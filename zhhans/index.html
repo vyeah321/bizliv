@@ -8,16 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
-        .sticky-header {
-            position: sticky;
+        body {
+            padding-top: 64px;
+        }
+        header {
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 1000;
             background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <header class="sticky-header shadow-md">
+<body>
+    <header id="site-header" class="bg-white">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-blue-600">BizLiv</a>
             <ul class="flex space-x-4">
@@ -27,97 +41,100 @@
             </ul>
         </nav>
     </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="hero" class="text-center py-16 bg-blue-50 rounded-lg mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">商务与生活平衡的<br>一体化解决方案</h1>
+            <p class="text-xl text-gray-600 mb-8">四款便捷应用，支持40多岁和50多岁商务人士的充实生活</p>
+            <a href="#apps" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即开始使用</a>
+        </section>
+
+        <span class="anchor" id="features"></span>
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8">BizLiv特点</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">工作生活平衡</h3>
+                    <p>支持平衡商务和个人生活，实现充实的职业生涯和丰富的生活方式。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">高效时间管理</h3>
+                    <p>简化日常任务，让您专注于核心工作和家庭时间。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">简单操作</h3>
+                    <p>直观的界面，即使不熟悉数字工具的人也能轻松使用。</p>
+                </div>
+            </div>
+        </section>
+
+        <span class="anchor" id="apps"></span>
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8">BizLiv应用</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/online-meetings-schedule" target="_blank">在线会议时间表</a></h3>
+                    <p class="text-gray-600 mb-4">摆脱繁琐的会议管理，专注于核心工作。只需复制粘贴即可轻松注册日程。</p>
+                    <a href="https://apps.apple.com/cn/app/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/id1515253382" target="_blank" class="block w-48 mx-auto">
+                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
+                    </a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/nomi-reco" target="_blank">NomiReco</a></h3>
+                    <p class="text-gray-600 mb-4">支持商务人士的健康管理和社交义务。客观跟踪饮酒习惯，助力健康生活方式的发展。</p>
+                    <a href="https://apps.apple.com/cn/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_blank" class="block w-48 mx-auto">
+                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
+                    </a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/shopping-list" target="_blank">购物清单</a></h3>
+                    <p class="text-gray-600 mb-4">通过高效购物有效利用宝贵时间。自动分类功能让您即使在工作繁忙时也能顺利管理家庭生活。</p>
+                    <a href="https://apps.apple.com/cn/app/%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E8%87%AA%E5%8B%95%E6%95%B4%E5%88%97/id1546963840" target="_blank" class="block w-48 mx-auto">
+                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
+                    </a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/go-back-home" target="_blank">回家导航</a></h3>
+                    <p class="text-gray-600 mb-4">从工作或社交聚会顺利回家。一键路线搜索和末班车时间确认，确保安全回家。</p>
+                    <a href="https://apps.apple.com/cn/app/%E5%B8%B0%E5%AE%85%E3%83%8A%E3%83%93/id1491940511" target="_blank" class="block w-48 mx-auto">
+                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <span class="anchor" id="faq"></span>
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8">常见问题</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">问：BizLiv是免费使用的吗？</h3>
+                    <p>答：是的，基本功能是免费提供的。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">问：数据安全有保障吗？</h3>
+                    <p>答：是的，您可以放心使用。用户数据仅存储在您的智能手机或iCloud中，不会保存在外部服务器上。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">问：只有40多岁和50多岁的人才能使用吗？</h3>
+                    <p>答：不是的。BizLiv可以被广泛的年龄群体使用。虽然我们的主要目标是40多岁和50多岁的商务人士，但我们也有许多适用于其他年龄段人群的功能。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="text-center py-16 bg-blue-50 rounded-lg">
+            <h2 class="text-3xl font-bold mb-4">现在就开始使用BizLiv，开启充实生活</h2>
+            <p class="text-xl text-gray-600 mb-8">高效管理您的商务和生活，实现更丰富的日常生活</p>
+            <a href="#apps" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">免费下载</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2024 BizLiv。保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
-<main class="container mx-auto px-4 py-8">
-    <section id="hero" class="text-center py-16 bg-blue-50 rounded-lg mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">商务与生活平衡的<br>一体化解决方案</h1>
-        <p class="text-xl text-gray-600 mb-8">四款便捷应用，支持40多岁和50多岁商务人士的充实生活</p>
-        <a href="#apps" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即开始使用</a>
-    </section>
-
-    <section id="features" class="mb-12">
-        <h2 class="text-3xl font-bold text-center mb-8">BizLiv特点</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">工作生活平衡</h3>
-                <p>支持平衡商务和个人生活，实现充实的职业生涯和丰富的生活方式。</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">高效时间管理</h3>
-                <p>简化日常任务，让您专注于核心工作和家庭时间。</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">简单操作</h3>
-                <p>直观的界面，即使不熟悉数字工具的人也能轻松使用。</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="apps" class="mb-12">
-        <h2 class="text-3xl font-bold text-center mb-8">BizLiv应用</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/online-meetings-schedule" target="_blank">在线会议时间表</a></h3>
-                <p class="text-gray-600 mb-4">摆脱繁琐的会议管理，专注于核心工作。只需复制粘贴即可轻松注册日程。</p>
-                <a href="https://apps.apple.com/cn/app/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/id1515253382" target="_blank" class="block w-48 mx-auto">
-                    <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/nomi-reco" target="_blank">NomiReco</a></h3>
-                <p class="text-gray-600 mb-4">支持商务人士的健康管理和社交义务。客观跟踪饮酒习惯，助力健康生活方式的发展。</p>
-                <a href="https://apps.apple.com/cn/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_blank" class="block w-48 mx-auto">
-                    <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/shopping-list" target="_blank">购物清单</a></h3>
-                <p class="text-gray-600 mb-4">通过高效购物有效利用宝贵时间。自动分类功能让您即使在工作繁忙时也能顺利管理家庭生活。</p>
-                <a href="https://apps.apple.com/cn/app/%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E8%87%AA%E5%8B%95%E6%95%B4%E5%88%97/id1546963840" target="_blank" class="block w-48 mx-auto">
-                    <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                </a>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://en.vyeah.jp/go-back-home" target="_blank">回家导航</a></h3>
-                <p class="text-gray-600 mb-4">从工作或社交聚会顺利回家。一键路线搜索和末班车时间确认，确保安全回家。</p>
-                <a href="https://apps.apple.com/cn/app/%E5%B8%B0%E5%AE%85%E3%83%8A%E3%83%93/id1491940511" target="_blank" class="block w-48 mx-auto">
-                    <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="mb-12">
-        <h2 class="text-3xl font-bold text-center mb-8">常见问题</h2>
-        <div class="space-y-4">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">问：BizLiv是免费使用的吗？</h3>
-                <p>答：是的，基本功能是免费提供的。</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">问：数据安全有保障吗？</h3>
-                <p>答：是的，您可以放心使用。用户数据仅存储在您的智能手机或iCloud中，不会保存在外部服务器上。</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">问：只有40多岁和50多岁的人才能使用吗？</h3>
-                <p>答：不是的。BizLiv可以被广泛的年龄群体使用。虽然我们的主要目标是40多岁和50多岁的商务人士，但我们也有许多适用于其他年龄段人群的功能。</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="cta" class="text-center py-16 bg-blue-50 rounded-lg">
-        <h2 class="text-3xl font-bold mb-4">现在就开始使用BizLiv，开启充实生活</h2>
-        <p class="text-xl text-gray-600 mb-8">高效管理您的商务和生活，实现更丰富的日常生活</p>
-        <a href="#apps" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">免费下载</a>
-    </section>
-</main>
-
-<footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-4">
-        <div class="text-center">
-            <p>&copy; 2024 BizLiv。保留所有权利。</p>
-        </div>
-    </div>
-</footer>
