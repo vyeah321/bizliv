@@ -8,9 +8,17 @@
     <meta name="description" content="BizLiv offers four convenient apps to support work-life balance for business professionals in their 40s and 50s.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
-    <header class="bg-white shadow-md">
+    <header class="sticky-header shadow-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-blue-600">BizLiv</a>
             <ul class="flex space-x-4">
