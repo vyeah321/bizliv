@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizLiv - ビジネスパーソンの充実ライフをサポート</title>
+    <title>NomiReco - 健康志向の飲酒ライフをサポート</title>
     <meta name="description" content="BizLivは、40代・50代のビジネスパーソンのワークライフバランスを支援する4つの便利なアプリを提供しています。">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             padding-top: 64px;
-            background-image: url('images/background.jpg'); /* 背景画像を設定 */
+            background-image: url('images/background.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            background-repeat: no-repeat;
             color: white;
         }
         header {
@@ -33,13 +34,13 @@
             top: -64px;
             visibility: hidden;
         }
-        .hero {
-            background-color: rgba(0, 0, 0, 0.6); /* 背景色を半透明に */
+        .hero, .features-section {
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 50px;
             border-radius: 10px;
         }
         h1, h2, p {
-            color: white; /* テキスト色を白に */
+            color: white;
         }
         a {
             color: #007BFF;
@@ -48,12 +49,11 @@
             text-decoration: underline;
         }
         
-        /* 主な機能セクションのスタイル */
-        .features-section {
-            background-color: rgba(0, 0, 0, 0.7); /* 背景色を濃く */
-            color: white; /* テキストを白に */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
         }
-
     </style>
 </head>
 <body>
