@@ -10,13 +10,18 @@
     <style>
         body {
             padding-top: 64px;
+            background-image: url('images/background.jpg'); /* 背景画像を設定 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
         }
         header {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         html {
@@ -28,9 +33,32 @@
             top: -64px;
             visibility: hidden;
         }
+        .hero {
+            background-color: rgba(0, 0, 0, 0.6); /* 背景色を半透明に */
+            padding: 50px;
+            border-radius: 10px;
+        }
+        h1, h2, p {
+            color: white; /* テキスト色を白に */
+        }
+        a {
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 主な機能セクションのスタイル */
+        .features-section {
+            background-color: rgba(0, 0, 0, 0.7); /* 背景色を濃く */
+            color: white; /* テキストを白に */
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- ヘッダー -->
     <header id="site-header" class="bg-white">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="https://bizliv.life/ja" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
@@ -42,29 +70,36 @@
         </nav>
     </header>
 
+    <!-- メインコンテンツ -->
     <main class="container mx-auto px-4 py-8">
-        <!-- タイトル部分 -->
+        
+        <!-- ヒーローセクション -->
         <section id="hero" class="hero text-center py-16 bg-blue-50 rounded-lg mb-12">
             <h1 class="center-title text-4xl md:text-5xl font-bold mb-4">
                 NomiReco<br>
                 健康志向の飲酒ライフをサポート
             </h1>
-            <p class="text-xl text-gray-600 mb-8">飲酒日や休肝日を簡単に管理し、健康的な生活をサポートするアプリです。Apple Watchとの連携や楽天市場でのお酒・グッズ購入機能も充実！</p>
+            <p class="text-xl text-gray-300 mb-8">飲酒日や休肝日を簡単に管理し、健康的な生活をサポートするアプリです。Apple Watchとの連携や楽天市場でのお酒・グッズ購入機能も充実！</p>
 
+            <!-- App Storeの画像 -->
             <a href="#download">
                 <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto">
             </a>
 
         </section>
 
+        <!-- 機能セクション -->
         <span class="anchor" id="features"></span>
-        <section class="mb-12">
+        <section class="features-section mb-12 p-6 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold text-center mb-8">主な機能</h2>
+            
+            <!-- グリッドレイアウトで機能紹介 -->
             <div class="grid md:grid-cols-2 gap-8">
+
                 <!-- カレンダー管理 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">カレンダーで飲酒日・休肝日を簡単管理</h3>
-                    <p>カレンダーに飲酒日や休肝日を記録し、一目で確認できます。これにより、自分の飲酒パターンを把握しやすくなり、健康的な生活をサポートします。</p>
+                <div class="bg-white p-6 rounded-lg shadow-md bg-opacity-90">
+                    <h3 class="text-xl font-bold mb-2 text-black">カレンダーで飲酒日・休肝日を簡単管理</h3>
+                    <p style="color:#333;">カレンダーに飲酒日や休肝日を記録し、一目で確認できます。これにより、自分の飲酒パターンを把握しやすくなり、健康的な生活をサポートします。</p>
                     <ul class="list-disc list-inside mt-4 text-gray-700">
                         <li>飲酒日・休肝日の記録が簡単にできる</li>
                         <li>イベント登録で飲み会や晩酌も管理可能</li>
@@ -72,9 +107,9 @@
                 </div>
 
                 <!-- グラフ化 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">グラフで健康状態を見える化</h3>
-                    <p>過去の飲酒日数や体重の変化をグラフで確認し、目標体重や飲酒回数に対して進捗状況も追跡可能です。</p>
+                <div class="bg-white p-6 rounded-lg shadow-md bg-opacity-90">
+                    <h3 class="text-xl font-bold mb-2 text-black">グラフで健康状態を見える化</h3>
+                    <p style="color:#333;">過去の飲酒日数や体重の変化をグラフで確認し、目標体重や飲酒回数に対して進捗状況も追跡可能です。</p>
                     <ul class="list-disc list-inside mt-4 text-gray-700">
                         <li>体重と飲酒日数のグラフ化が可能</li>
                         <li>健康目標に向けて進捗を確認できる</li>
@@ -82,9 +117,9 @@
                 </div>
 
                 <!-- Apple Watch連携 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Apple Watchと連携した健康データ管理</h3>
-                    <p>Apple Watchと連携して心拍数や歩行データを記録し、飲酒時の身体への影響もチェックできます。</p>
+                <div class="bg-white p-6 rounded-lg shadow-md bg-opacity-90">
+                    <h3 class="text-xl font-bold mb-2 text-black">Apple Watchと連携した健康データ管理</h3>
+                    <p style="color:#333;">Apple Watchと連携して心拍数や歩行データを記録し、飲酒時の身体への影響もチェックできます。</p>
                     <ul class="list-disc list-inside mt-4 text-gray-700">
                         <li>心拍数・歩行データの追跡が可能</li>
                         <li>運動量と健康リスクを総合的に管理</li>
@@ -92,9 +127,9 @@
                 </div>
 
                 <!-- 楽天市場連携 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">楽天市場との連携でお酒やグッズ購入</h3>
-                    <p>アプリ内から楽天市場へアクセスし、お気に入りのお酒や関連グッズを簡単に購入できます。</p>
+                <div class="bg-white p-6 rounded-lg shadow-md bg-opacity-90">
+                    <h3 class="text-xl font-bold mb-2 text-black">楽天市場との連携でお酒やグッズ購入</h3>
+                    <p style="color:#333;">アプリ内から楽天市場へアクセスし、お気に入りのお酒や関連グッズを簡単に購入できます。</p>
                     <ul class="list-disc list-inside mt-4 text-gray-700">
                         <li>お得にお酒やグッズを購入可能</li>
                         <li>楽しい飲酒ライフをサポートするアイテムが揃う</li>
@@ -102,19 +137,25 @@
                 </div>
 
             </div>
+
         </section>
 
         <!-- ダウンロードセクション -->
         <span class="anchor" id="download"></span>
-        <section id="cta" class="text-center py-16 bg-blue-50 rounded-lg mb-12">
+        <section id="cta" class="text-center py-16 bg-black bg-opacity-70 rounded-lg mb-12">
+            
+            <!-- NomiRecoでできること -->
             <h2 class="text-xl font-bold mb-4">NomiRecoでできること</h2>
-            <ul class="list-disc list-inside mx-auto max-w-md text-left text-gray-700 mb-8">
+
+            <!-- 機能リスト -->
+            <ul class="list-disc list-inside mx-auto max-w-md text-left text-gray-300 mb-8">
                 <li>飲酒日・休肝日の記録とカレンダー表示</li>
                 <li>体重と飲酒回数のグラフ化</li>
                 <li>Apple Watchとの連携で心拍数・歩行データ管理</li>
                 <li>楽天市場との連携でお酒やグッズ購入</li>
             </ul>
 
+            <!-- App Storeダウンロードリンク -->
             <a href="#download">
                 <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto">
             </a>
@@ -124,6 +165,7 @@
     </main>
 
     <!-- フッター -->
+    <!-- プライバシーポリシーと利用規約リンク追加 -->
     <footer id="footer" class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
 
