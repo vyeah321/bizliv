@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NomiReco - 健康志向の飲酒ライフをサポート</title>
-    <meta name="description" content="NomiRecoは飲酒日や休肝日を簡単に管理し、健康的な生活をサポートするアプリです。Apple Watch連携や楽天市場での購入機能も充実。">
+    <title>BizLiv - ビジネスパーソンの充実ライフをサポート</title>
+    <meta name="description" content="BizLivは、40代・50代のビジネスパーソンのワークライフバランスを支援する4つの便利なアプリを提供しています。">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
@@ -41,21 +41,26 @@
                 <!-- 「特徴」を「機能」に変更 -->
                 <li><a href="#features" class="text-gray-600 hover:text-blue-600">機能</a></li>
                 <li><a href="#download" class="text-gray-600 hover:text-blue-600">ダウンロード</a></li>
-                <li><a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a></li>
+                <!-- FAQを削除 -->
             </ul>
         </nav>
     </header>
 
     <main class="container mx-auto px-4 py-8">
         <!-- タイトル部分 -->
-        <section id="hero" class="text-center py-16 bg-blue-50 rounded-lg mb-12">
+        <section id="hero" class="hero text-center py-16 bg-blue-50 rounded-lg mb-12">
             <!-- タイトルを中央揃えで2行に分ける -->
             <h1 class="center-title text-4xl md:text-5xl font-bold mb-4">
                 NomiReco<br>
                 健康志向の飲酒ライフをサポート
             </h1>
             <p class="text-xl text-gray-600 mb-8">飲酒日や休肝日を簡単に管理し、健康的な生活をサポートするアプリです。Apple Watchとの連携や楽天市場でのお酒・グッズ購入機能も充実！</p>
-            <a href="#download" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">今すぐダウンロード</a>
+
+            <!-- App Storeの画像に変更 -->
+            <a href="#download">
+                <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto">
+            </a>
+
         </section>
 
         <span class="anchor" id="features"></span>
@@ -116,17 +121,30 @@
                 <li>楽天市場との連携でお酒やグッズ購入</li>
             </ul>
 
-            <!-- ダウンロードボタン -->
-            <a href="#download" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">今すぐダウンロードして始めましょう！</a>
+            <!-- App Storeの画像に変更 -->
+            <a href="#download">
+                <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto">
+            </a>
 
         </section>
 
     </main>
 
     <!-- フッター -->
+    <!-- プライバシーポリシーと利用規約リンク追加 -->
     <footer id="footer" class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            &copy; 2024 NomiReco. All Rights Reserved.
+
+            &copy; 2024 NomiReco. All Rights Reserved.<br><br>
+
+            <!-- プライバシーポリシーリンク -->
+            <a href="https://bizliv.life/nomireco/privacy/ja/#privacy-policy" 
+               style="color:white; text-decoration:none;">プライバシーポリシー</a> |
+            
+            <!-- 利用規約リンク -->
+            <a href="https://bizliv.life/nomireco/privacy/ja/#terms-of-service"
+               style="color:white; text-decoration:none;">利用規約</a>
+
         </div>
     </footer>
 
