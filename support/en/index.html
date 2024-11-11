@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BizLiv</title>
+    <meta name="description" content="Please use this page to contact us regarding BizLiv.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            padding-top: 64px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4">
+            <a href="https://bizliv.life/en/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center py-16 bg-blue-50 rounded-lg mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-xl text-gray-600 mb-8">We'd love to hear your questions and feedback about BizLiv</p>
+        </section>
+
+        <section class="mb-12">
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <form id="contactForm">
+                    <div class="mb-4">
+                        <label for="app" class="block text-gray-700 font-bold mb-2">Select Service/App</label>
+                        <select id="app" name="app" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">Please select</option>
+                            <option value="BizLiv Service">BizLiv Service</option>
+                            <option value="Online Meetings Schedule">Online Meetings Schedule</option>
+                            <option value="NomiReco">NomiReco</option>
+                            <option value="Shopping List">Shopping List</option>
+                            <option value="Go Home Navi">Go Home Navi</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-gray-700 font-bold mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="16" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" onclick="openMailApp()" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">
+                            Open in Mail App
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Other Contact Methods</h2>
+            <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Email Contact</h3>
+                <p class="text-gray-600">bizliv.life@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2024 BizLiv. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openMailApp() {
+            var app = document.getElementById('app').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            var mailSubject = '[' + app + '] ' + subject;
+            var mailBody = 'App: ' + app + '\n\n' + message;
+            var mailtoLink = 'mailto:bizliv.life@gmail.com?subject=' + encodeURIComponent(mailSubject) + '&body=' + encodeURIComponent(mailBody);
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
