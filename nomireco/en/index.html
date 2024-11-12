@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NomiReco - Supporting a Health-Conscious Drinking Lifestyle</title>
+    <link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/">
+    <link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/">
+    <meta name="description" content="NomiReco is an app that supports a health-conscious drinking lifestyle. With calendar management, graphing, and Apple Watch integration, it supports the healthy lifestyle of business professionals.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            padding-top: 64px;
+            background-color: #f0f0f0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
+        .hero {
+            background-image: url('https://bizliv.life/nomireco/images/background.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 10px;
+            color: white;
+            max-width: 800px;
+        }
+        .white-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .feature-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .feature-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://bizliv.life/en" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Home</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-blue-600">Features</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-blue-600">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    NomiReco<br>
+                    Supporting a Health-Conscious Drinking Lifestyle
+                </h1>
+                <p class="text-xl mb-8">An app that helps you easily manage your drinking days and alcohol-free days, supporting a healthy lifestyle. Features include Apple Watch integration!</p>
+                <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    Download Now
+                </a>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 py-8">
+            <!-- Features Section -->
+            <span class="anchor" id="features"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">Key Features</h2>
+                
+                <!-- Grid layout for feature introduction -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Calendar Management -->
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">Easy Management of Drinking and Alcohol-Free Days with Calendar</h3>
+                        <p class="text-gray-700">Record your drinking and alcohol-free days on the calendar for easy viewing. This helps you understand your drinking patterns and supports a healthier lifestyle.</p>
+                        <ul class="list-disc list-inside mt-4 text-gray-700">
+                            <li>Easily record drinking and alcohol-free days</li>
+                            <li>Manage drinking events and evening drinks with event registration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Graphing -->
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">Visualize Your Health Status with Graphs</h3>
+                        <p class="text-gray-700">Check past drinking days and weight changes in graph form, and track progress towards your target weight and drinking frequency.</p>
+                        <ul class="list-disc list-inside mt-4 text-gray-700">
+                            <li>Graph your weight and number of drinking days</li>
+                            <li>Monitor progress towards your health goals</li>
+                        </ul>
+                    </div>
+
+                    <!-- Apple Watch Integration -->
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">Health Data Management Integrated with Apple Watch</h3>
+                        <p class="text-gray-700">Record heart rate and walking data by integrating with Apple Watch, and check the effects of drinking on your body.</p>
+                        <ul class="list-disc list-inside mt-4 text-gray-700">
+                            <li>Track heart rate and walking data</li>
+                            <li>Comprehensively manage exercise volume and health risks</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download Section -->
+            <span class="anchor" id="download"></span>
+            <section class="white-box text-center py-16">
+                <h2 class="text-2xl font-bold mb-4">Download NomiReco Now</h2>
+                <p class="text-gray-700 mb-8">Start your health-conscious drinking lifestyle!</p>
+                <a href="#download">
+                    <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto">
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="mb-4">&copy; 2024 BizLiv. All rights reserved.</p>
+                <nav class="space-x-4">
+                    <a href="https://bizliv.life/privacy/en/#privacy-policy" class="text-white hover:text-blue-300">Privacy Policy</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="https://bizliv.life/privacy/en/#terms-of-service" class="text-white hover:text-blue-300">Terms of Service</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="https://bizliv.life/support/en/" class="text-white hover:text-blue-300">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
