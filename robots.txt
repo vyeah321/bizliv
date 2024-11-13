@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /temp.html
+
+Sitemap: https://bizliv.life/sitemap.xml
