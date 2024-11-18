@@ -9,12 +9,23 @@
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
             line-height: 1.6;
             background-color: #f9f9f9;
+            padding-top: 64px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         h1, h2 {
             color: #333;
@@ -43,6 +54,12 @@
         ul li a:hover {
             text-decoration: underline;
         }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
@@ -56,16 +73,24 @@
 </head>
 <body>
 
+<header id="site-header">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="https://bizliv.life/en/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+        <ul class="flex space-x-4">
+            <li><a href="#privacy-policy" class="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
+            <li><a href="#terms-of-service" class="text-gray-600 hover:text-blue-600">Terms of Service</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container mx-auto px-4 py-8">
     <h1>BizLiv Services - Privacy Policy and Terms of Service</h1>
 
-    <!-- Anchor Links -->
-    <ul>
-        <li><a href="#privacy-policy">Privacy Policy</a></li>
-        <li><a href="#terms-of-service">Terms of Service</a></li>
-    </ul>
+    <div class="mb-8"></div>
 
     <!-- Privacy Policy -->
-    <h2 id="privacy-policy">Privacy Policy</h2>
+    <span class="anchor" id="privacy-policy"></span>
+    <h2 class="text-xl font-bold mb-2">Privacy Policy</h2>
     
     <h3>1. Collection and Use of Personal Information</h3>
     <p>BizLiv services (hereinafter referred to as "the Service") may collect personal information from users, such as name and email address. This information will only be used for specific purposes such as providing customer support and handling inquiries. It will not be shared or disclosed to third parties without the user's consent.</p>
@@ -88,7 +113,8 @@
     <p><strong>Last Updated:</strong> November 9, 2024</p>
 
     <!-- Terms of Service -->
-    <h2 id="terms-of-service">Terms of Service</h2>
+    <span class="anchor" id="terms-of-service"></span>
+    <h2 class="text-xl font-bold mb-2">Terms of Service</h2>
 
     <h3>1. Service Description</h3>
     <p>BizLiv provides applications and websites that allow users to record and manage their drinking habits, health data, schedule management, shopping lists, and other daily life activities. The service is provided free of charge; however, some features may display ads.</p>
@@ -110,9 +136,26 @@
     <p><strong>Last Updated:</strong> November 9, 2024</p>
 
     <!-- Applicability -->
-    <h2 id="applicability">Applicability</h2>
+    <h2 class="text-xl font-bold mb-2">Applicability</h2>
     
     <p>This Privacy Policy and Terms of Service apply to all applications and websites provided by BizLiv (e.g., NomiReco app, Online Meetings Schedule app, Shopping List app).</p>
+
+</main>
+
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <p class="mb-4">&copy; 2024 BizLiv. All rights reserved.</p>
+            <nav class="space-x-4">
+                <a href="#privacy-policy" class="text-white hover:text-blue-300">Privacy Policy</a>
+                |
+                <a href="#terms-of-service" class="text-white hover:text-blue-300">Terms of Service</a>
+                |
+                <a href="https://bizliv.life/support/en/" class="text-white hover:text-blue-300">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

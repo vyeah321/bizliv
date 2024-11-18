@@ -9,12 +9,23 @@
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
             line-height: 1.6;
             background-color: #f9f9f9;
+            padding-top: 64px; /* ヘッダーの高さ分のパディング */
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         h1, h2 {
             color: #333;
@@ -43,29 +54,34 @@
         ul li a:hover {
             text-decoration: underline;
         }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'G-KZ2GMHNF9E');
-    </script>
 </head>
 <body>
 
+<header id="site-header">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="https://bizliv.life/ja/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+        <ul class="flex space-x-4">
+            <li><a href="#privacy-policy" class="text-gray-600 hover:text-blue-600">プライバシーポリシー</a></li>
+            <li><a href="#terms-of-service" class="text-gray-600 hover:text-blue-600">利用規約</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container mx-auto px-4 py-8">
     <h1>BizLivサービス - プライバシーポリシーと利用規約</h1>
 
-    <!-- アンカーリンク -->
-    <ul>
-        <li><a href="#privacy-policy">プライバシーポリシー</a></li>
-        <li><a href="#terms-of-service">利用規約</a></li>
-    </ul>
+    <div class="mb-8"></div>
 
     <!-- プライバシーポリシー -->
-    <h2 id="privacy-policy">プライバシーポリシー</h2>
+    <span class="anchor" id="privacy-policy"></span>
+    <h2 class="text-xl font-bold mb-2">プライバシーポリシー</h2>
     
     <h3>1. 個人情報の収集と利用</h3>
     <p>BizLivサービス（以下「本サービス」）では、ユーザーの個人情報（氏名、メールアドレスなど）を収集することがあります。これらの情報は、お問い合わせ対応やサポート提供など、特定の目的でのみ使用されます。ユーザーの許可なく第三者へ開示・共有することはありません。</p>
@@ -88,7 +104,8 @@
     <p><strong>最終更新日:</strong> 2024年11月9日</p>
 
     <!-- 利用規約 -->
-    <h2 id="terms-of-service">利用規約</h2>
+    <span class="anchor" id="terms-of-service"></span>
+    <h2 class="text-xl font-bold mb-2">利用規約</h2>
 
     <h3>1. サービス内容</h3>
     <p>BizLivは、ユーザーが飲酒日や健康データを記録・管理したり、スケジュール管理や買い物リスト作成などの日常生活をサポートするためのアプリケーションおよびウェブサイトです。本サービスは無料で提供されますが、一部機能には広告が表示される場合があります。</p>
@@ -110,9 +127,26 @@
     <p><strong>最終更新日:</strong> 2024年11月9日</p>
 
     <!-- 適用範囲 -->
-    <h2 id="applicability">適用範囲</h2>
+    <h2 class="text-xl font-bold mb-2">適用範囲</h2>
     
     <p>このプライバシーポリシーおよび利用規約は、BizLivが提供するすべてのアプリケーションおよびウェブサイト（例：NomiRecoアプリ、オンライン会議スケジュールアプリ、買い物リストアプリなど）に適用されます。</p>
+
+</main>
+
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <p class="mb-4">&copy; 2024 BizLiv. All rights reserved.</p>
+            <nav class="space-x-4">
+                <a href="#privacy-policy" class="text-white hover:text-blue-300">プライバシーポリシー</a>
+                |
+                <a href="#terms-of-service" class="text-white hover:text-blue-300">利用規約</a>
+                |
+                <a href="https://bizliv.life/support/ja/" class="text-white hover:text-blue-300">お問い合わせ</a>
+            </nav>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
