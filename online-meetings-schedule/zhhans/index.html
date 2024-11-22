@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线会议时间表 - 支持高效会议管理</title>
+    <meta name="description" content="在线会议时间表大大减少了会议管理的麻烦。只需复制粘贴邀请函即可高效管理时间。商务人士必备的应用。">
+    <meta property="og:title" content="在线会议时间表 - 支持高效会议管理" />
+    <meta property="og:description" content="在线会议时间表大大减少了会议管理的麻烦。只需复制粘贴邀请函即可高效管理时间。商务人士必备的应用。" />
+    <meta property="og:image" content="https://bizliv.life/online-meetings-schedule/images/background.jpg">
+    <meta property="og:url" content="https://bizliv.life/online-meetings-schedule/zhhans/">
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            padding-top: 64px;
+            background-color: #f0f0f0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
+        .hero {
+            background-image: url('https://bizliv.life/online-meetings-schedule/images/background.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 10px;
+            color: white;
+            width: 98%;
+        }
+        .white-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .feature-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .feature-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://bizliv.life/zhhans" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">首页</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-blue-600">功能</a></li>
+                <li><a href="#how-to-use" class="text-gray-600 hover:text-blue-600">使用方法</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-blue-600">下载</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    在线会议时间表<br>
+                    支持高效会议管理
+                </h1>
+                <p class="text-xl mb-8">
+                    只需复制粘贴邀请函即可高效管理时间。商务人士必备的应用。
+                </p>
+                <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    立即下载
+                </a>
+            </div>
+        </section>
+        <div class="container mx-auto px-4 py-8">
+            <span class="anchor" id="features"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">主要功能</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">自动添加日程</h3>
+                        <p class="text-gray-700">
+                            自动分析Zoom邀请函中的主题、时间和URL，并添加到您的日程中。同时兼容Google Meet和Skype等其他平台。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">智能URL提取</h3>
+                        <p class="text-gray-700">
+                            粘贴包含URL的文本时，会自动提取出URL。轻松管理多个会议链接。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">便捷的通知功能</h3>
+                        <p class="text-gray-700">
+                            通知您会议的开始和结束时间。您还可以点击开始时间通知界面直接加入会议。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">日历集成</h3>
+                        <p class="text-gray-700">
+                            自动将日程添加到您的默认日历或Google日历。在一处管理所有日程。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">清晰的会议列表</h3>
+                        <p class="text-gray-700">
+                            会议按时间顺序列出，让您一目了然地看到下一个会议。实现高效的日程管理。
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <span class="anchor" id="how-to-use"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">使用方法</h2>
+                <div class="space-y-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">1. 只需粘贴邀请函即可添加日程</h3>
+                        <p class="text-gray-700">
+                            只需将以下类似的邀请函文本粘贴到应用的文本框中，日程就会自动添加：
+                        </p>
+                        <pre class="bg-gray-100 p-4 mt-2 rounded">
+主题：在线会议
+时间：2020年5月25日 21:00 北京，上海
+加入Zoom会议
+https://us02web.zoom.us/j/12345678900?pwd=ABCDEFGHIJKLMNOPQRSTU
+                        </pre>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">2. 一键加入会议</h3>
+                        <p class="text-gray-700">
+                            只需点击会议信息界面上的"加入"按钮或开始时间通知界面，即可立即加入会议。无需搜索URL，实现顺畅的会议参与。
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <span class="anchor" id="download"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">下载</h2>
+                <div class="text-center">
+                    <p class="mb-4">立即下载应用，开始智能会议管理。</p>
+                    <a href="https://apps.apple.com/cn/app/%E5%9C%A8%E7%BA%BF%E4%BC%9A%E8%AE%AE%E6%97%B6%E9%97%B4%E8%A1%A8/id1515253382" target="_blank">
+                        <img src="https://bizliv.life/images/app-store-badge.png" alt="从App Store下载" class="mx-auto w-auto h-auto">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm mb-4">&copy; 2024 BizLiv.life. 保留所有权利。</p>
+            <nav class="space-x-4">
+                <a href="https://bizliv.life/privacy/zhhans/#privacy-policy" class="text-white hover:text-blue-300">隐私政策</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://bizliv.life/privacy/zhhans/#terms-of-service" class="text-white hover:text-blue-300">服务条款</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://bizliv.life/support/zhhans/" class="text-white hover:text-blue-300">联系我们</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

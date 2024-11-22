@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在線會議時間表 - 支援高效會議管理</title>
+    <meta name="description" content="在線會議時間表大幅減少會議管理的麻煩。只需複製貼上邀請函即可高效管理時間。商務人士必備的應用程式。">
+    <meta property="og:title" content="在線會議時間表 - 支援高效會議管理" />
+    <meta property="og:description" content="在線會議時間表大幅減少會議管理的麻煩。只需複製貼上邀請函即可高效管理時間。商務人士必備的應用程式。" />
+    <meta property="og:image" content="https://bizliv.life/online-meetings-schedule/images/background.jpg">
+    <meta property="og:url" content="https://bizliv.life/online-meetings-schedule/zhhant/">
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            padding-top: 64px;
+            background-color: #f0f0f0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
+        .hero {
+            background-image: url('https://bizliv.life/online-meetings-schedule/images/background.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 10px;
+            color: white;
+            width: 98%;
+        }
+        .white-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .feature-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .feature-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://bizliv.life/zhhant" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">首頁</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-blue-600">功能</a></li>
+                <li><a href="#how-to-use" class="text-gray-600 hover:text-blue-600">使用方法</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-blue-600">下載</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    在線會議時間表<br>
+                    支援高效會議管理
+                </h1>
+                <p class="text-xl mb-8">
+                    只需複製貼上邀請函即可高效管理時間。商務人士必備的應用程式。
+                </p>
+                <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    立即下載
+                </a>
+            </div>
+        </section>
+        <div class="container mx-auto px-4 py-8">
+            <span class="anchor" id="features"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">主要功能</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">自動新增行程</h3>
+                        <p class="text-gray-700">
+                            自動分析Zoom邀請函中的主題、時間和URL，並新增到您的行程中。同時兼容Google Meet和Skype等其他平台。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">智能URL提取</h3>
+                        <p class="text-gray-700">
+                            貼上包含URL的文字時，會自動提取出URL。輕鬆管理多個會議連結。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">便捷的通知功能</h3>
+                        <p class="text-gray-700">
+                            通知您會議的開始和結束時間。您還可以點擊開始時間通知介面直接加入會議。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">日曆整合</h3>
+                        <p class="text-gray-700">
+                            自動將行程新增到您的預設日曆或Google日曆。在一處管理所有行程。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">清晰的會議列表</h3>
+                        <p class="text-gray-700">
+                            會議按時間順序列出，讓您一目了然地看到下一個會議。實現高效的行程管理。
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <span class="anchor" id="how-to-use"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">使用方法</h2>
+                <div class="space-y-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">1. 只需貼上邀請函即可新增行程</h3>
+                        <p class="text-gray-700">
+                            只需將以下類似的邀請函文字貼上到應用程式的文字框中，行程就會自動新增：
+                        </p>
+                        <pre class="bg-gray-100 p-4 mt-2 rounded">
+主題：在線會議
+時間：2020年5月25日 21:00 台北
+加入Zoom會議
+https://us02web.zoom.us/j/12345678900?pwd=ABCDEFGHIJKLMNOPQRSTU
+                        </pre>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">2. 一鍵加入會議</h3>
+                        <p class="text-gray-700">
+                            只需點擊會議資訊介面上的「加入」按鈕或開始時間通知介面，即可立即加入會議。無需搜尋URL，實現順暢的會議參與。
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <span class="anchor" id="download"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">下載</h2>
+                <div class="text-center">
+                    <p class="mb-4">立即下載應用程式，開始智能會議管理。</p>
+                    <a href="https://apps.apple.com/tw/app/%E5%9C%A8%E7%B7%9A%E6%9C%83%E8%AD%B0%E6%99%82%E9%96%93%E8%A1%A8/id1515253382" target="_blank">
+                        <img src="https://bizliv.life/images/app-store-badge.png" alt="從App Store下載" class="mx-auto w-auto h-auto">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm mb-4">&copy; 2024 BizLiv.life. 版權所有。</p>
+            <nav class="space-x-4">
+                <a href="https://bizliv.life/privacy/zhhant/#privacy-policy" class="text-white hover:text-blue-300">隱私政策</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://bizliv.life/privacy/zhhant/#terms-of-service" class="text-white hover:text-blue-300">服務條款</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://bizliv.life/support/zhhant/" class="text-white hover:text-blue-300">聯絡我們</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
