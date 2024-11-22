@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物清单 - 高效购物的得力助手</title>
+    <meta name="description" content="购物清单是一款支持高效购物的应用，具有自动分类和家庭共享功能。为忙碌的现代人节省时间和精力。">
+    <meta property="og:title" content="购物清单 - 高效购物的得力助手" />
+    <meta property="og:description" content="购物清单是一款支持高效购物的应用，具有自动分类和家庭共享功能。为忙碌的现代人节省时间和精力。" />
+    <meta property="og:image" content="https://bizliv.life/shopping-list/images/background.jpg">
+    <meta property="og:url" content="https://bizliv.life/shopping-list/zhhant/">
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            padding-top: 64px;
+            background-color: #f0f0f0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
+        .hero {
+            background-image: url('https://bizliv.life/shopping-list/images/background.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 10px;
+            color: white;
+            width: 98%;
+        }
+        .white-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .feature-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .feature-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://bizliv.life/zhhant" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">首页</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-blue-600">功能</a></li>
+                <li><a href="#scenarios" class="text-gray-600 hover:text-blue-600">使用场景</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-blue-600">下载</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    购物清单<br>
+                    高效购物的得力助手
+                </h1>
+                <p class="text-xl mb-8">
+                    通过自动分类和家庭共享功能节省时间和精力。忙碌现代生活的好帮手。
+                </p>
+                <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    立即下载
+                </a>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 py-8">
+            <span class="anchor" id="features"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">主要功能</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">自动分类</h3>
+                        <p class="text-gray-700">
+                            通过自动识别商品名称的类别，清晰地组织商品。为高效浏览超市区域进行了优化。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">提醒式清单</h3>
+                        <p class="text-gray-700">
+                            使用熟悉的提醒格式轻松进行购物检查。通过避免重复访问同一区域来节省时间，让您能够通过最短路线完成购物。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">自动列表格式化</h3>
+                        <p class="text-gray-700">
+                            只需复制粘贴，即可将家人或朋友发送的商品列表转换为可用的清单。自动格式化批量粘贴的商品列表，方便使用。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <span class="anchor" id="scenarios"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">适用场景</h2>
+                <div class="space-y-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">忙碌家庭的好帮手</h3>
+                        <p class="text-gray-700">
+                            对于同时照顾孩子和处理家务的父母来说，周末购物可能是一项具有挑战性的任务。特别是当家庭聚会需要比平常更多的购物时。使用这款应用，您可以快速添加家庭成员的请求，并在商店中使用按类别排序的列表高效购物。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">独居生活的强大支持</h3>
+                        <p class="text-gray-700">
+                            对于刚开始独立生活的大学生来说，在家做饭很有吸引力，但购物可能会让人感到困惑。通过向父母询问推荐的食材并将清单导入应用程序，必需品会按类别组织，让您能够顺利购物而不会迷路。
+                        </p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">为双职工夫妇节省时间</h3>
+                        <p class="text-gray-700">
+                            对于工作繁忙的双职工夫妇来说，找时间购物可能具有挑战性。使用此应用的共享功能，您可以快速导入伴侣通过消息应用发送的购物清单。借助自动组织的易读列表，您可以在工作任务之间高效购物并满足家庭需求。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <span class="anchor" id="download"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">下载</h2>
+                <div class="text-center">
+                    <p class="mb-4">立即下载应用，体验高效购物。</p>
+                    <a href="https://apps.apple.com/cn/app/shopping-list-auto-genre-sort/id1546963840" target="_blank">
+                        <img src="https://bizliv.life/images/app-store-badge.png" alt="从App Store下载" class="mx-auto w-auto h-auto">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm mb-4">&copy; 2024 BizLiv.life. 保留所有权利。</p>
+            <nav class="space-x-4">
+                <a href="https://bizliv.life/privacy/zhhant/#privacy-policy" class="text-white hover:text-blue-300">隐私政策</a>
+                |
+                <a href="https://bizliv.life/privacy/zhhant/#terms-of-service" class="text-white hover:text-blue-300">使用条款</a>
+                |
+                <a href="https://bizliv.life/support/zhhant/" class="text-white hover:text-blue-300">联系我们</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

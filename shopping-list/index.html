@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List - Support for Efficient Shopping</title>
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/">
+    <link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/">
+    <link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        header { margin-bottom: 20px; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 10px; }
+    </style>
+    <script>
+        function detectLanguage() {
+            var lang = navigator.language || navigator.userLanguage;
+            lang = lang.toLowerCase().split('-')[0];
+            var supportedLangs = ['en', 'ja', 'zh'];
+            return supportedLangs.includes(lang) ? lang : 'en';
+        }
+
+        function redirect() {
+            var lang = detectLanguage();
+            var langUrls = {
+                'en': '/en/',
+                'ja': '/ja/',
+                'zh': '/zhhans/'
+            };
+
+            if (lang === 'zh') {
+                if (navigator.language === 'zh-TW' || navigator.language === 'zh-HK') {
+                    langUrls['zh'] = '/zhhant/';
+                }
+            }
+
+            window.location.href = 'https://bizliv.life/shopping-list' + langUrls[lang];
+        }
+
+        window.onload = redirect;
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-KZ2GMHNF9E');
+    </script>
+</head>
+<body>
+    <header>
+        <nav aria-label="Language selection">
+            <ul>
+                <li><a href="https://bizliv.life/shopping-list/en" hreflang="en" lang="en" aria-label="Switch to English">English</a></li>
+                <li><a href="https://bizliv.life/shopping-list/ja" hreflang="ja" lang="ja" aria-label="日本語に切り替え">日本語</a></li>
+                <li><a href="https://bizliv.life/shopping-list/zhhans" hreflang="zh-Hans" lang="zh-Hans" aria-label="切换到简体中文">简体中文</a></li>
+                <li><a href="https://bizliv.life/shopping-list/zhhant" hreflang="zh-Hant" lang="zh-Hant" aria-label="切換到繁體中文">繁體中文</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Shopping List - Support for Efficient Shopping</h1>
+        <p>Welcome to Shopping List, your comprehensive app for efficient shopping with automatic genre-based sorting and family sharing features.</p>
+        <p>Please select your preferred language from the menu above to learn more about our features.</p>
+
+        <noscript>
+            <p><strong>JavaScript is disabled in your browser.</strong></p>
+            <p>You can access our site by selecting your preferred language from the links above.</p>
+        </noscript>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BizLiv. All rights reserved.</p>
+    </footer>
+</body>
+</html>
