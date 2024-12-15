@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回家导航 - 安全高效的回家支持</title>
+    <meta name="description" content="回家导航是一款便捷的应用程序，支持查询末班车、出租车费用和搜索住宿设施等功能。">
+    <meta property="og:title" content="回家导航 - 安全高效的回家支持" />
+    <meta property="og:description" content="回家导航是一款便捷的应用程序，支持查询末班车、出租车费用和搜索住宿设施等功能。" />
+    <meta property="og:image" content="https://bizliv.life/go-home-navi/images/background.jpg">
+    <meta property="og:url" content="https://bizliv.life/go-home-navi/zhhans/">
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            padding-top: 64px;
+            background-color: #f0f0f0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
+        .hero {
+            background-image: url('https://bizliv.life/go-home-navi/images/background.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 10px;
+            color: white;
+            width: 98%;
+        }
+        .white-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .feature-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .feature-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .cta-button {
+            background-color: #1D4ED8;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #2563EB;
+        }
+        .app-store-btn img {
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://bizliv.life/zhhans" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">首页</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-blue-600">功能</a></li>
+                <li><a href="#scenes" class="text-gray-600 hover:text-blue-600">使用场景</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-blue-600">下载</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">回家导航<br>安全高效的回家支持</h1>
+                <p class="text-xl mb-8">从查询末班车和出租车费用到搜索住宿设施。我们为您的回家之路提供全方位支持。</p>
+                <a href="#download" class="cta-button">立即下载</a>
+            </div>
+        </section>
+        <div class="container mx-auto px-4 py-8">
+            <span class="anchor" id="features"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">主要功能</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">回家路线</h3>
+                        <p class="text-gray-700">只需点击图标即可显示回家路线搜索界面。启用快速模式后，打开应用时会自动显示路线搜索界面。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">查询末班车</h3>
+                        <p class="text-gray-700">使用路线搜索网站查询末班车。预先注册家庭地址后，只需一键即可获取从当前位置到家的末班车信息。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">查询出租车费用</h3>
+                        <p class="text-gray-700">轻松查看回家或目的地的出租车费用。即使错过末班车，也能快速估算出租车费用。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">预订住宿</h3>
+                        <p class="text-gray-700">与乐天旅行合作，可以搜索并预订附近的住宿设施。当难以回家时非常方便。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">显示地图</h3>
+                        <p class="text-gray-700">在应用内显示当前位置周围的地图。当无法回家时，可用于寻找附近可以消磨时间的地方。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">通知功能</h3>
+                        <p class="text-gray-700">设置回家时间后，会在指定时间发送通知提醒。启用快速模式后，只需点击通知即可打开地图应用并显示回家路线搜索界面。</p>
+                    </div>
+                </div>
+            </section>
+            <span class="anchor" id="scenes"></span>
+            <section class="white-box">
+                <h2 class="text-3xl font-bold text-center mb-8">适用场景</h2>
+                <div class="space-y-8">
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">加班赶末班车的上班族</h3>
+                        <p class="text-gray-700">加班时间紧迫，可通过应用快速查看末班车时间。找到最佳回家路线，从容不迫地回家。使用应用的通知功能，可以专注工作而不会错过末班车时间。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">聚会后安全回家</h3>
+                        <p class="text-gray-700">愉快的聚会后，提前查看出租车费用。支持深夜费率，让您安心准备回家。还可显示附近出租车站信息，方便顺利回家。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="text-xl font-bold mb-2 text-black">出差时突发计划变更</h3>
+                        <p class="text-gray-700">即使计划变更无法赶上末班车，也可以快速预订附近住宿。灵活应对出差中的突发情况。</p>
+                    </div>
+                </div>
+            </section>
+            <span class="anchor" id="download"></span>
+            <section class="white-box text-center">
+                <h2 class="text-3xl font-bold mb-8">下载应用</h2>
+                <p class="mb-4 text-gray-700">立即免费下载，体验便捷安全的回家支持。</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://apps.apple.com/cn/app/%E5%9B%9E%E5%AE%B6%E5%AF%BC%E8%88%AA/id1491940511" class="app-store-btn">
+                        <img src="https://bizliv.life/images/app-store-badge.png" alt="在App Store上下载">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm mb-4">&copy; 2024 BizLiv.life. 保留所有权利。</p>
+            <nav class="space-x-4">
+                <a href="https://bizliv.life/privacy/zhhans/#privacy-policy" class="text-white hover:text-blue-300">隐私政策</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://bizliv.life/privacy/zhhans/#terms-of-service" class="text-white hover:text-blue-300">服务条款</a>
+                <span class="text-gray-500">|</span>
+                <a href="https://bizliv.life/support/zhhans/" class="text-white hover:text-blue-300">联系我们</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
