@@ -2,36 +2,7 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <me    <header id="site-header" class="bg-white">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-            
-            <!-- デスクトップメニュー -->
-            <ul class="hidden md:flex space-x-4">
-                <li><a href="#features" class="text-gray-600 hover:text-blue-600">功能</a></li>
-                <li><a href="#apps" class="text-gray-600 hover:text-blue-600">應用</a></li>
-                <li><a href="#faq" class="text-gray-600 hover:text-blue-600">常見問題</a></li>
-            </ul>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            </button>
-        </nav>
-        
-        <!-- モバイルメニュー -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="container mx-auto px-4 py-4">
-                <ul class="space-y-2">
-                    <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">功能</a></li>
-                    <li><a href="#apps" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">應用</a></li>
-                    <li><a href="#faq" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">常見問題</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>iewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BizLiv - 支持商務人士充實生活</title>
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/zhhant/">
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/ja/">
@@ -39,15 +10,163 @@
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/zhhans/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/">
     <meta name="description" content="BizLiv提供四款便捷應用，支持40多歲和50多歲的商務人士實現工作與生活的平衡。">
+    <meta name="keywords" content="工作生活平衡,商務人士,40歲50歲,提高生產力,飲酒記錄,回家支援,購物清單,會議管理,iOS">
     <meta property="og:title" content="BizLiv - 支持商務人士充實生活">
     <meta property="og:description" content="BizLiv提供四款便捷應用，支持40多歲和50多歲的商務人士實現工作與生活的平衡。">
     <meta property="og:image" content="https://bizliv.life/images/background.jpg">
     <meta property="og:url" content="https://bizliv.life/zhhant/">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bizliv_jp">
+    <meta name="twitter:title" content="BizLiv - 支持商務人士充實生活">
+    <meta name="twitter:description" content="提供四款便捷應用，支持40多歲和50多歲的商務人士實現工作與生活的平衡。">
+    <meta name="twitter:image" content="https://bizliv.life/images/background.jpg">
+    <link rel="apple-touch-icon" href="/images/app-store-badge.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BizLiv",
+      "url": "https://bizliv.life/zhhant/"
+    }
+    </script>
+    <style>
+        body {
+            padding-top: 64px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background-image: url('../images/background.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 20px;
+            color: white;
+            width: 95%;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -64px;
+            visibility: hidden;
+        }
+    </style>
+    
+    <!-- ハンバーガーメニュー用JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuLines = mobileMenuButton.querySelectorAll('span');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                
+                if (isOpen) {
+                    // メニューを閉じる
+                    mobileMenu.classList.add('hidden');
+                    menuLines[0].style.transform = 'rotate(0deg)';
+                    menuLines[1].style.opacity = '1';
+                    menuLines[2].style.transform = 'rotate(0deg)';
+                } else {
+                    // メニューを開く
+                    mobileMenu.classList.remove('hidden');
+                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
+                    menuLines[1].style.opacity = '0';
+                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
+                }
+            });
+            
+            // メニュー項目クリック時にメニューを閉じる
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    menuLines[0].style.transform = 'rotate(0deg)';
+                    menuLines[1].style.opacity = '1';
+                    menuLines[2].style.transform = 'rotate(0deg)';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="bg-white bg-opacity-95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="/zhhant/" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        BizLiv
+                    </a>
+                </div>
+                
+                <!-- デスクトップメニュー -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/zhhant/" class="text-blue-600 px-3 py-2 rounded-md text-sm font-medium">首頁</a>
+                        <a href="/nomireco/zhhant/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">NomiReco</a>
+                        <a href="/go-home-navi/zhhant/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">回家導航</a>
+                        <a href="/shopping-list/zhhant/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">購物清單</a>
+                        <a href="/online-meetings-schedule/zhhant/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">線上會議日程</a>
+                        <a href="/privacy/zhhant/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">隱私政策</a>
+                        <a href="/support/zhhant/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">支援</a>
+                    </div>
+                </div>
+                
+                <!-- モバイルハンバーガーメニューボタン -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
+                        <span class="sr-only">メニューを開く</span>
+                        <div class="w-6 h-6 relative flex flex-col justify-center">
+                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out"></span>
+                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
+                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- モバイルメニュー -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                    <a href="/zhhant/" class="text-blue-600 block px-3 py-2 rounded-md text-base font-medium">首頁</a>
+                    <a href="/nomireco/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">NomiReco</a>
+                    <a href="/go-home-navi/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">回家導航</a>
+                    <a href="/shopping-list/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">購物清單</a>
+                    <a href="/online-meetings-schedule/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">線上會議日程</a>
+                    <a href="/privacy/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">隱私政策</a>
+                    <a href="/support/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">支援</a>
+                </div>
+            </div>
+        </nav>
+    </header>
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
