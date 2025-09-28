@@ -114,6 +114,22 @@
                     menuLines[2].style.transform = 'rotate(0deg)';
                 });
             });
+            
+            // 言語切り替えメニューの制御
+            const languageButton = document.getElementById('language-button');
+            const languageMenu = document.getElementById('language-menu');
+            
+            languageButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                languageMenu.classList.toggle('hidden');
+            });
+            
+            // 言語メニューの外側クリックで閉じる
+            document.addEventListener('click', function(e) {
+                if (!languageButton.contains(e.target) && !languageMenu.contains(e.target)) {
+                    languageMenu.classList.add('hidden');
+                }
+            });
         });
     </script>
 </head>
@@ -137,6 +153,24 @@
                         <a href="/online-meetings-schedule/zhhans/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">在线会议日程</a>
                         <a href="/privacy/zhhans/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">隐私政策</a>
                         <a href="/support/zhhans/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">支持</a>
+                        
+                        <!-- 言語切り替えメニュー（デスクトップ） -->
+                        <div class="relative">
+                            <button id="language-button" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                                🌐 中文（简体） 
+                                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="language-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                                <div class="py-1">
+                                    <a href="/ja/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇯🇵 日本語</a>
+                                    <a href="/en/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇺🇸 English</a>
+                                    <a href="/zhhans/" class="text-blue-600 bg-blue-50 block px-4 py-2 text-sm">🇨🇳 中文（简体）</a>
+                                    <a href="/zhhant/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇹🇼 中文（繁體）</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -163,6 +197,15 @@
                     <a href="/online-meetings-schedule/zhhans/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">在线会议日程</a>
                     <a href="/privacy/zhhans/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">隐私政策</a>
                     <a href="/support/zhhans/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">支持</a>
+                    
+                    <!-- 言語切り替えメニュー（モバイル） -->
+                    <div class="border-t border-gray-200 pt-2 mt-2">
+                        <div class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">语言选择</div>
+                        <a href="/ja/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇯🇵 日本語</a>
+                        <a href="/en/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇺🇸 English</a>
+                        <a href="/zhhans/" class="text-blue-600 bg-blue-50 block px-3 py-2 rounded-md text-base font-medium">🇨🇳 中文（简体）</a>
+                        <a href="/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇹🇼 中文（繁體）</a>
+                    </div>
                 </div>
             </div>
         </nav>
