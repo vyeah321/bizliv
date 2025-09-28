@@ -86,6 +86,44 @@
             width: 160px;
         }
     </style>
+    
+    <!-- ハンバーガーメニュー用JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuLines = mobileMenuButton.querySelectorAll('span');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                
+                if (isOpen) {
+                    // メニューを閉じる
+                    mobileMenu.classList.add('hidden');
+                    menuLines[0].style.transform = 'rotate(0deg)';
+                    menuLines[1].style.opacity = '1';
+                    menuLines[2].style.transform = 'rotate(0deg)';
+                } else {
+                    // メニューを開く
+                    mobileMenu.classList.remove('hidden');
+                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
+                    menuLines[1].style.opacity = '0';
+                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
+                }
+            });
+            
+            // メニュー項目クリック時にメニューを閉じる
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    menuLines[0].style.transform = 'rotate(0deg)';
+                    menuLines[1].style.opacity = '1';
+                    menuLines[2].style.transform = 'rotate(0deg)';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="site-header" class="bg-white">

@@ -2,7 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initia    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://bizliv.life/en" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            
+            <!-- デスクトップメニュー -->
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Home</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-blue-600">Features</a></li>
+                <li><a href="#scenarios" class="text-gray-600 hover:text-blue-600">Use Cases</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-blue-600">Download</a></li>
+            </ul>
+            
+            <!-- ハンバーガーメニューボタン -->
+            <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
+                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
+                <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
+                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
+            </button>
+        </nav>
+        
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4">
+                <ul class="space-y-2">
+                    <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Home</a></li>
+                    <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Features</a></li>
+                    <li><a href="#scenarios" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Use Cases</a></li>
+                    <li><a href="#download" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Download</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>">
     <title>Go Home Navi - Safe and Efficient Return Home Support</title>
     <meta name="description" content="Go Home Navi is a convenient app that supports checking last trains, taxi fares, and searching for accommodations.">
     <meta property="og:title" content="Go Home Navi - Safe and Efficient Return Home Support" />
@@ -86,6 +117,44 @@
             width: 160px;
         }
     </style>
+    
+    <!-- ハンバーガーメニュー用JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuLines = mobileMenuButton.querySelectorAll('span');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                
+                if (isOpen) {
+                    // メニューを閉じる
+                    mobileMenu.classList.add('hidden');
+                    menuLines[0].style.transform = 'rotate(0deg)';
+                    menuLines[1].style.opacity = '1';
+                    menuLines[2].style.transform = 'rotate(0deg)';
+                } else {
+                    // メニューを開く
+                    mobileMenu.classList.remove('hidden');
+                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
+                    menuLines[1].style.opacity = '0';
+                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
+                }
+            });
+            
+            // メニュー項目クリック時にメニューを閉じる
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    menuLines[0].style.transform = 'rotate(0deg)';
+                    menuLines[1].style.opacity = '1';
+                    menuLines[2].style.transform = 'rotate(0deg)';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="site-header" class="bg-white">
