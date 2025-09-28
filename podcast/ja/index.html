@@ -311,7 +311,7 @@
                     const episodeUrl = item.querySelector('link')?.textContent || '';
                     
                     // 説明文をクリーンアップ（HTMLタグを除去）
-                    const cleanDescription = description.replace(/<[^>]*>/g, '').substring(0, 150) + '...';
+                    const cleanDescription = description.replace(/<[^>]*>/g, '').substring(0, 200) + '...';
                     
                     // 日付をフォーマット
                     const formattedDate = pubDate ? new Date(pubDate).toLocaleDateString('ja-JP', {
@@ -337,7 +337,7 @@
                                     ${title}
                                 </h2>
                                 
-                                <p class="text-gray-600 mb-2 leading-relaxed line-clamp-2 overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${cleanDescription}</p>
+                                <p class="text-gray-600 mb-2 leading-relaxed line-clamp-3 overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">${cleanDescription}</p>
                                 
                                 ${episodeUrl ? `
                                 <div class="mb-6">
