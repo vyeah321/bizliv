@@ -1,0 +1,20 @@
+{
+  "name": "BizLiv - ビジネスパーソンの充実ライフをサポート",
+  "short_name": "BizLiv",
+  "description": "40代・50代のビジネスパーソンのワークライフバランスを支援する4つの便利なアプリを提供しています。",
+  "start_url": "/ja/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/images/app-store-badge.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "lifestyle", "business"],
+  "lang": "ja"
+}

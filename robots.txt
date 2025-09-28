@@ -3,4 +3,16 @@ Allow: /
 Disallow: /private/
 Disallow: /temp.html
 
+# 主要ページの明示的許可
+Allow: /ja/
+Allow: /en/
+Allow: /zhhans/
+Allow: /zhhant/
+Allow: /blog/
+Allow: /podcast/
+Allow: /nomireco/
+Allow: /go-home-navi/
+Allow: /shopping-list/
+Allow: /online-meetings-schedule/
+
 Sitemap: https://bizliv.life/sitemap.xml
