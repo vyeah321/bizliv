@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note & Voice - AIが解説する日々のノート | BizLiv</title>
+    <link rel="alternate" hreflang="ja" href="https://bizliv.life/podcast/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://bizliv.life/podcast/ja/">
+    <meta name="description" content="「Note & Voice」は、noteに書いた記事をGoogle Notebook LMのAIが自動で音声解説するPodcastです。コーチングの気づき、日常の出来事、アプリ開発の話を聴くノートとしてお楽しみください。">
+    <meta property="og:title" content="Note & Voice - AIが解説する日々のノート | BizLiv">
+    <meta property="og:description" content="「Note & Voice」は、noteに書いた記事をGoogle Notebook LMのAIが自動で音声解説するPodcastです。コーチングの気づき、日常の出来事、アプリ開発の話を聴くノートとしてお楽しみください。">
+    <meta property="og:image" content="https://bizliv.life/images/background.jpg">
+    <meta property="og:url" content="https://bizliv.life/podcast/ja/">
+    <meta property="og:type" content="website">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "name": "Note & Voice - AIが解説する日々のノート",
+      "description": "noteに書いた記事をGoogle Notebook LMのAIが自動で音声解説するPodcast",
+      "url": "https://bizliv.life/podcast/ja/",
+      "author": {
+        "@type": "Person",
+        "name": "つぶ@ラグビーとアプリ開発"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BizLiv",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bizliv.life/images/background.jpg"
+        }
+      },
+      "webFeed": "https://stand.fm/rss/673606cf69bc2015d03c44d8"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KZ2GMHNF9E');
+    </script>
+    <style>
+        body {
+            padding-top: 64px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .podcast-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .podcast-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .loading-skeleton {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .podcast-item {
+            display: none;
+        }
+        .podcast-item.loaded {
+            display: block;
+        }
+        audio {
+            width: 100%;
+            height: 40px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../../ja/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            <ul class="flex space-x-4">
+                <li><a href="../../ja/#features" class="text-gray-600 hover:text-blue-600">特徴</a></li>
+                <li><a href="../../ja/#apps" class="text-gray-600 hover:text-blue-600">アプリ</a></li>
+                <li><a href="../../blog/ja/" class="text-gray-600 hover:text-blue-600">ブログ</a></li>
+                <li><span class="text-purple-600 font-semibold cursor-default">音声</span></li>
+                <li><a href="../../ja/#faq" class="text-gray-600 hover:text-blue-600">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- ヒーローセクション -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Note & Voice</h1>
+            <p class="text-xl text-gray-600 mb-4">AIが解説する日々のノート</p>
+            <p class="text-lg text-gray-600 mb-6">
+                noteに書いた記事を、Google Notebook LMのAIが自動で音声解説。<br>
+                コーチングの気づき、日常の出来事、アプリ開発の話など、<br>
+                「聴くノート」として新しい体験をお楽しみください。
+            </p>
+            
+            <!-- 自動更新インジケーター -->
+            <div id="auto-refresh-indicator" class="inline-flex items-center text-sm text-gray-500 mb-6">
+                <div class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+                <span>最新エピソードを自動取得</span>
+                <button onclick="loadPodcastEpisodes()" class="ml-4 text-purple-600 hover:text-purple-800 underline">
+                    今すぐ更新
+                </button>
+            </div>
+            
+            <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+        </section>
+
+        <!-- ローディング表示 -->
+        <div id="loading" class="text-center py-8">
+            <div class="loading-skeleton bg-gray-200 h-8 w-48 mx-auto mb-4 rounded"></div>
+            <div class="loading-skeleton bg-gray-200 h-4 w-64 mx-auto rounded"></div>
+        </div>
+
+        <!-- エラー表示 -->
+        <div id="error" class="text-center py-8 hidden">
+            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-red-800 mb-2">音声エピソードの読み込みに失敗しました</h3>
+                <p class="text-red-600">しばらく時間をおいてから再度お試しください。</p>
+                <button onclick="loadPodcastEpisodes()" class="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                    再試行
+                </button>
+            </div>
+        </div>
+
+        <!-- 音声エピソード一覧 -->
+        <section id="podcast" class="mb-12">
+            <div id="podcast-episodes" class="space-y-6">
+                <!-- エピソードはJavaScriptで動的に生成されます -->
+            </div>
+        </section>
+
+        <!-- STAND.FMリンク -->
+        <section class="text-center py-16 bg-purple-50 rounded-lg">
+            <h2 class="text-3xl font-bold mb-4">STAND.FMでフォロー</h2>
+            <p class="text-xl text-gray-600 mb-8">最新エピソードの通知を受け取り、コメントでの交流もお楽しみください</p>
+            <a href="https://stand.fm/channels/673606cf69bc2015d03c44d8" 
+               target="_blank" rel="noopener noreferrer"
+               class="bg-purple-600 text-white font-bold py-3 px-8 rounded-full hover:bg-purple-700 transition-colors inline-flex items-center">
+                STAND.FMでフォローする
+                <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </section>
+
+        <!-- 関連コンテンツ -->
+        <section class="text-center py-12">
+            <h2 class="text-3xl font-bold mb-8">その他のコンテンツ</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">BizLiv ブログ</h3>
+                    <p class="text-gray-600 mb-4">ビジネスパーソンのワークライフバランス・生産性向上のためのヒント</p>
+                    <a href="../../blog/ja/" class="text-blue-600 hover:text-blue-800 font-semibold">ブログを読む →</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">BizLiv アプリ</h3>
+                    <p class="text-gray-600 mb-4">4つの便利なアプリでビジネスと生活を効率的に管理</p>
+                    <a href="../../ja/#apps" class="text-blue-600 hover:text-blue-800 font-semibold">アプリを見る →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="mb-4">&copy; 2024 BizLiv. All rights reserved.</p>
+                <nav class="space-x-4">
+                    <a href="../../privacy/ja/#privacy-policy" class="text-white hover:text-blue-300">プライバシーポリシー</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="../../privacy/ja/#terms-of-service" class="text-white hover:text-blue-300">利用規約</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="../../support/ja/" class="text-white hover:text-blue-300">お問い合わせ</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // STAND.FM RSS フィード URL
+        const STANDFM_RSS_URL = 'https://stand.fm/rss/673606cf69bc2015d03c44d8';
+        
+        // CORSプロキシサービス
+        const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+        
+        async function loadPodcastEpisodes() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const podcastEpisodes = document.getElementById('podcast-episodes');
+            const indicator = document.getElementById('auto-refresh-indicator');
+            
+            // 更新インジケーターを一時的に変更
+            if (indicator) {
+                const dot = indicator.querySelector('.bg-green-500');
+                const text = indicator.querySelector('span');
+                if (dot && text) {
+                    dot.className = 'w-2 h-2 bg-purple-500 rounded-full mr-2 animate-spin';
+                    text.textContent = '更新中...';
+                }
+            }
+            
+            // ローディング表示
+            loading.classList.remove('hidden');
+            error.classList.add('hidden');
+            
+            try {
+                const response = await fetch(CORS_PROXY + encodeURIComponent(STANDFM_RSS_URL));
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                
+                // RSS項目を解析
+                const items = xmlDoc.querySelectorAll('item');
+                
+                if (items.length === 0) {
+                    throw new Error('No podcast items found');
+                }
+                
+                // エピソードカードを生成
+                let htmlContent = '';
+                items.forEach((item, index) => {
+                    const title = item.querySelector('title')?.textContent || '無題のエピソード';
+                    const description = item.querySelector('description')?.textContent || '';
+                    const audioUrl = item.querySelector('enclosure')?.getAttribute('url') || '';
+                    const pubDate = item.querySelector('pubDate')?.textContent || '';
+                    const duration = item.querySelector('itunes\\:duration, duration')?.textContent || '';
+                    const episodeUrl = item.querySelector('link')?.textContent || '';
+                    
+                    // 説明文をクリーンアップ（HTMLタグを除去）
+                    const cleanDescription = description.replace(/<[^>]*>/g, '').substring(0, 300) + '...';
+                    
+                    // 日付をフォーマット
+                    const formattedDate = pubDate ? new Date(pubDate).toLocaleDateString('ja-JP', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        weekday: 'short'
+                    }) : '';
+                    
+                    htmlContent += `
+                        <article class="podcast-card bg-white rounded-lg shadow-md overflow-hidden podcast-item">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm text-gray-500 mb-3">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd" d="M12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="mr-4">${formattedDate}</span>
+                                    ${duration ? `<span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">${duration}</span>` : ''}
+                                </div>
+                                
+                                <h2 class="text-2xl font-bold mb-4 text-gray-800 leading-tight">
+                                    ${title}
+                                </h2>
+                                
+                                <p class="text-gray-600 mb-6 leading-relaxed">${cleanDescription}</p>
+                                
+                                ${audioUrl ? `
+                                <div class="mb-6">
+                                    <audio controls class="w-full" preload="none" style="border-radius: 8px;">
+                                        <source src="${audioUrl}" type="audio/mpeg">
+                                        <source src="${audioUrl}" type="audio/mp4">
+                                        お使いのブラウザでは音声の再生がサポートされていません。
+                                    </audio>
+                                </div>
+                                ` : ''}
+                                
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                                    <a href="${episodeUrl}" 
+                                       target="_blank" rel="noopener noreferrer"
+                                       class="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold transition-colors">
+                                        STAND.FMで詳細を見る
+                                        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+                                    <div class="text-sm text-gray-500">
+                                        エピソード #${items.length - index}
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                });
+                
+                podcastEpisodes.innerHTML = htmlContent;
+                
+                // アニメーション付きで表示
+                setTimeout(() => {
+                    const podcastItems = document.querySelectorAll('.podcast-item');
+                    podcastItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('loaded');
+                        }, index * 150);
+                    });
+                }, 100);
+                
+            } catch (err) {
+                console.error('Podcast episodes loading error:', err);
+                error.classList.remove('hidden');
+            } finally {
+                loading.classList.add('hidden');
+                
+                // インジケーターを元に戻す
+                const indicator = document.getElementById('auto-refresh-indicator');
+                if (indicator) {
+                    const dot = indicator.querySelector('.bg-purple-500, .bg-green-500');
+                    const text = indicator.querySelector('span');
+                    if (dot && text) {
+                        dot.className = 'w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse';
+                        text.textContent = '最新エピソードを自動取得';
+                    }
+                }
+            }
+        }
+        
+        // ページ読み込み時にポッドキャストエピソードを取得
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPodcastEpisodes();
+        });
+    </script>
+</body>
+</html>
