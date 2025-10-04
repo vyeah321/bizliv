@@ -27,122 +27,100 @@
             background-position: center 30%;
             background-repeat: no-repeat;
             width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding-top: 40px;
-            padding-bottom: 40px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 20px;
-            color: white;
-            width: 98%;
-        }
-        .white-box {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 20px;
-        }
-        .feature-item {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .feature-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-    </style>
+            <!DOCTYPE html>
+            <html lang="zh-Hans">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>NomiReco - 支持健康饮酒生活方式</title>
+                <link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/">
+                <link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/">
+                <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/">
+                <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/">
+                <link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/">
+                <meta name="description" content="NomiReco是一款支持健康饮酒生活方式的应用。通过日历管理、图表化和Apple Watch集成功能，它支持商务人士的健康生活方式。">
+                <meta property="og:title" content="NomiReco - 支持健康饮酒生活方式" />
+                <meta property="og:description" content="NomiReco是一款支持健康饮酒生活方式的应用。通过日历管理、图表化和Apple Watch集成功能，它支持商务人士的健康生活方式。">
+                <meta property="og:image" content="https://bizliv.life/nomireco/images/background.jpg">
+                <meta property="og:url" content="https://bizliv.life/nomireco/zhhans/">
+                <meta property="og:type" content="website" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+                <link rel="icon" href="/favicon.ico" type="image/x-icon">
+                <link rel="stylesheet" href="/css/site.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);} 
-        gtag('js', new Date());
-        gtag('config', 'G-KZ2GMHNF9E');
-    </script>
-    <meta name="twitter:description" content="NomiReco是一款支持健康饮酒生活方式的应用。通过日历管理、图表化和Apple Watch集成功能，它支持商务人士的健康生活方式。">
-</head>
-<body>
-    <!-- Header will be injected by /js/header-loader.js -->
-    <script src="/js/header-loader.js" defer></script>
-            </div>
-        </section>
+                <style>
+                    body { padding-top: 64px; background-color: #f0f0f0; }
+                    header { position: fixed; top: 0; width: 100%; z-index: 1000; background-color: rgba(255,255,255,0.9); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                    html { scroll-behavior: smooth; }
+                    .anchor { display: block; position: relative; top: -64px; visibility: hidden; }
+                    .hero { background-image: url('https://bizliv.life/nomireco/images/background.jpg'); background-size: cover; background-position: center 30%; background-repeat: no-repeat; width:100%; height:80vh; display:flex; align-items:center; justify-content:center; }
+                    .hero-content { background-color: rgba(0,0,0,0.6); padding:40px 10px; border-radius:20px; color:white; width:98%; }
+                    .white-box { background-color: white; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); padding:30px; margin-bottom:20px; }
+                </style>
 
-        <div class="container mx-auto px-4 py-8">
-            <!-- 功能部分 -->
-            <span class="anchor" id="features"></span>
-            <section class="white-box">
-                <h2 class="text-3xl font-bold text-center mb-8">主要功能</h2>
-                
-                <!-- 功能介绍网格布局 -->
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- 日历管理 -->
-                    <div class="feature-item">
-                        <h3 class="text-xl font-bold mb-2 text-black">通过日历轻松管理饮酒日和禁酒日</h3>
-                        <p class="text-gray-700">在日历上记录您的饮酒日和禁酒日，方便查看。这有助于您了解自己的饮酒模式，支持更健康的生活方式。</p>
-                        <ul class="list-disc list-inside mt-4 text-gray-700">
-                            <li>轻松记录饮酒日和禁酒日</li>
-                            <li>通过事件注册管理聚会和晚间饮酒</li>
-                        </ul>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);} 
+                    gtag('js', new Date());
+                    gtag('config', 'G-KZ2GMHNF9E');
+                </script>
+                <meta name="twitter:description" content="NomiReco是一款支持健康饮酒生活方式的应用。通过日历管理、图表化和Apple Watch集成功能，它支持商务人士的健康生活方式。">
+            </head>
+            <body>
+                <!-- Header will be injected by /js/header-loader.js -->
+                <script src="/js/header-loader.js" defer></script>
+
+                <main>
+                    <section id="hero" class="hero">
+                        <div class="hero-content text-center">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">NomiReco<br>支持健康饮酒生活方式</h1>
+                            <p class="text-xl mb-8">一款帮助您轻松管理饮酒日和禁酒日的应用，支持健康的生活方式。功能包括 Apple Watch 集成！</p>
+                            <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">立即下载</a>
+                        </div>
+                    </section>
+
+                    <div class="container mx-auto px-4 py-8">
+                        <span class="anchor" id="features"></span>
+                        <section class="white-box">
+                            <h2 class="text-3xl font-bold text-center mb-8">主要功能</h2>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="feature-item">
+                                    <h3 class="text-xl font-bold mb-2 text-black">通过日历轻松管理饮酒日和禁酒日</h3>
+                                    <p class="text-gray-700">在日历上记录饮酒日和禁酒日，方便查看，帮助了解自己的饮酒模式，支持更健康的生活方式。</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3 class="text-xl font-bold mb-2 text-black">通过图表可视化您的健康状态</h3>
+                                    <p class="text-gray-700">以图表形式查看过去的饮酒天数和体重变化，并追踪目标体重和饮酒频率的进展。</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <span class="anchor" id="download"></span>
+                        <section class="white-box text-center py-16">
+                            <h2 class="text-2xl font-bold mb-4">立即下载 NomiReco</h2>
+                            <p class="text-gray-700 mb-8">开始您的健康饮酒生活方式！</p>
+                            <a href="https://apps.apple.com/cn/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_blank">
+                                <img src="https://bizliv.life/images/app-store-badge.png" alt="从 App Store 下载" class="mx-auto w-auto h-auto">
+                            </a>
+                        </section>
                     </div>
+                </main>
 
-                    <!-- 图表化 -->
-                    <div class="feature-item">
-                        <h3 class="text-xl font-bold mb-2 text-black">通过图表可视化您的健康状况</h3>
-                        <p class="text-gray-700">以图表形式查看过去的饮酒天数和体重变化，并跟踪目标体重和饮酒频率的进展。</p>
-                        <ul class="list-disc list-inside mt-4 text-gray-700">
-                            <li>绘制您的体重和饮酒天数图表</li>
-                            <li>监控健康目标的进展</li>
-                        </ul>
+                <footer class="bg-gray-800 text-white py-8">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center">
+                            <p class="mb-4">&copy; 2024 BizLiv. 保留所有权利。</p>
+                            <nav class="space-x-4">
+                                <a href="https://bizliv.life/privacy/zhhans/#privacy-policy" class="text-white hover:text-blue-300">隐私政策</a>
+                                <span class="text-gray-500">|</span>
+                                <a href="https://bizliv.life/privacy/zhhans/#terms-of-service" class="text-white hover:text-blue-300">服务条款</a>
+                                <span class="text-gray-500">|</span>
+                                <a href="https://bizliv.life/support/zhhans/" class="text-white hover:text-blue-300">联系我们</a>
+                            </nav>
+                        </div>
                     </div>
-
-                    <!-- Apple Watch集成 -->
-                    <div class="feature-item">
-                        <h3 class="text-xl font-bold mb-2 text-black">与Apple Watch集成的健康数据管理</h3>
-                        <p class="text-gray-700">通过与Apple Watch集成记录心率和步行数据，检查饮酒对身体的影响。</p>
-                        <ul class="list-disc list-inside mt-4 text-gray-700">
-                            <li>跟踪心率和步行数据</li>
-                            <li>全面管理运动量和健康风险</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 下载部分 -->
-            <span class="anchor" id="download"></span>
-            <section class="white-box text-center py-16">
-                <h2 class="text-2xl font-bold mb-4">立即下载NomiReco</h2>
-                <p class="text-gray-700 mb-8">开始您的健康饮酒生活方式！</p>
-                <a href="https://apps.apple.com/cn/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_blank">
-                    <img src="https://bizliv.life/images/app-store-badge.png" alt="从App Store下载" class="mx-auto w-auto h-auto">
-                </a>
-            </section>
-        </div>
-    </main>
-
-    <!-- 页脚 -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p class="mb-4">&copy; 2024 BizLiv. 保留所有权利。</p>
-                <nav class="space-x-4">
-                    <a href="https://bizliv.life/privacy/zhhans/#privacy-policy" class="text-white hover:text-blue-300">隐私政策</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/privacy/zhhans/#terms-of-service" class="text-white hover:text-blue-300">服务条款</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/support/zhhans/" class="text-white hover:text-blue-300">联系我们</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+                </footer>
+            </body>
+            </html>
