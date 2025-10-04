@@ -10,8 +10,41 @@
     <meta property="og:image" content="https://bizliv.life/online-meetings-schedule/images/background.jpg">
     <meta property="og:url" content="https://bizliv.life/online-meetings-schedule/en/">
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bizliv_jp">
+    <meta name="twitter:title" content="Online Meeting Schedule - Supporting Efficient Meeting Management">
+    <meta name="description" content="Efficiently manage multiple online meetings and simplify schedule coordination. Supports Teams, Zoom, Google Meet, and more.">
+    <meta name="keywords" content="meeting schedule management,Teams integration,Zoom integration,Google Meet,online meetings,schedule coordination,business efficiency,iOS">
+    <meta property="og:title" content="Online Meeting Schedule - Supporting Efficient Meeting Management" />
+    <meta name="twitter:description" content="Online Meeting Schedule significantly reduces the hassle of meeting management. Efficiently manage your time with just a copy-paste of the invitation. An essential app for business professionals.">
+    <meta name="twitter:image" content="https://bizliv.life/online-meetings-schedule/images/background.jpg">
+    <link rel="apple-touch-icon" href="/images/app-store-badge.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Online Meeting Schedule",
+      "description": "Efficiently manage multiple online meetings and simplify schedule coordination. Supports Teams, Zoom, Google Meet, and more.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS",
+      "downloadUrl": "https://apps.apple.com/jp/app/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/id1515253382",
+      "offers": {
+        "@type": "Offer",
+        "price": "0", 
+        "priceCurrency": "JPY"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "BizLiv"
+      },
+      "keywords": ["meeting schedule", "Teams integration", "Zoom", "Google Meet", "online meetings"],
+      "screenshot": "https://bizliv.life/online-meetings-schedule/images/background.jpg"
+    }
+    </script>
     <link rel="stylesheet" href="/css/site.css">
     
     <!-- ハンバーガーメニュー用JavaScript -->
@@ -54,54 +87,38 @@
     <meta name="twitter:description" content="Online Meeting Schedule significantly reduces the hassle of meeting management. Efficiently manage your time with just a copy-paste of the invitation. An essential app for business professionals.">
 </head>
 <body>
-            <header class="bg-white bg-opacity-95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
-            <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-16">
-                    <div class="flex-shrink-0">
-                        <a href="/en/" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                            BizLiv
-                        </a>
-                    </div>
-                    
-                    <!-- デスクトップメニュー -->
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="/en/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                            <a href="/nomireco/en/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">NomiReco</a>
-                            <a href="/go-home-navi/en/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Go Home Navi</a>
-                            <a href="/shopping-list/en/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Shopping List</a>
-                            <a href="/online-meetings-schedule/en/" class="text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Online Meetings Schedule</a>
-                            <a href="/privacy/en/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Privacy</a>
-                            <a href="/support/en/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Support</a>
-                        </div>
-                    </div>
-                    
-                    <!-- モバイルハンバーガーメニューボタン -->
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
-                            <span class="sr-only">メニューを開く</span>
-                            <div class="w-6 h-6 relative flex flex-col justify-center">
-                                <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out"></span>
-                                <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
-                                <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Mobile Menu -->
-                <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-                    <div class="container mx-auto px-4 py-4">
-                        <ul class="space-y-2">
-                            <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Home</a></li>
-                            <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Features</a></li>
-                            <li><a href="#how-to-use" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">How to Use</a></li>
-                            <li><a href="#download" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Download</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+    <header id="site-header" class="bg-white">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://bizliv.life/en" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
+            
+            <!-- Desktop menu -->
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Home</a></li>
+                <li><a href="#features" class="text-gray-600 hover:text-blue-600">Features</a></li>
+                <li><a href="#how-to-use" class="text-gray-600 hover:text-blue-600">How to Use</a></li>
+                <li><a href="#download" class="text-gray-600 hover:text-blue-600">Download</a></li>
+            </ul>
+            
+            <!-- ハンバーガーメニューボタン -->
+            <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
+                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
+                <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
+                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4">
+                <ul class="space-y-2">
+                    <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Home</a></li>
+                    <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Features</a></li>
+                    <li><a href="#how-to-use" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">How to Use</a></li>
+                    <li><a href="#download" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Download</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <main>
         <section id="hero" class="hero" style="background-image: url('https://bizliv.life/online-meetings-schedule/images/background.jpg');">
             <div class="hero-content text-center">
