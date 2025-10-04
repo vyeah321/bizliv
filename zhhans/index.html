@@ -35,92 +35,11 @@
       "url": "https://bizliv.life/zhhans/"
     }
     </script>
-    <style>
-        body {
-            padding-top: 64px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .hero {
-            background-image: url('/images/background.jpg');
-            background-size: cover;
-            background-position: center 30%;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding-top: 40px;
-            padding-bottom: 40px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 20px;
-            color: white;
-            width: 95%;
-        }
-        .anchor {
-            display: block;
-            position: relative;
-            top: -64px;
-            visibility: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/site.css">
     
     <!-- Header will be injected by /js/header-loader.js -->
     <script src="/js/header-loader.js" defer></script>
-        <style>
-        body {
-            padding-top: 64px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .hero {
-            background-image: url('../images/background.jpg');
-            background-size: cover;
-            background-position: center 30%;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 50px;
-            border-radius: 10px;
-            color: white;
-            width: 98%;
-        }
-        .anchor {
-            display: block;
-            position: relative;
-            top: -64px;
-            visibility: hidden;
-        }
-    </style>
+    <!-- duplicate styles removed; using /css/site.css -->
     
     <!-- ハンバーガーメニュー用JavaScript -->
     <script>
@@ -174,7 +93,7 @@
     <!-- Header is injected by /js/header-loader.js (shared header includes Blog/Podcast links) -->
 
     <main class="container mx-auto px-4 py-8">
-        <section id="hero" class="hero">
+    <section id="hero" class="hero" style="background-image: url('/images/background.jpg');">
             <div class="hero-content text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">商务与生活平衡的<br>一体化解决方案</h1>
                 <p class="text-xl text-white mb-8">四款便捷应用，支持40多岁和50多岁商务人士的充实生活</p>
