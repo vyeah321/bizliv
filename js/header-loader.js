@@ -53,16 +53,26 @@
       // Helper to set href or hide element(s)
       function applyLinkOrHide(elems, hrefKey, hasAnchor, fallbackPath) {
         elems.forEach(el => {
-          const explicit = strings && strings[hrefKey];
-          if (explicit) {
-            el.setAttribute('href', explicit);
+          // Prefer explicit URL keys like 'nav_blog_href' or 'nav_podcast_href'
+          const explicitHrefKey = hrefKey + '_href';
+          let explicitHref = (strings && strings[explicitHrefKey]) || null;
+
+          // Backwards-compatible: if the base key itself contains a URL-looking value, accept it.
+          if (!explicitHref && strings && typeof strings[hrefKey] === 'string') {
+            const v = strings[hrefKey].trim();
+            if (v.startsWith('http') || v.startsWith('/')) {
+              explicitHref = v;
+            }
+          }
+
+          if (explicitHref) {
+            el.setAttribute('href', explicitHref);
             el.classList.remove('hidden');
             return;
           }
 
-          // Derive anchor name: e.g. 'nav_blog_href' -> 'blog', 'nav_podcast_href' -> 'podcast'
+          // Derive anchor name from the base key, e.g. 'nav_blog' -> 'blog'
           let anchorName = hrefKey.replace(/^nav_/, '').replace(/_href$/, '');
-          // If the key was just 'nav_blog' (older calls), normalize too
           anchorName = anchorName.replace(/^blog_?/, 'blog').replace(/^podcast_?/, 'podcast');
 
           if (hasAnchor && document.querySelector('#' + anchorName)) {
