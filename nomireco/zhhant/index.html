@@ -29,157 +29,137 @@
                     <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">首頁</a></li>
                     <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">功能</a></li>
                     <li><a href="#download" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">下載</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>=1.0">
-    <title>NomiReco - 支持健康飲酒生活方式</title>
-    <link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/">
-    <link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/">
-    <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/">
-    <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/">
-    <link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/">
-    <meta name="description" content="NomiReco是一款支持健康飲酒生活方式的應用。通過日曆管理、圖表化和Apple Watch整合功能，它支持商務人士的健康生活方式。">
-    <meta property="og:title" content="NomiReco - 支持健康飲酒生活方式" />
-    <meta property="og:description" content="NomiReco是一款支持健康飲酒生活方式的應用。通過日曆管理、圖表化和Apple Watch整合功能，它支持商務人士的健康生活方式。">
-    <meta property="og:image" content="https://bizliv.life/nomireco/images/background.jpg">
-    <meta property="og:url" content="https://bizliv.life/nomireco/zhhant/">
-    <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            padding-top: 64px;
-            background-color: #f0f0f0;
-        }
-        header {
+
+                </head>
+                <body>
+                    <!-- Header will be injected by /js/header-loader.js -->
+                    <script src="/js/header-loader.js" defer></script>
+
+                    <!-- 主要内容 -->
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .anchor {
-            display: block;
-            position: relative;
-            top: -64px;
-            visibility: hidden;
-        }
-        .hero {
-            background-image: url('https://bizliv.life/nomireco/images/background.jpg');
-            background-size: cover;
-            background-position: center 30%;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding-top: 40px;
-            padding-bottom: 40px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 20px;
-            color: white;
-            width: 98%;
-        }
-        .white-box {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 20px;
-        }
-        .feature-item {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .feature-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-    </style>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
+            <style>
+                body {
+                    padding-top: 64px;
+                    background-color: #f0f0f0;
                 }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'G-KZ2GMHNF9E');
-    </script>
-    <meta name="twitter:description" content="NomiReco是一款支持健康飲酒生活方式的應用。通過日曆管理、圖表化和Apple Watch整合功能，它支持商務人士的健康生活方式。">
-</head>
-<body>
-    <!-- 頭部 -->
-    <header id="site-header" class="bg-white">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="https://bizliv.life/zhhant" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-            <ul class="flex space-x-4">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">首頁</a></li>
-                <li><a href="#features" class="text-gray-600 hover:text-blue-600">功能</a></li>
-                <li><a href="#download" class="text-gray-600 hover:text-blue-600">下載</a></li>
-            </ul>
-        </nav>
-    </header>
+                header {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    z-index: 1000;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                html {
+                    scroll-behavior: smooth;
+                }
+                .anchor {
+                    display: block;
+                    position: relative;
+                    top: -64px;
+                    visibility: hidden;
+                }
+                .hero {
+                    background-image: url('https://bizliv.life/nomireco/images/background.jpg');
+                    background-size: cover;
+                    background-position: center 30%;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 80vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .hero-content {
+                    background-color: rgba(0, 0, 0, 0.6);
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-radius: 20px;
+                    color: white;
+                    width: 98%;
+                }
+                .white-box {
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    padding: 30px;
+                    margin-bottom: 20px;
+                }
+                .feature-item {
+                    border-bottom: 1px solid #e0e0e0;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+                .feature-item:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            </style>
 
-    <!-- 主要內容 -->
-    <main>
-        <!-- 英雄部分 -->
+            <!-- ハンバーガーメニュー用JavaScript -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const mobileMenuButton = document.getElementById('mobile-menu-button');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const menuLines = mobileMenuButton.querySelectorAll('span');
+            
+                    mobileMenuButton.addEventListener('click', function() {
+                        const isOpen = !mobileMenu.classList.contains('hidden');
+                
+                        if (isOpen) {
+                            // メニューを閉じる
+                            mobileMenu.classList.add('hidden');
+                            menuLines[0].style.transform = 'rotate(0deg)';
+                            menuLines[1].style.opacity = '1';
+                            menuLines[2].style.transform = 'rotate(0deg)';
+                        } else {
+                            // メニューを開く
+                            mobileMenu.classList.remove('hidden');
+                            menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
+                            menuLines[1].style.opacity = '0';
+                            menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
+                        }
+                    });
+            
+                    // メニュー項目クリック時にメニューを閉じる
+                    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                    mobileMenuLinks.forEach(function(link) {
+                        link.addEventListener('click', function() {
+                            mobileMenu.classList.add('hidden');
+                            menuLines[0].style.transform = 'rotate(0deg)';
+                            menuLines[1].style.opacity = '1';
+                            menuLines[2].style.transform = 'rotate(0deg)';
+                        });
+                    });
+                });
+            </script>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-KZ2GMHNF9E');
+            </script>
+            <meta name="twitter:description" content="NomiRecoは〜">
+        </head>
+        <body>
+            <!-- Header will be injected by /js/header-loader.js -->
+            <script src="/js/header-loader.js" defer></script>
+
         <section id="hero" class="hero">
             <div class="hero-content text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">
                     NomiReco<br>
                     支持健康飲酒生活方式
                 </h1>
-                <p class="text-xl mb-8">一款幫助您輕鬆管理飲酒日和禁酒日的應用，支持健康的生活方式。功能包括Apple Watch整合！</p>
+                <p class="text-xl mb-8">一款帮助您轻松管理饮酒日和禁酒日的应用，支持健康的生活方式。功能包括Apple Watch集成！</p>
                 <a href="#download" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
                     立即下載
                 </a>
