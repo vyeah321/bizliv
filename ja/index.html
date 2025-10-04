@@ -130,6 +130,43 @@
                     languageMenu.classList.add('hidden');
                 }
             });
+
+            // --- モバイル言語トグルの挙動 ---
+            const mobileLangToggle = document.getElementById('mobile-language-toggle');
+            const mobileLangMenu = document.getElementById('mobile-language-menu');
+
+            if (mobileLangToggle && mobileLangMenu) {
+                mobileLangToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isOpen = !mobileLangMenu.classList.contains('hidden');
+                    if (isOpen) {
+                        mobileLangMenu.classList.add('hidden');
+                        mobileLangToggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        mobileLangMenu.classList.remove('hidden');
+                        mobileLangToggle.setAttribute('aria-expanded', 'true');
+                        const firstLink = mobileLangMenu.querySelector('a');
+                        if (firstLink) firstLink.focus();
+                    }
+                });
+
+                // 外側クリックで閉じる
+                document.addEventListener('click', function(e) {
+                    if (!mobileLangMenu.contains(e.target) && e.target !== mobileLangToggle) {
+                        mobileLangMenu.classList.add('hidden');
+                        mobileLangToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Esc キーで閉じる
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !mobileLangMenu.classList.contains('hidden')) {
+                        mobileLangMenu.classList.add('hidden');
+                        mobileLangToggle.setAttribute('aria-expanded', 'false');
+                        mobileLangToggle.focus();
+                    }
+                });
+            }
         });
     </script>
 </head>
@@ -172,8 +209,8 @@
                     </div>
                 </div>
                 
-                <!-- モバイルハンバーガーメニューボタン -->
-                <div class="md:hidden">
+                <!-- モバイルハンバーガーメニューボタン と モバイル用言語トグル -->
+                <div class="md:hidden flex items-center space-x-2">
                     <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
                         <span class="sr-only">メニューを開く</span>
                         <div class="w-6 h-6 relative flex flex-col justify-center">
@@ -182,6 +219,19 @@
                             <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
                         </div>
                     </button>
+
+                    <!-- モバイル専用の言語切替ボタン（ポップオーバーを表示） -->
+                    <div class="relative">
+                        <button id="mobile-language-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-language-menu" class="text-gray-600 hover:text-blue-600 focus:outline-none px-2 py-1 rounded">
+                            🌐 <span class="sr-only">言語を選択</span>
+                        </button>
+                        <div id="mobile-language-menu" class="hidden absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                            <a href="/ja/" hreflang="ja" aria-label="日本語に切り替え" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50">🇯🇵 日本語</a>
+                            <a href="/en/" hreflang="en" aria-label="Switch to English" class="block px-4 py-2 text-sm hover:bg-gray-100">🇺🇸 English</a>
+                            <a href="/zhhans/" hreflang="zh-Hans" aria-label="切换到简体中文" class="block px-4 py-2 text-sm hover:bg-gray-100">🇨🇳 中文（简体）</a>
+                            <a href="/zhhant/" hreflang="zh-Hant" aria-label="切換到繁體中文" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇼 中文（繁體）</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -205,6 +255,7 @@
                     </div>
                 </div>
             </div>
+            
         </nav>
     </header>
         
