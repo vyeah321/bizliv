@@ -14,19 +14,50 @@
   const lang = detectLang();
   const langPath = lang === 'en' ? 'en' : lang;
 
-  // fetch header template
-  try {
-    const res = await fetch('/_includes/header.html');
-    if (!res.ok) throw new Error('Failed to fetch header');
-    let html = await res.text();
+    // fetch header template
+    try {
+      // determine app-specific include path (if any)
+      const pathSegments = location.pathname.split('/').filter(Boolean);
+      const locales = ['ja', 'en', 'zhhans', 'zhhant'];
+      let appBase = null;
+      if (pathSegments.length > 0) {
+        if (!locales.includes(pathSegments[0])) {
+          appBase = '/' + pathSegments[0];
+        } else if (pathSegments.length > 1 && !locales.includes(pathSegments[1])) {
+          appBase = '/' + pathSegments[1];
+        }
+      }
 
-    // inject langPath placeholder
-    html = html.replace(/{{langPath}}/g, langPath);
+      let res = null;
+      let html = null;
 
-    // insert into DOM at the top of body
-    const container = document.createElement('div');
-    container.innerHTML = html;
-    document.body.insertBefore(container, document.body.firstChild);
+      // try app-specific include first
+      if (appBase) {
+        try {
+          res = await fetch(appBase + '/_includes/header.html');
+          if (res && res.ok) {
+            html = await res.text();
+          }
+        } catch (e) {
+          // fallthrough to root include
+          res = null;
+        }
+      }
+
+      // fallback to root include
+      if (!html) {
+        res = await fetch('/_includes/header.html');
+        if (!res.ok) throw new Error('Failed to fetch header');
+        html = await res.text();
+      }
+
+      // inject langPath placeholder
+      html = html.replace(/{{langPath}}/g, langPath);
+
+      // insert into DOM at the top of body
+      const container = document.createElement('div');
+      container.innerHTML = html;
+      document.body.insertBefore(container, document.body.firstChild);
 
     // fetch i18n strings
     const i18nRes = await fetch('/i18n/' + lang + '.json');
