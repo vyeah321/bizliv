@@ -130,18 +130,24 @@
     function initHeader() {
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
-      const menuLines = mobileMenuButton ? mobileMenuButton.querySelectorAll('span') : [];
+     const menuLines = mobileMenuButton ? mobileMenuButton.querySelectorAll('span:not(.sr-only)') : [];
 
       if (mobileMenuButton && mobileMenu) {
+        // ensure accessibility attributes
+        try { mobileMenuButton.setAttribute('aria-controls', 'mobile-menu'); } catch (e) {}
+        if (!mobileMenuButton.hasAttribute('aria-expanded')) mobileMenuButton.setAttribute('aria-expanded', 'false');
+
         mobileMenuButton.addEventListener('click', function() {
           const isOpen = !mobileMenu.classList.contains('hidden');
           if (isOpen) {
             mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
             if (menuLines[0]) menuLines[0].style.transform = 'rotate(0deg)';
             if (menuLines[1]) menuLines[1].style.opacity = '1';
             if (menuLines[2]) menuLines[2].style.transform = 'rotate(0deg)';
           } else {
             mobileMenu.classList.remove('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
             if (menuLines[0]) menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
             if (menuLines[1]) menuLines[1].style.opacity = '0';
             if (menuLines[2]) menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
@@ -152,7 +158,7 @@
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(function(link) {
           link.addEventListener('click', function() {
-            mobileMenu.classList.add('hidden');
+           mobileMenu.classList.add('hidden');
             if (menuLines[0]) menuLines[0].style.transform = 'rotate(0deg)';
             if (menuLines[1]) menuLines[1].style.opacity = '1';
             if (menuLines[2]) menuLines[2].style.transform = 'rotate(0deg)';
