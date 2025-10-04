@@ -75,8 +75,8 @@
         });
       }
 
-      applyLinkOrHide(blogEls, 'nav_blog_href', hasBlogAnchor, '/blog/' + lang + '/');
-      applyLinkOrHide(podcastEls, 'nav_podcast_href', hasPodcastAnchor, '/podcast/' + lang + '/');
+      applyLinkOrHide(blogEls, 'nav_blog', hasBlogAnchor, '/blog/' + lang + '/');
+      applyLinkOrHide(podcastEls, 'nav_podcast', hasPodcastAnchor, '/podcast/' + lang + '/');
     } catch (e) {
       // non-fatal
       console.warn('header-loader: failed to adjust/hide blog/podcast links', e);
