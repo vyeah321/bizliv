@@ -1,33 +1,56 @@
-<header id="site-header" class="bg-white">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <!-- site_name will be localized via header-loader; link points to site root for current lang -->
-        <a href="/{{langPath}}/" class="text-2xl font-bold text-blue-600" data-i18n="site_name">BizLiv.life</a>
-        
-        <!-- Desktop menu -->
-        <ul class="hidden md:flex space-x-4">
-            <li><a href="#" class="text-gray-600 hover:text-blue-600" data-i18n="nav_home">Home</a></li>
-            <li><a href="#features" class="text-gray-600 hover:text-blue-600" data-i18n="nav_features">Features</a></li>
-            <li><a href="#how-to-use" class="text-gray-600 hover:text-blue-600" data-i18n="nav_how_to_use">How to use</a></li>
-            <li><a href="#download" class="text-gray-600 hover:text-blue-600" data-i18n="nav_download">Download</a></li>
-        </ul>
-        
-        <!-- ハンバーガーメニューボタン -->
-        <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-        </button>
-    </nav>
-    
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-        <div class="container mx-auto px-4 py-4">
-            <ul class="space-y-2">
-                <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_home">Home</a></li>
-                <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_features">Features</a></li>
-                <li><a href="#how-to-use" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_how_to_use">How to use</a></li>
-                <li><a href="#download" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_download">Download</a></li>
-            </ul>
+<header class="bg-white bg-opacity-95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0">
+                <a href="/{{langPath}}/" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors" data-i18n="site_name">BizLiv.life</a>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav_features">Features</a>
+                    <a href="#how-to-use" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav_how_to_use">How to use</a>
+                    <a href="#download" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav_download">Download</a>
+                </div>
+            </div>
+
+            <!-- Mobile buttons: language left, hamburger right -->
+            <div class="md:hidden flex items-center space-x-3">
+                <div class="relative">
+                    <button id="mobile-language-button" aria-expanded="false" class="text-gray-600 hover:text-blue-600 focus:outline-none px-2 py-2 rounded transition-colors flex items-center justify-center">
+                        <span class="sr-only" data-i18n="aria_change_language">Change language</span>
+                        🌐
+                    </button>
+                    <div id="mobile-language-menu" class="hidden absolute mt-12 right-0 w-44 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                        <div class="py-1">
+                            <a href="/ja/" class="block px-4 py-2 text-sm">🇯🇵 日本語</a>
+                            <a href="/en/" class="block px-4 py-2 text-sm">🇺🇸 English</a>
+                            <a href="/zhhans/" class="block px-4 py-2 text-sm">🇨🇳 中文（简体）</a>
+                            <a href="/zhhant/" class="block px-4 py-2 text-sm">🇹🇼 中文（繁體）</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none transition-colors px-2 py-2 flex items-center justify-center">
+                        <span class="sr-only" data-i18n="aria_open_menu">Open menu</span>
+                        <div class="w-6 h-6 relative flex flex-col justify-center">
+                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out"></span>
+                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
+                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#features" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors" data-i18n="nav_features">Features</a>
+                <a href="#how-to-use" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors" data-i18n="nav_how_to_use">How to use</a>
+                <a href="#download" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors" data-i18n="nav_download">Download</a>
+            </div>
+        </div>
+    </nav>
 </header>
