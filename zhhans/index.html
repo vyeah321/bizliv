@@ -13,14 +13,14 @@
     <meta name="keywords" content="工作生活平衡,商务人士,40岁50岁,提高生产力,饮酒记录,回家支援,购物清单,会议管理,iOS">
     <meta property="og:title" content="BizLiv - 支持商务人士充实生活">
     <meta property="og:description" content="BizLiv 提供实用的应用与优质内容（博客与音频），帮助您更轻松地管理工作与生活、解决日常问题。">
-    <meta property="og:image" content="https://bizliv.life/images/background.jpg">
+    <meta property="og:image" content="/images/background.jpg">
     <meta property="og:url" content="https://bizliv.life/zhhans/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@bizliv_jp">
     <meta name="twitter:title" content="BizLiv - 支持商务人士充实生活">
     <meta name="twitter:description" content="BizLiv 提供实用的应用与优质内容（博客与音频），帮助您更轻松地管理工作与生活、解决日常问题。">
-    <meta name="twitter:image" content="https://bizliv.life/images/background.jpg">
+    <meta name="twitter:image" content="/images/background.jpg">
     <link rel="apple-touch-icon" href="/images/app-store-badge.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#2563eb">
@@ -51,7 +51,7 @@
             scroll-behavior: smooth;
         }
         .hero {
-            background-image: url('../images/background.jpg');
+            background-image: url('/images/background.jpg');
             background-size: cover;
             background-position: center 30%;
             background-repeat: no-repeat;
@@ -79,129 +79,8 @@
         }
     </style>
     
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-            
-            // 言語切り替えメニューの制御
-            const languageButton = document.getElementById('language-button');
-            const languageMenu = document.getElementById('language-menu');
-            
-            languageButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                languageMenu.classList.toggle('hidden');
-            });
-            
-            // 言語メニューの外側クリックで閉じる
-            document.addEventListener('click', function(e) {
-                if (!languageButton.contains(e.target) && !languageMenu.contains(e.target)) {
-                    languageMenu.classList.add('hidden');
-                }
-            });
-        });
-    </script>
-</head>
-<body>
-    <header class="bg-white bg-opacity-95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <a href="/zhhans/" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                        BizLiv.life
-                    </a>
-                </div>
-                
-                <!-- Desktop menu (same structure as English) -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">功能</a>
-                        <a href="#apps" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">应用</a>
-                        <a href="#faq" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">常见问题</a>
-
-                        <!-- language switcher (desktop) -->
-                        <div class="relative">
-                            <button id="language-button" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
-                                🌐 中文（简体）
-                                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div id="language-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                                <div class="py-1">
-                                    <a href="/ja/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇯🇵 日本語</a>
-                                    <a href="/en/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇺🇸 English</a>
-                                    <a href="/zhhans/" class="text-blue-600 bg-blue-50 block px-4 py-2 text-sm">🇨🇳 中文（简体）</a>
-                                    <a href="/zhhant/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇹🇼 中文（繁體）</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mobile hamburger button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
-                        <span class="sr-only">Open menu</span>
-                        <div class="w-6 h-6 relative flex flex-col justify-center">
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out"></span>
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-                    <a href="#features" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">功能</a>
-                    <a href="#apps" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">应用</a>
-                    <a href="#faq" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">常见问题</a>
-
-                    <!-- language switcher (mobile) -->
-                    <div class="border-t border-gray-200 pt-2 mt-2">
-                        <div class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">语言选择</div>
-                        <a href="/ja/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇯🇵 日本語</a>
-                        <a href="/en/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇺🇸 English</a>
-                        <a href="/zhhans/" class="text-blue-600 bg-blue-50 block px-3 py-2 rounded-md text-base font-medium">🇨🇳 中文（简体）</a>
-                        <a href="/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇹🇼 中文（繁體）</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Header will be injected by /js/header-loader.js -->
+    <script src="/js/header-loader.js" defer></script>
         <style>
         body {
             padding-top: 64px;
@@ -292,22 +171,13 @@
     </script>
 </head>
 <body>
-    <header id="site-header" class="bg-white">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-            <ul class="flex space-x-4">
-                <li><a href="#features" class="text-gray-600 hover:text-blue-600">特点</a></li>
-                <li><a href="#apps" class="text-gray-600 hover:text-blue-600">应用</a></li>
-                <li><a href="#faq" class="text-gray-600 hover:text-blue-600">常见问题</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header is injected by /js/header-loader.js (shared header includes Blog/Podcast links) -->
 
     <main class="container mx-auto px-4 py-8">
         <section id="hero" class="hero">
             <div class="hero-content text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">商务与生活平衡的<br>一体化解决方案</h1>
-                <p class="text-xl text-gray-600 mb-8">四款便捷应用，支持40多岁和50多岁商务人士的充实生活</p>
+                <p class="text-xl text-white mb-8">四款便捷应用，支持40多岁和50多岁商务人士的充实生活</p>
                 <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即下载</a>
             </div>   
         </section>

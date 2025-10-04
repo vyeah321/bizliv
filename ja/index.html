@@ -13,14 +13,14 @@
     <meta name="keywords" content="ワークライフバランス,ビジネスパーソン,40代50代,生産性向上,飲酒記録,帰宅サポート,買い物リスト,会議管理,iOS">
     <meta property="og:title" content="BizLiv - ビジネスパーソンの充実ライフをサポート">
     <meta property="og:description" content="BizLivは生活と仕事を支えるアプリと、役立つブログ・音声コンテンツで、あなたの毎日をもっと快適に、日々の課題解決をサポートします。">
-    <meta property="og:image" content="https://bizliv.life/images/background.jpg">
+    <meta property="og:image" content="/images/background.jpg">
     <meta property="og:url" content="https://bizliv.life/ja/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@bizliv_jp">
     <meta name="twitter:title" content="BizLiv - ビジネスパーソンの充実ライフをサポート">
     <meta name="twitter:description" content="BizLivは生活と仕事を支えるアプリと、役立つブログ・音声コンテンツで、あなたの毎日をもっと快適に、日々の課題解決をサポートします。">
-    <meta name="twitter:image" content="https://bizliv.life/images/background.jpg">
+    <meta name="twitter:image" content="/images/background.jpg">
     <link rel="apple-touch-icon" href="/images/app-store-badge.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#2563eb">
@@ -51,7 +51,7 @@
             scroll-behavior: smooth;
         }
         .hero {
-            background-image: url('../images/background.jpg');
+            background-image: url('/images/background.jpg');
             background-size: cover;
             background-position: center 30%;
             background-repeat: no-repeat;
@@ -78,181 +78,11 @@
             visibility: hidden;
         }
     </style>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-            
-            // 言語切り替えメニューの制御
-            const languageButton = document.getElementById('language-button');
-            const languageMenu = document.getElementById('language-menu');
-            
-            languageButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                languageMenu.classList.toggle('hidden');
-            });
-            
-            // 言語メニューの外側クリックで閉じる
-            document.addEventListener('click', function(e) {
-                if (!languageButton.contains(e.target) && !languageMenu.contains(e.target)) {
-                    languageMenu.classList.add('hidden');
-                }
-            });
 
-            // --- モバイル言語トグルの挙動 ---
-            const mobileLangToggle = document.getElementById('mobile-language-toggle');
-            const mobileLangMenu = document.getElementById('mobile-language-menu');
-
-            if (mobileLangToggle && mobileLangMenu) {
-                mobileLangToggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const isOpen = !mobileLangMenu.classList.contains('hidden');
-                    if (isOpen) {
-                        mobileLangMenu.classList.add('hidden');
-                        mobileLangToggle.setAttribute('aria-expanded', 'false');
-                    } else {
-                        mobileLangMenu.classList.remove('hidden');
-                        mobileLangToggle.setAttribute('aria-expanded', 'true');
-                        const firstLink = mobileLangMenu.querySelector('a');
-                        if (firstLink) firstLink.focus();
-                    }
-                });
-
-                // 外側クリックで閉じる
-                document.addEventListener('click', function(e) {
-                    if (!mobileLangMenu.contains(e.target) && e.target !== mobileLangToggle) {
-                        mobileLangMenu.classList.add('hidden');
-                        mobileLangToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-
-                // Esc キーで閉じる
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && !mobileLangMenu.classList.contains('hidden')) {
-                        mobileLangMenu.classList.add('hidden');
-                        mobileLangToggle.setAttribute('aria-expanded', 'false');
-                        mobileLangToggle.focus();
-                    }
-                });
-            }
-        });
-    </script>
+    <!-- Header will be injected by /js/header-loader.js -->
+    <script src="/js/header-loader.js" defer></script>
 </head>
 <body>
-    <header class="bg-white bg-opacity-95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <a href="/ja/" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                        BizLiv.life
-                    </a>
-                </div>
-                
-                <!-- デスクトップメニュー -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#features" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">特徴</a>
-                        <a href="#apps" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">アプリ</a>
-                        <a href="#blog" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">ブログ</a>
-                        <a href="#podcast" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">音声</a>
-                        <a href="#faq" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">FAQ</a>
-                        
-                        <!-- 言語切り替えメニュー（デスクトップ） -->
-                        <div class="relative">
-                            <button id="language-button" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
-                                🌐 日本語 
-                                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div id="language-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                                <div class="py-1">
-                                    <a href="/ja/" class="text-blue-600 bg-blue-50 block px-4 py-2 text-sm">🇯🇵 日本語</a>
-                                    <a href="/en/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇺🇸 English</a>
-                                    <a href="/zhhans/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇨🇳 中文（简体）</a>
-                                    <a href="/zhhant/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇹🇼 中文（繁體）</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- モバイルハンバーガーメニューボタン と モバイル用言語トグル -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <!-- モバイル専用の言語切替ボタン（ポップオーバーを表示） -->
-                    <div class="relative">
-                        <button id="mobile-language-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-language-menu" class="text-gray-600 hover:text-blue-600 focus:outline-none px-2 py-1 rounded">
-                            🌐 <span class="sr-only">言語を選択</span>
-                        </button>
-                        <div id="mobile-language-menu" class="hidden absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                            <a href="/ja/" hreflang="ja" aria-label="日本語に切り替え" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50">🇯🇵 日本語</a>
-                            <a href="/en/" hreflang="en" aria-label="Switch to English" class="block px-4 py-2 text-sm hover:bg-gray-100">🇺🇸 English</a>
-                            <a href="/zhhans/" hreflang="zh-Hans" aria-label="切换到简体中文" class="block px-4 py-2 text-sm hover:bg-gray-100">🇨🇳 中文（簡体）</a>
-                            <a href="/zhhant/" hreflang="zh-Hant" aria-label="切換到繁體中文" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇼 中文（繁體）</a>
-                        </div>
-                    </div>
-
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
-                        <span class="sr-only">メニューを開く</span>
-                        <div class="w-6 h-6 relative flex flex-col justify-center">
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out"></span>
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- モバイルメニュー -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-                    <a href="#features" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">特徴</a>
-                    <a href="#apps" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">アプリ</a>
-                    <a href="#blog" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">ブログ</a>
-                    <a href="#podcast" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">音声</a>
-                    <a href="#faq" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">FAQ</a>
-                </div>
-            </div>
-            
-        </nav>
-    </header>
-        
-        <!-- removed duplicate mobile menu block (kept header's internal mobile menu) -->
-    </header>
-
-    <main class="container mx-auto px-4 py-8">
         <section id="hero" class="hero">
             <div class="hero-content text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">ビジネスと生活の調和を実現する<br>オールインワンソリューション</h1>
