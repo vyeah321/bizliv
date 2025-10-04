@@ -43,80 +43,7 @@
       "screenshot": "https://bizliv.life/go-home-navi/images/background.jpg"
     }
     </script>
-    <style>
-        body {
-            padding-top: 64px;
-            background-color: #f0f0f0;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .anchor {
-            display: block;
-            position: relative;
-            top: -64px;
-            visibility: hidden;
-        }
-        .hero {
-            background-image: url('https://bizliv.life/go-home-navi/images/background.jpg');
-            background-size: cover;
-            background-position: center 30%;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 50px;
-            border-radius: 10px;
-            color: white;
-            width: 98%;
-        }
-        .white-box {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 20px;
-        }
-        .feature-item {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .feature-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-        .cta-button {
-            background-color: #1D4ED8;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-align: center;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #2563EB;
-        }
-        .app-store-btn img {
-            width: 160px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/site.css">
     
     <!-- ハンバーガーメニュー用JavaScript -->
     <script>
@@ -191,7 +118,7 @@
     </header>
 
     <main>
-        <section id="hero" class="hero">
+    <section id="hero" class="hero" style="background-image: url('https://bizliv.life/go-home-navi/images/background.jpg');">
             <div class="hero-content text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">帰宅ナビ<br>安心で効率的な帰宅支援</h1>
                 <p class="text-xl mb-8">終電やタクシー料金の確認、宿泊施設検索まで。あなたの帰宅をサポートします。</p>

@@ -49,64 +49,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding-top: 40px;
-            padding-bottom: 40px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 20px;
-            color: white;
-            width: 95%;
-        }
-        .white-box {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 20px;
-        }
-        .feature-item {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .feature-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-    </style>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
+        <link rel="stylesheet" href="/css/site.css">
                 link.addEventListener('click', function() {
                     mobileMenu.classList.add('hidden');
                     menuLines[0].style.transform = 'rotate(0deg)';
@@ -163,7 +106,7 @@
     <!-- 主要内容 -->
     <main>
         <!-- 英雄部分 -->
-        <section id="hero" class="hero">
+    <section id="hero" class="hero" style="background-image: url('https://bizliv.life/nomireco/images/background.jpg');">
             <div class="hero-content text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">
                     NomiReco<br>
