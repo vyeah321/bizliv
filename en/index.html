@@ -214,12 +214,12 @@
                 <!-- モバイルボタン群（言語ボタンを左、ハンバーガーを右に配置） -->
                 <div class="md:hidden flex items-center space-x-3">
                     <!-- モバイル用言語トグル（ハンバーガーの外側） -->
-                    <div class="">
+                    <div class="relative">
                         <button id="mobile-language-button" aria-expanded="false" class="text-gray-600 hover:text-blue-600 focus:outline-none px-2 py-1 rounded transition-colors">
                             <span class="sr-only">Change language</span>
                             🌐
                         </button>
-                        <div id="mobile-language-menu" class="hidden absolute mt-12 left-4 w-44 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                        <div id="mobile-language-menu" class="hidden absolute mt-12 right-0 w-44 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                             <div class="py-1">
                                 <a href="/ja/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇯🇵 日本語</a>
                                 <a href="/en/" class="text-blue-600 bg-blue-50 block px-4 py-2 text-sm">🇺🇸 English</a>
