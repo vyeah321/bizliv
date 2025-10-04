@@ -3,11 +3,14 @@
 
 (async function() {
   function detectLang() {
-    // simple heuristic: path /ja/ /en/ /zhhans/ /zhhant/
-    const path = location.pathname;
-    if (path.startsWith('/ja/')) return 'ja';
-    if (path.startsWith('/zhhans/')) return 'zhhans';
-    if (path.startsWith('/zhhant/')) return 'zhhant';
+    // Look for a known locale segment anywhere in the pathname.
+    // Handles paths like /online-meetings-schedule/ja/ or /ja/.
+    const pathSegments = location.pathname.split('/').filter(Boolean);
+    const locales = ['ja', 'en', 'zhhans', 'zhhant'];
+    for (let i = 0; i < pathSegments.length; i++) {
+      const seg = pathSegments[i];
+      if (locales.includes(seg)) return seg;
+    }
     return 'en';
   }
 

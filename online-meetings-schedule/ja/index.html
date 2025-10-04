@@ -50,38 +50,8 @@
     <!-- Header will be injected by /js/header-loader.js -->
 </head>
 <body>
-    <header id="site-header" class="bg-white">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="https://bizliv.life/ja" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-            
-            <!-- デスクトップメニュー -->
-            <ul class="hidden md:flex space-x-4">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">トップ</a></li>
-                <li><a href="#features" class="text-gray-600 hover:text-blue-600">機能</a></li>
-                <li><a href="#how-to-use" class="text-gray-600 hover:text-blue-600">使い方</a></li>
-                <li><a href="#download" class="text-gray-600 hover:text-blue-600">ダウンロード</a></li>
-            </ul>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            </button>
-        </nav>
-        
-        <!-- モバイルメニュー -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="container mx-auto px-4 py-4">
-                <ul class="space-y-2">
-                    <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">トップ</a></li>
-                    <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">機能</a></li>
-                    <li><a href="#how-to-use" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">使い方</a></li>
-                    <li><a href="#download" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">ダウンロード</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <script src="/js/header-loader.js" defer></script>
+    <!-- header removed; header-loader will inject the header -->
 
     <main>
     <section id="hero" class="hero" style="background-image: url('https://bizliv.life/online-meetings-schedule/images/background.jpg');">
