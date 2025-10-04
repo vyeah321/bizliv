@@ -7,6 +7,9 @@
   "nav_podcast": "音声",
   "nav_podcast_href": "/ja/#podcast",
   "nav_faq": "よくある質問",
+  "nav_home": "トップ",
+  "nav_how_to_use": "使い方",
+  "nav_download": "ダウンロード",
   "lang_label": "日本語",
   "aria_change_language": "言語を選択",
   "aria_open_menu": "メニューを開く"

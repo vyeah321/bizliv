@@ -5,6 +5,9 @@
   "nav_blog": "Blog",
   "nav_podcast": "Podcast",
   "nav_faq": "FAQ",
+  "nav_home": "Home",
+  "nav_how_to_use": "How to use",
+  "nav_download": "Download",
   "lang_label": "English",
   "aria_change_language": "Change language",
   "aria_open_menu": "Open menu"

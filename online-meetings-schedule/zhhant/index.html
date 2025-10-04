@@ -47,48 +47,11 @@
     </script>
     <link rel="stylesheet" href="/css/site.css">
     
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
+    <!-- Header will be injected by /js/header-loader.js -->
     <meta name="twitter:description" content="在線會議時間表大幅減少會議管理的麻煩。只需複製貼上邀請函即可高效管理時間。商務人士必備的應用程式。">
 </head>
 <body>
-    <header id="site-header" class="bg-white bg-opacity-95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header will be injected by /js/header-loader.js -->
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
                     <a href="/zhhant/" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">

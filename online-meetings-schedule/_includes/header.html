@@ -1,0 +1,33 @@
+<header id="site-header" class="bg-white">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- site_name will be localized via header-loader; link points to site root for current lang -->
+        <a href="/{{langPath}}/" class="text-2xl font-bold text-blue-600" data-i18n="site_name">BizLiv.life</a>
+        
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex space-x-4">
+            <li><a href="#" class="text-gray-600 hover:text-blue-600" data-i18n="nav_home">Home</a></li>
+            <li><a href="#features" class="text-gray-600 hover:text-blue-600" data-i18n="nav_features">Features</a></li>
+            <li><a href="#how-to-use" class="text-gray-600 hover:text-blue-600" data-i18n="nav_how_to_use">How to use</a></li>
+            <li><a href="#download" class="text-gray-600 hover:text-blue-600" data-i18n="nav_download">Download</a></li>
+        </ul>
+        
+        <!-- ハンバーガーメニューボタン -->
+        <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
+            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
+            <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
+            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
+        </button>
+    </nav>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-2">
+                <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_home">Home</a></li>
+                <li><a href="#features" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_features">Features</a></li>
+                <li><a href="#how-to-use" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_how_to_use">How to use</a></li>
+                <li><a href="#download" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded" data-i18n="nav_download">Download</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
