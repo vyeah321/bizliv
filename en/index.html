@@ -115,7 +115,7 @@
                 });
             });
             
-            // 言語切り替えメニューの制御
+            // 言語切り替えメニューの制御（デスクトップ）
             const languageButton = document.getElementById('language-button');
             const languageMenu = document.getElementById('language-menu');
             
@@ -124,12 +124,43 @@
                 languageMenu.classList.toggle('hidden');
             });
             
-            // 言語メニューの外側クリックで閉じる
+            // 言語メニューの外側クリックで閉じる（デスクトップ）
             document.addEventListener('click', function(e) {
                 if (!languageButton.contains(e.target) && !languageMenu.contains(e.target)) {
                     languageMenu.classList.add('hidden');
                 }
             });
+
+            // --- モバイル用言語トグル制御 ---
+            const mobileLanguageButton = document.getElementById('mobile-language-button');
+            const mobileLanguageMenu = document.getElementById('mobile-language-menu');
+
+            if (mobileLanguageButton && mobileLanguageMenu) {
+                mobileLanguageButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const expanded = mobileLanguageButton.getAttribute('aria-expanded') === 'true';
+                    mobileLanguageButton.setAttribute('aria-expanded', String(!expanded));
+                    mobileLanguageMenu.classList.toggle('hidden');
+                });
+
+                // 外側クリックで閉じる（モバイル）
+                document.addEventListener('click', function(e) {
+                    if (!mobileLanguageButton.contains(e.target) && !mobileLanguageMenu.contains(e.target)) {
+                        mobileLanguageMenu.classList.add('hidden');
+                        mobileLanguageButton.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Esc キーで閉じる
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        if (!mobileLanguageMenu.classList.contains('hidden')) {
+                            mobileLanguageMenu.classList.add('hidden');
+                            mobileLanguageButton.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            }
         });
     </script>
     
@@ -180,16 +211,35 @@
                     </div>
                 </div>
                 
-                <!-- モバイルハンバーガーメニューボタン -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
-                        <span class="sr-only">メニューを開く</span>
-                        <div class="w-6 h-6 relative flex flex-col justify-center">
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out"></span>
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
-                            <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
+                <!-- モバイルボタン群（言語ボタンを左、ハンバーガーを右に配置） -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <!-- モバイル用言語トグル（ハンバーガーの外側） -->
+                    <div class="">
+                        <button id="mobile-language-button" aria-expanded="false" class="text-gray-600 hover:text-blue-600 focus:outline-none px-2 py-1 rounded transition-colors">
+                            <span class="sr-only">Change language</span>
+                            🌐
+                        </button>
+                        <div id="mobile-language-menu" class="hidden absolute mt-12 left-4 w-44 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                            <div class="py-1">
+                                <a href="/ja/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇯🇵 日本語</a>
+                                <a href="/en/" class="text-blue-600 bg-blue-50 block px-4 py-2 text-sm">🇺🇸 English</a>
+                                <a href="/zhhans/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇨🇳 中文（简体）</a>
+                                <a href="/zhhant/" class="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-4 py-2 text-sm transition-colors">🇹🇼 中文（繁體）</a>
+                            </div>
                         </div>
-                    </button>
+                    </div>
+
+                    <!-- ハンバーガーメニューボタン -->
+                    <div>
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
+                            <span class="sr-only">Open menu</span>
+                            <div class="w-6 h-6 relative flex flex-col justify-center">
+                                <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out"></span>
+                                <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
+                                <span class="block h-0.5 w-6 bg-current transition-all duration-200 ease-in-out mt-1"></span>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
             
@@ -200,14 +250,7 @@
                     <a href="#apps" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">Apps</a>
                     <a href="#faq" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">FAQ</a>
                     
-                    <!-- 言語切り替えメニュー（モバイル） -->
-                    <div class="border-t border-gray-200 pt-2 mt-2">
-                        <div class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Language</div>
-                        <a href="/ja/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇯🇵 日本語</a>
-                        <a href="/en/" class="text-blue-600 bg-blue-50 block px-3 py-2 rounded-md text-base font-medium">🇺🇸 English</a>
-                        <a href="/zhhans/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇨🇳 中文（简体）</a>
-                        <a href="/zhhant/" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">🇹🇼 中文（繁體）</a>
-                    </div>
+                    <!-- 言語切り替えメニュー（モバイル） - 削除（モバイルではヘッダー外に切替ボタンを用意） -->
                 </div>
             </div>
         </nav>
