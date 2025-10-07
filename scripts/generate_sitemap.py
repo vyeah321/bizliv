@@ -1,213 +1,178 @@
-#!/usr/bin/env python3
-"""
-Sitemap Generator for BizLiv Website
-Automatically generates sitemap.xml from HTML files in the repository
-"""
-
 import os
-import glob
 import xml.etree.ElementTree as ET
-from datetime import datetime
-from typing import Dict, List, Tuple
+from datetime import datetime, timezone
 
-# Configuration
-DOMAIN = "https://bizliv.life"
-DEFAULT_CHANGEFREQ = "monthly"
-DEFAULT_PRIORITY = "0.8"
-
-# Priority mapping for different page types
-PRIORITY_MAP = {
-    "": "1.0",  # Root page
-    "blog": "0.9",
-    "podcast": "0.9",
-    "nomireco": "0.8",
-    "shopping-list": "0.8",
-    "go-home-navi": "0.8",
-    "online-meetings-schedule": "0.8",
-    "privacy": "0.7",
-    "support": "0.7"
-}
-
-# Change frequency mapping
-CHANGEFREQ_MAP = {
-    "": "daily",  # Root page
-    "blog": "daily",
-    "podcast": "daily",
-    "nomireco": DEFAULT_CHANGEFREQ,
-    "shopping-list": DEFAULT_CHANGEFREQ,
-    "go-home-navi": DEFAULT_CHANGEFREQ,
-    "online-meetings-schedule": DEFAULT_CHANGEFREQ,
-    "privacy": "yearly",
-    "support": "yearly"
-}
-
-def find_html_files(root_dir: str) -> List[str]:
-    """Find all index.html files except those in _includes directories"""
-    html_files = []
-    for root, dirs, files in os.walk(root_dir):
-        # Skip _includes directories
-        if '_includes' in root:
-            continue
-        if 'index.html' in files:
-            html_files.append(os.path.join(root, 'index.html'))
-    return sorted(html_files)
-
-def path_to_url(file_path: str, root_dir: str) -> str:
-    """Convert file path to URL"""
-    # Remove root directory and index.html
-    relative_path = os.path.relpath(file_path, root_dir)
-    url_path = os.path.dirname(relative_path)
-    
-    # Convert to URL format
-    if url_path == '.':
-        return f"{DOMAIN}/"
+def indent(elem, level=0):
+    """インデントを適用してXMLを見やすくする"""
+    i = "\n" + level * "  "
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = i + "  "
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
+        for subelem in elem:
+            indent(subelem, level + 1)
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
     else:
-        return f"{DOMAIN}/{url_path}/"
+        if level and (not elem.tail or not elem.tail.strip()):
+            elem.tail = i
 
-def get_app_name(url_path: str) -> str:
-    """Extract app name from URL path"""
-    if url_path == f"{DOMAIN}/":
-        return ""
+def normalize_url_path(url_path):
+    """
+    重複する言語プレフィックスを除去する
+    例: /ja/ja/page -> /ja/page, /en/en/page -> /en/page
+    """
+    # 言語プレフィックスパターン
+    lang_prefixes = ['ja', 'en', 'zhhans', 'zhhant']
     
-    # Remove domain and trailing slash
-    path = url_path.replace(f"{DOMAIN}/", "").rstrip("/")
+    for lang in lang_prefixes:
+        duplicate_pattern = f'/{lang}/{lang}/'
+        if duplicate_pattern in url_path:
+            url_path = url_path.replace(duplicate_pattern, f'/{lang}/')
     
-    # Get the first part of the path (app name)
-    return path.split('/')[0] if path else ""
+    return url_path
 
-def get_language_alternatives(file_path: str, root_dir: str, all_files: List[str]) -> List[Tuple[str, str]]:
-    """Get language alternatives for a given file"""
+def get_language_alternatives(rel_path, base_url, root_dir):
+    """
+    指定されたページに対する言語別の代替URLを取得する
+    実際に存在するファイルのみを返し、重複プレフィックスを避ける
+    """
     alternatives = []
+    lang_mapping = {
+        'ja': 'ja',
+        'en': 'en', 
+        'zh-Hans': 'zhhans',
+        'zh-Hant': 'zhhant'
+    }
     
-    # Get the relative path without index.html
-    relative_path = os.path.relpath(file_path, root_dir)
-    base_dir = os.path.dirname(relative_path)
+    # パスを分析して、言語ディレクトリ構造を理解する
+    path_parts = rel_path.split('/')
     
-    # Determine the app and language structure
-    if base_dir == '.':
-        # Root page - check language variants
-        lang_variants = {
-            'ja': 'ja/',
-            'en': 'en/', 
-            'zh-Hans': 'zhhans/',
-            'zh-Hant': 'zhhant/'
-        }
-        for hreflang, path in lang_variants.items():
-            full_path = os.path.join(root_dir, path, 'index.html')
-            if full_path in all_files:
-                alternatives.append((hreflang, f"{DOMAIN}/{path}"))
-    else:
-        # App pages - find language variants within the same app
-        parts = base_dir.split(os.sep)
+    # ケース1: ルートページ (index.html)
+    if rel_path == 'index.html':
+        for hreflang, dir_name in lang_mapping.items():
+            lang_file = f'{dir_name}/index.html'
+            full_path = os.path.join(root_dir, lang_file)
+            if os.path.exists(full_path):
+                alt_url = f'{base_url}{dir_name}/'
+                alternatives.append((hreflang, alt_url))
+        return alternatives
+    
+    # ケース2: 既に言語ディレクトリ内のページ (ja/app/index.html, en/app/index.html, etc.)
+    if len(path_parts) >= 2 and path_parts[0] in ['ja', 'en', 'zhhans', 'zhhant']:
+        current_lang = path_parts[0]
+        app_path = '/'.join(path_parts[1:])  # 言語プレフィックスを除去
         
-        if len(parts) == 1:
-            # App root page (e.g., nomireco/index.html)
-            app_name = parts[0]
-            lang_variants = {
-                'ja': f'{app_name}/ja/',
-                'en': f'{app_name}/en/',
-                'zh-Hans': f'{app_name}/zhhans/',
-                'zh-Hant': f'{app_name}/zhhant/',
-                'x-default': f'{app_name}/'
-            }
-        elif len(parts) == 2:
-            # App language page (e.g., nomireco/ja/index.html)
-            app_name, current_lang = parts
-            lang_variants = {
-                'ja': f'{app_name}/ja/',
-                'en': f'{app_name}/en/',
-                'zh-Hans': f'{app_name}/zhhans/',
-                'zh-Hant': f'{app_name}/zhhant/',
-                'x-default': f'{app_name}/'
-            }
-        else:
-            return alternatives
-            
-        for hreflang, path in lang_variants.items():
-            full_path = os.path.join(root_dir, path, 'index.html')
-            if full_path in all_files:
-                alternatives.append((hreflang, f"{DOMAIN}/{path}"))
+        for hreflang, dir_name in lang_mapping.items():
+            lang_file = f'{dir_name}/{app_path}'
+            full_path = os.path.join(root_dir, lang_file)
+            if os.path.exists(full_path):
+                if app_path.endswith('index.html'):
+                    alt_url = f'{base_url}{dir_name}/{app_path.replace("index.html", "")}'
+                else:
+                    alt_url = f'{base_url}{dir_name}/{app_path}'
+                alternatives.append((hreflang, alt_url))
+        return alternatives
+    
+    # ケース3: アプリのルートページ (app/index.html)
+    if rel_path.endswith('/index.html') and len(path_parts) >= 2:
+        app_name = path_parts[0]  # アプリ名
+        
+        for hreflang, dir_name in lang_mapping.items():
+            # app/ja/index.html, app/en/index.html の形式で探す
+            lang_file = f'{app_name}/{dir_name}/index.html'
+            full_path = os.path.join(root_dir, lang_file)
+            if os.path.exists(full_path):
+                alt_url = f'{base_url}{app_name}/{dir_name}/'
+                alternatives.append((hreflang, alt_url))
+        return alternatives
+    
+    # ケース4: その他のファイル - 対応する言語ディレクトリ内で探す
+    for hreflang, dir_name in lang_mapping.items():
+        # 直接言語ディレクトリ内に配置されているファイルを探す
+        lang_file = f'{dir_name}/{rel_path}'
+        full_path = os.path.join(root_dir, lang_file)
+        if os.path.exists(full_path):
+            if rel_path.endswith('index.html'):
+                alt_url = f'{base_url}{dir_name}/{rel_path.replace("index.html", "")}'
+            else:
+                alt_url = f'{base_url}{dir_name}/{rel_path}'
+            alternatives.append((hreflang, alt_url))
     
     return alternatives
 
-def generate_sitemap(root_dir: str) -> str:
-    """Generate sitemap XML content"""
-    # Create XML structure
+def create_sitemap(base_url, root_dir):
+    # XML namespace宣言を正しく設定（重複を避ける）
     urlset = ET.Element('urlset')
     urlset.set('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
     urlset.set('xmlns:xhtml', 'http://www.w3.org/1999/xhtml')
-    
-    # Find all HTML files
-    html_files = find_html_files(root_dir)
-    current_date = datetime.now().strftime('%Y-%m-%d')
-    
-    # Process each HTML file
-    for html_file in html_files:
-        url_path = path_to_url(html_file, root_dir)
-        app_name = get_app_name(url_path)
-        
-        # Create URL element
-        url_elem = ET.SubElement(urlset, 'url')
-        
-        # Add location
-        loc = ET.SubElement(url_elem, 'loc')
-        loc.text = url_path
-        
-        # Add last modified date
-        lastmod = ET.SubElement(url_elem, 'lastmod')
-        lastmod.text = current_date
-        
-        # Add priority
-        priority = ET.SubElement(url_elem, 'priority')
-        priority.text = PRIORITY_MAP.get(app_name, DEFAULT_PRIORITY)
-        
-        # Add change frequency
-        changefreq = ET.SubElement(url_elem, 'changefreq')
-        changefreq.text = CHANGEFREQ_MAP.get(app_name, DEFAULT_CHANGEFREQ)
-        
-        # Add language alternatives
-        alternatives = get_language_alternatives(html_file, root_dir, html_files)
-        for hreflang, href in alternatives:
-            link = ET.SubElement(url_elem, '{http://www.w3.org/1999/xhtml}link')
-            link.set('rel', 'alternate')
-            link.set('hreflang', hreflang)
-            link.set('href', href)
-    
-    # Convert to string with pretty formatting
-    ET.indent(urlset, space="  ")
-    xml_str = ET.tostring(urlset, encoding='unicode', xml_declaration=True)
-    
-    # Add UTF-8 encoding to declaration and fix namespace declarations
-    xml_str = xml_str.replace("<?xml version='1.0' encoding='unicode'?>", 
-                             "<?xml version='1.0' encoding='utf-8'?>")
-    
-    # Fix duplicate xmlns:html by removing the redundant one
-    xml_str = xml_str.replace('xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"',
-                             'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"')
-    
-    return xml_str
 
-def main():
-    """Main function"""
-    # Get the repository root directory
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    repo_root = os.path.dirname(script_dir)
-    
-    print(f"Generating sitemap for: {repo_root}")
-    
-    # Generate sitemap
-    sitemap_content = generate_sitemap(repo_root)
-    
-    # Write to sitemap.xml
-    sitemap_path = os.path.join(repo_root, 'sitemap.xml')
-    with open(sitemap_path, 'w', encoding='utf-8') as f:
-        f.write(sitemap_content)
-    
-    print(f"Sitemap generated successfully: {sitemap_path}")
-    
-    # Print summary
-    html_files = find_html_files(repo_root)
-    print(f"Total pages included: {len(html_files)}")
+    for root, dirs, files in os.walk(root_dir):
+        for file in files:
+            if file.endswith('.html'):
+                file_path = os.path.join(root, file)
+                rel_path = os.path.relpath(file_path, root_dir).replace(os.path.sep, '/')
+                
+                # テンプレートファイルや不要なファイルを除外
+                if ('_includes' in rel_path or 
+                    rel_path.startswith('.') or
+                    'template' in rel_path.lower()):
+                    continue
+                
+                # URLの基本形を生成
+                if rel_path.endswith('index.html'):
+                    url = base_url + rel_path.replace('index.html', '')
+                else:
+                    url = base_url + rel_path
 
+                # URLパスを正規化（重複プレフィックス除去）
+                url = normalize_url_path(url)
+
+                # URL要素の作成
+                url_element = ET.SubElement(urlset, 'url')
+
+                # locタグ
+                loc = ET.SubElement(url_element, 'loc')
+                loc.text = url
+
+                # lastmodタグ
+                lastmod = ET.SubElement(url_element, 'lastmod')
+                lastmod.text = datetime.fromtimestamp(os.path.getmtime(file_path), timezone.utc).strftime('%Y-%m-%d')
+
+                # priorityタグ
+                priority = ET.SubElement(url_element, 'priority')
+                priority.text = '1.0' if rel_path == 'index.html' else '0.8'
+
+                # changefreqタグ
+                changefreq = ET.SubElement(url_element, 'changefreq')
+                changefreq.text = 'daily' if rel_path == 'index.html' else 'monthly'
+
+                # hreflangリンクを追加（実際に存在するページのみ）
+                alternatives = get_language_alternatives(rel_path, base_url, root_dir)
+                for hreflang, alt_url in alternatives:
+                    hreflang_link = ET.SubElement(
+                        url_element,
+                        '{http://www.w3.org/1999/xhtml}link',
+                        rel="alternate",
+                        hreflang=hreflang,
+                        href=alt_url
+                    )
+
+    # インデントを適用して見やすくする
+    indent(urlset)
+
+    # XMLファイルとして保存
+    tree = ET.ElementTree(urlset)
+    tree.write('sitemap.xml', encoding='utf-8', xml_declaration=True)
+
+# 使用例
 if __name__ == "__main__":
-    main()
+    base_url = 'https://bizliv.life/'
+    root_dir = '../'  # 親ディレクトリ（bizlivルート）を指定
+    
+    print(f"Scanning directory: {os.path.abspath(root_dir)}")
+    print(f"Base URL: {base_url}")
+    
+    create_sitemap(base_url, root_dir)
+    print("Sitemap generated successfully!")
