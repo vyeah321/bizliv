@@ -59,3 +59,89 @@ header {
 
 nav ul { list-style-type: none; padding: 0; }
 nav ul li { display: inline; margin-right: 10px; }
+
+/* White box styling */
+.white-box {
+  background-color: white;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Ensure readable text colors */
+  .text-black {
+    color: #f9fafb !important; /* text-gray-50 equivalent */
+  }
+  
+  .text-gray-700 {
+    color: #d1d5db !important; /* text-gray-300 equivalent */
+  }
+  
+  .text-gray-800 {
+    color: #e5e7eb !important; /* text-gray-200 equivalent */
+  }
+  
+  .text-gray-600 {
+    color: #d1d5db !important; /* text-gray-300 equivalent */
+  }
+  
+  .text-gray-500 {
+    color: #9ca3af !important; /* text-gray-400 equivalent */
+  }
+  
+  /* Background color adjustments */
+  .bg-white {
+    background-color: #374151 !important; /* gray-700 */
+    color: #f9fafb !important;
+  }
+  
+  /* Header adjustments for dark mode */
+  header {
+    background-color: #1f2937 !important; /* gray-800 */
+    color: #f9fafb !important;
+  }
+  
+  /* Ensure white boxes have dark background in dark mode */
+  .white-box {
+    background-color: #374151 !important; /* gray-700 */
+    color: #f9fafb !important;
+  }
+  
+  /* Body background adjustment */
+  body {
+    background-color: #111827; /* gray-900 */
+    color: #f9fafb;
+  }
+  
+  /* Hero content adjustment - make sure it's still readable */
+  .hero-content {
+    background-color: rgba(31, 41, 55, 0.8) !important; /* darker overlay */
+  }
+  
+  /* Footer already uses dark colors, but ensure consistency */
+  footer {
+    background-color: #030712 !important; /* gray-950 */
+  }
+  
+  /* Shadow adjustments for dark mode */
+  .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06) !important;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  /* Ensure lists are readable */
+  ul li {
+    color: inherit;
+  }
+  
+  /* Ensure all paragraphs are readable */
+  p {
+    color: inherit !important;
+  }
+}
