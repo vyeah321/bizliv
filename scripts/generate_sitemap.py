@@ -1,6 +1,105 @@
 import os
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+import urllib.request
+import urllib.error
+from urllib.parse import urljoin
+
+def fetch_rss_last_updated(rss_url, timeout=10):
+    """
+    RSSフィードから最新記事の更新日時を取得する
+    """
+    try:
+        req = urllib.request.Request(rss_url)
+        req.add_header('User-Agent', 'BizLiv-SitemapGenerator/1.0')
+        
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            rss_content = response.read().decode('utf-8')
+            
+        # XMLパース
+        rss_root = ET.fromstring(rss_content)
+        
+        # RSS 2.0形式の場合
+        items = rss_root.findall('.//item')
+        if not items:
+            # Atom形式の場合
+            items = rss_root.findall('.//{http://www.w3.org/2005/Atom}entry')
+        
+        if not items:
+            print(f"Warning: No items found in RSS feed: {rss_url}")
+            return None
+            
+        # 最新記事の日付を取得
+        latest_date = None
+        for item in items:
+            # RSS 2.0の場合
+            pub_date = item.find('pubDate')
+            if pub_date is None:
+                # Atomの場合
+                pub_date = item.find('.//{http://www.w3.org/2005/Atom}published')
+                if pub_date is None:
+                    pub_date = item.find('.//{http://www.w3.org/2005/Atom}updated')
+            
+            if pub_date is not None and pub_date.text:
+                try:
+                    # RFC 2822形式またはISO 8601形式をパース
+                    date_str = pub_date.text.strip()
+                    
+                    if ',' in date_str:
+                        # RFC 2822形式の処理
+                        if 'GMT' in date_str:
+                            # GMT形式: "Tue, 07 Oct 2025 15:30:00 GMT"
+                            parsed_date = datetime.strptime(date_str, "%a, %d %b %Y %H:%M:%S GMT")
+                            parsed_date = parsed_date.replace(tzinfo=timezone.utc)
+                        else:
+                            # タイムゾーン付き形式: "Tue, 07 Oct 2025 15:30:00 +0900"
+                            parsed_date = datetime.strptime(date_str, "%a, %d %b %Y %H:%M:%S %z")
+                    else:
+                        # ISO 8601形式の例: "2025-10-07T15:30:00+09:00"
+                        parsed_date = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                    
+                    if latest_date is None or parsed_date > latest_date:
+                        latest_date = parsed_date
+                        
+                except ValueError as e:
+                    print(f"Warning: Could not parse date '{date_str}': {e}")
+                    continue
+        
+        return latest_date
+        
+    except urllib.error.URLError as e:
+        print(f"Warning: Could not fetch RSS feed {rss_url}: {e}")
+        return None
+    except ET.ParseError as e:
+        print(f"Warning: Could not parse RSS feed {rss_url}: {e}")
+        return None
+    except Exception as e:
+        print(f"Warning: Unexpected error fetching RSS feed {rss_url}: {e}")
+        return None
+
+def get_content_last_updated():
+    """
+    外部コンテンツ（note、STAND.FM）の最新更新日時を取得する
+    """
+    rss_feeds = {
+        'note': 'https://note.com/vyeah/rss',
+        'stand.fm': 'https://stand.fm/rss/673606cf69bc2015d03c44d8'
+    }
+    
+    latest_update = None
+    
+    for source, rss_url in rss_feeds.items():
+        print(f"Checking {source} RSS feed...")
+        last_updated = fetch_rss_last_updated(rss_url)
+        
+        if last_updated:
+            print(f"  Latest {source} update: {last_updated.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+            if latest_update is None or last_updated > latest_update:
+                latest_update = last_updated
+        else:
+            print(f"  Could not retrieve {source} update date")
+    
+    return latest_update
 
 def indent(elem, level=0):
     """インデントを適用してXMLを見やすくする"""
@@ -111,6 +210,17 @@ def create_sitemap(base_url, root_dir):
     urlset = ET.Element('urlset')
     urlset.set('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
     urlset.set('xmlns:xhtml', 'http://www.w3.org/1999/xhtml')
+    
+    # 外部コンテンツの最新更新日時を取得
+    print("Checking external content updates...")
+    content_last_updated = get_content_last_updated()
+    
+    if content_last_updated:
+        content_last_updated_str = content_last_updated.strftime('%Y-%m-%d')
+        print(f"External content last updated: {content_last_updated_str}")
+    else:
+        content_last_updated_str = None
+        print("Could not determine external content update date")
 
     for root, dirs, files in os.walk(root_dir):
         for file in files:
@@ -142,7 +252,27 @@ def create_sitemap(base_url, root_dir):
 
                 # lastmodタグ
                 lastmod = ET.SubElement(url_element, 'lastmod')
-                lastmod.text = datetime.fromtimestamp(os.path.getmtime(file_path), timezone.utc).strftime('%Y-%m-%d')
+                
+                # ブログとポッドキャストページは外部コンテンツの更新日時を使用
+                is_blog_or_podcast = (
+                    'blog/' in rel_path or 
+                    'podcast/' in rel_path or
+                    (rel_path == 'index.html' and content_last_updated_str)  # トップページも外部コンテンツの影響を受ける
+                )
+                
+                if is_blog_or_podcast and content_last_updated_str:
+                    # 外部コンテンツの更新日時とファイルの更新日時を比較し、新しい方を使用
+                    file_mtime = datetime.fromtimestamp(os.path.getmtime(file_path), timezone.utc)
+                    file_mtime_str = file_mtime.strftime('%Y-%m-%d')
+                    
+                    if content_last_updated > file_mtime:
+                        lastmod.text = content_last_updated_str
+                        print(f"  Using external content date for {rel_path}: {content_last_updated_str}")
+                    else:
+                        lastmod.text = file_mtime_str
+                else:
+                    # 通常のファイル更新日時を使用
+                    lastmod.text = datetime.fromtimestamp(os.path.getmtime(file_path), timezone.utc).strftime('%Y-%m-%d')
 
                 # priorityタグ
                 priority = ET.SubElement(url_element, 'priority')
@@ -150,7 +280,13 @@ def create_sitemap(base_url, root_dir):
 
                 # changefreqタグ
                 changefreq = ET.SubElement(url_element, 'changefreq')
-                changefreq.text = 'daily' if rel_path == 'index.html' else 'monthly'
+                # ブログとポッドキャストページはより頻繁に更新される
+                if 'blog/' in rel_path or 'podcast/' in rel_path:
+                    changefreq.text = 'daily'
+                elif rel_path == 'index.html':
+                    changefreq.text = 'daily'
+                else:
+                    changefreq.text = 'monthly'
 
                 # hreflangリンクを追加（実際に存在するページのみ）
                 alternatives = get_language_alternatives(rel_path, base_url, root_dir)
