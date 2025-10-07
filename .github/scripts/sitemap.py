@@ -1,87 +1,67 @@
 import os
-import xml.etree.ElementTree as ET
+from xml.etree.ElementTree import Element, SubElement, tostring
+from xml.dom import minidom
 from datetime import datetime
 
-def indent(elem, level=0):
-    """インデントを適用してXMLを見やすくする"""
-    i = "\n" + level * "  "
-    if len(elem):
-        if not elem.text or not elem.text.strip():
-            elem.text = i + "  "
-        if not elem.tail or not elem.tail.strip():
-            elem.tail = i
-        for subelem in elem:
-            indent(subelem, level + 1)
-        if not elem.tail or not elem.tail.strip():
-            elem.tail = i
-    else:
-        if level and (not elem.tail or not elem.tail.strip()):
-            elem.tail = i
+# サイトURLとページ情報
+pages = [
+    {'loc': '/', 'priority': 1.0, 'changefreq': 'daily'},
+    {'loc': '/ja/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/en/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/zhhans/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/zhhant/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/privacy/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/support/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/blog/ja/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/shopping-list/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/go-home-navi/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/nomireco/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/podcast/ja/', 'priority': 0.8, 'changefreq': 'monthly'},
+    {'loc': '/online-meetings-schedule/', 'priority': 0.8, 'changefreq': 'monthly'},
+]
 
-def create_sitemap(base_url, root_dir):
-    urlset = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9', 
-                        attrib={'xmlns:xhtml': 'http://www.w3.org/1999/xhtml'})
+# hreflang マッピング
+hreflangs = {
+    'ja': '/ja/',
+    'en': '/en/',
+    'zhhans': '/zhhans/',
+    'zhhant': '/zhhant/',
+}
 
-    # 言語ごとのパスを定義
-    hreflang_paths = {
-        'ja': '/ja/',
-        'en': '/en/',
-        'zhhans': '/zhhans/',
-        'zhhant': '/zhhant/'
-    }
+base_url = "https://bizliv.life"
 
-    for root, dirs, files in os.walk(root_dir):
-        for file in files:
-            if file.endswith('.html'):
-                file_path = os.path.join(root, file)
-                rel_path = os.path.relpath(file_path, root_dir)
-                
-                # index.html の場合はルートディレクトリに変換
-                if rel_path.endswith('index.html'):
-                    url = base_url + rel_path.replace('index.html', '').replace(os.path.sep, '/')
-                else:
-                    url = base_url + rel_path.replace(os.path.sep, '/')
-                
-                # URL要素の作成
-                url_element = ET.SubElement(urlset, 'url')
-                
-                # locタグの作成
-                loc = ET.SubElement(url_element, 'loc')
-                loc.text = url
-                
-                # lastmodタグの作成（ファイルの最終更新日時を取得）
-                lastmod = ET.SubElement(url_element, 'lastmod')
-                lastmod.text = datetime.utcfromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d')
+# XML生成
+urlset = Element('urlset', {
+    'xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+    'xmlns:xhtml': 'http://www.w3.org/1999/xhtml'
+})
 
-                # priorityタグ（トップページは1.0、それ以外は0.8）
-                priority = ET.SubElement(url_element, 'priority')
-                if rel_path == 'index.html':
-                    priority.text = '1.0'
-                else:
-                    priority.text = '0.8'
+today = datetime.today().strftime('%Y-%m-%d')
 
-                # changefreqタグ（トップページはdaily、それ以外はmonthly）
-                changefreq = ET.SubElement(url_element, 'changefreq')
-                if rel_path == 'index.html':
-                    changefreq.text = 'daily'
-                else:
-                    changefreq.text = 'monthly'
+for page in pages:
+    # _includes などの内部ファイルは無視
+    if '_includes' in page['loc']:
+        continue
 
-                # hreflangリンクの追加
-                for lang, path in hreflang_paths.items():
-                    hreflang_link = ET.SubElement(url_element, '{http://www.w3.org/1999/xhtml}link', 
-                                                  rel="alternate", hreflang=lang)
-                    hreflang_link.set('href', base_url + lang + '/')
+    url = SubElement(urlset, 'url')
+    SubElement(url, 'loc').text = base_url + page['loc']
+    SubElement(url, 'lastmod').text = today
+    SubElement(url, 'changefreq').text = page['changefreq']
+    SubElement(url, 'priority').text = str(page['priority'])
 
-    # インデントを適用して見やすくする
-    indent(urlset)
+    # hreflang タグを付与
+    for lang, path in hreflangs.items():
+        link = SubElement(url, '{http://www.w3.org/1999/xhtml}link', {
+            'rel': 'alternate',
+            'hreflang': lang,
+            'href': base_url + path
+        })
 
-    # XMLファイルとして保存
-    tree = ET.ElementTree(urlset)
-    tree.write('sitemap.xml', encoding='utf-8', xml_declaration=True)
+# 見やすいXMLに整形
+xml_str = minidom.parseString(tostring(urlset)).toprettyxml(indent="  ", encoding="utf-8")
 
-# 使用例
-base_url = 'https://bizliv.life/'
-root_dir = '.'  # カレントディレクトリを指定
+# ファイル保存
+with open('sitemap.xml', 'wb') as f:
+    f.write(xml_str)
 
-create_sitemap(base_url, root_dir)
+print("sitemap.xml を生成しました。")
