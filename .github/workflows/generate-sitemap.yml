@@ -11,9 +11,9 @@ on:
   # Allow manual trigger
   workflow_dispatch:
   
-  # Run weekly to keep sitemap fresh
+  # Run daily to keep sitemap fresh
   schedule:
-    - cron: '0 2 * * 1'  # Every Monday at 2 AM UTC
+    - cron: '0 2 * * *'  # Every day at 2 AM UTC
 
 jobs:
   generate-sitemap:
@@ -57,6 +57,8 @@ jobs:
         git config --local user.name "GitHub Action"
         git add sitemap.xml
         git commit -m "Auto-update sitemap.xml [skip ci]"
+        # Pull remote changes first to avoid non-fast-forward errors
+        git pull --rebase origin main
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
