@@ -136,7 +136,6 @@ def generate_sitemap(root_dir: str) -> str:
     urlset = ET.Element('urlset')
     urlset.set('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
     urlset.set('xmlns:xhtml', 'http://www.w3.org/1999/xhtml')
-    urlset.set('xmlns:html', 'http://www.w3.org/1999/xhtml')
     
     # Find all HTML files
     html_files = find_html_files(root_dir)
@@ -178,9 +177,13 @@ def generate_sitemap(root_dir: str) -> str:
     ET.indent(urlset, space="  ")
     xml_str = ET.tostring(urlset, encoding='unicode', xml_declaration=True)
     
-    # Add UTF-8 encoding to declaration
+    # Add UTF-8 encoding to declaration and fix namespace declarations
     xml_str = xml_str.replace("<?xml version='1.0' encoding='unicode'?>", 
                              "<?xml version='1.0' encoding='utf-8'?>")
+    
+    # Fix duplicate xmlns:html by removing the redundant one
+    xml_str = xml_str.replace('xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"',
+                             'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"')
     
     return xml_str
 
