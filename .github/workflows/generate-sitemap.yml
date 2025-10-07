@@ -1,0 +1,73 @@
+name: Generate Sitemap
+
+on:
+  # Run on pushes to main branch that modify HTML files
+  push:
+    branches: [ main ]
+    paths:
+      - '**/*.html'
+      - 'scripts/generate_sitemap.py'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Run weekly to keep sitemap fresh
+  schedule:
+    - cron: '0 2 * * 1'  # Every Monday at 2 AM UTC
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # Needed to commit changes
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch full history for accurate file dates
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Make script executable
+      run: chmod +x scripts/generate_sitemap.py
+    
+    - name: Generate sitemap
+      run: python3 scripts/generate_sitemap.py
+    
+    - name: Check if sitemap changed
+      id: check_changes
+      run: |
+        if git diff --quiet sitemap.xml; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+          echo "No changes to sitemap.xml"
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+          echo "Sitemap.xml has been updated"
+        fi
+    
+    - name: Commit and push changes
+      if: steps.check_changes.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add sitemap.xml
+        git commit -m "Auto-update sitemap.xml [skip ci]"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Summary
+      run: |
+        echo "## Sitemap Generation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- **Repository**: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Triggered by**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Sitemap updated**: ${{ steps.check_changes.outputs.changed }}" >> $GITHUB_STEP_SUMMARY
+        if [ "${{ steps.check_changes.outputs.changed }}" == "true" ]; then
+          echo "- **Total pages**: $(grep -c '<loc>' sitemap.xml)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Last updated**: $(date -u)" >> $GITHUB_STEP_SUMMARY
+        fi
