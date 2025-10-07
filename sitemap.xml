@@ -5,69 +5,69 @@
     <lastmod>2025-10-07</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/blog/ja/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/blog/ja/" />
   </url>
   <url>
     <loc>https://bizliv.life/en/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/en/" />
   </url>
   <url>
     <loc>https://bizliv.life/go-home-navi/en/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
   </url>
   <url>
     <loc>https://bizliv.life/go-home-navi/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
   </url>
   <url>
     <loc>https://bizliv.life/go-home-navi/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
   </url>
   <url>
     <loc>https://bizliv.life/go-home-navi/zhhans/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
   </url>
   <url>
     <loc>https://bizliv.life/go-home-navi/zhhant/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/go-home-navi/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/go-home-navi/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/go-home-navi/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/go-home-navi/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/go-home-navi/" />
   </url>
   <url>
     <loc>https://bizliv.life//</loc>
@@ -80,302 +80,302 @@
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/ja/" />
   </url>
   <url>
     <loc>https://bizliv.life/nomireco/en/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
   </url>
   <url>
     <loc>https://bizliv.life/nomireco/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
   </url>
   <url>
     <loc>https://bizliv.life/nomireco/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
   </url>
   <url>
     <loc>https://bizliv.life/nomireco/zhhans/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
   </url>
   <url>
     <loc>https://bizliv.life/nomireco/zhhant/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/nomireco/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/nomireco/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/nomireco/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/nomireco/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/nomireco/" />
   </url>
   <url>
     <loc>https://bizliv.life/online-meetings-schedule/en/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
   </url>
   <url>
     <loc>https://bizliv.life/online-meetings-schedule/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
   </url>
   <url>
     <loc>https://bizliv.life/online-meetings-schedule/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
   </url>
   <url>
     <loc>https://bizliv.life/online-meetings-schedule/zhhans/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
   </url>
   <url>
     <loc>https://bizliv.life/online-meetings-schedule/zhhant/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/online-meetings-schedule/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/online-meetings-schedule/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/online-meetings-schedule/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/online-meetings-schedule/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/online-meetings-schedule/" />
   </url>
   <url>
     <loc>https://bizliv.life/podcast/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/podcast/ja/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/podcast/ja/" />
   </url>
   <url>
     <loc>https://bizliv.life/privacy/en/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
   </url>
   <url>
     <loc>https://bizliv.life/privacy/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
   </url>
   <url>
     <loc>https://bizliv.life/privacy/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
   </url>
   <url>
     <loc>https://bizliv.life/privacy/zhhans/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
   </url>
   <url>
     <loc>https://bizliv.life/privacy/zhhant/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/" />
   </url>
   <url>
     <loc>https://bizliv.life/shopping-list/en/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
   </url>
   <url>
     <loc>https://bizliv.life/shopping-list/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
   </url>
   <url>
     <loc>https://bizliv.life/shopping-list/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
   </url>
   <url>
     <loc>https://bizliv.life/shopping-list/zhhans/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
   </url>
   <url>
     <loc>https://bizliv.life/shopping-list/zhhant/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/shopping-list/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/shopping-list/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/shopping-list/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/shopping-list/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/shopping-list/" />
   </url>
   <url>
     <loc>https://bizliv.life/support/en/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
   </url>
   <url>
     <loc>https://bizliv.life/support/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
   </url>
   <url>
     <loc>https://bizliv.life/support/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
   </url>
   <url>
     <loc>https://bizliv.life/support/zhhans/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
   </url>
   <url>
     <loc>https://bizliv.life/support/zhhant/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
-    <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
-    <html:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
-    <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
-    <html:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/" />
   </url>
   <url>
     <loc>https://bizliv.life/zhhans/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/zhhans/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/zhhans/" />
   </url>
   <url>
     <loc>https://bizliv.life/zhhant/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <html:link rel="alternate" hreflang="x-default" href="https://bizliv.life/zhhant/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizliv.life/zhhant/" />
   </url>
 </urlset>
