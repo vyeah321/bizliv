@@ -304,7 +304,7 @@
     <loc>https://bizliv.life/blog/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/bizliv/ja/" />
     <html:link rel="alternate" hreflang="en" href="https://bizliv.life/bizliv/en/" />
     <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/bizliv/zhhans/" />
@@ -364,7 +364,7 @@
     <loc>https://bizliv.life/podcast/ja/</loc>
     <lastmod>2025-10-07</lastmod>
     <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <html:link rel="alternate" hreflang="ja" href="https://bizliv.life/bizliv/ja/" />
     <html:link rel="alternate" hreflang="en" href="https://bizliv.life/bizliv/en/" />
     <html:link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/bizliv/zhhans/" />
