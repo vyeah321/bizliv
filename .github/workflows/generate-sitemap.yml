@@ -1,13 +1,6 @@
 name: Generate Sitemap
 
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - '**/*.html'
-      - 'scripts/generate_sitemap.py'
-    paths-ignore:
-      - 'sitemap.xml'
   workflow_dispatch:
   schedule:
     - cron: '0 2 * * *'  # 毎日2:00 UTC
