@@ -309,7 +309,7 @@ def create_sitemap(base_url, root_dir):
 # 使用例
 if __name__ == "__main__":
     base_url = 'https://bizliv.life/'
-    root_dir = '../'  # 親ディレクトリ（bizlivルート）を指定
+    root_dir = './'
     
     print(f"Scanning directory: {os.path.abspath(root_dir)}")
     print(f"Base URL: {base_url}")
