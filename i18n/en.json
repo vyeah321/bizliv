@@ -10,5 +10,9 @@
   "nav_download": "Download",
   "lang_label": "English",
   "aria_change_language": "Change language",
-  "aria_open_menu": "Open menu"
+  "aria_open_menu": "Open menu",
+  "footer_copyright": "© 2024 BizLiv. All rights reserved.",
+  "footer_privacy": "Privacy Policy",
+  "footer_terms": "Terms of Service",
+  "footer_contact": "Contact Us"
 }

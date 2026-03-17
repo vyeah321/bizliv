@@ -12,5 +12,9 @@
   "nav_download": "ダウンロード",
   "lang_label": "日本語",
   "aria_change_language": "言語を選択",
-  "aria_open_menu": "メニューを開く"
+  "aria_open_menu": "メニューを開く",
+  "footer_copyright": "© 2024 BizLiv. All rights reserved.",
+  "footer_privacy": "プライバシーポリシー",
+  "footer_terms": "利用規約",
+  "footer_contact": "お問い合わせ"
 }

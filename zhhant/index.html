@@ -37,64 +37,10 @@
     }
     </script>
     <link rel="stylesheet" href="/css/site.css">
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-            
-            // 言語切り替えメニューの制御
-            const languageButton = document.getElementById('language-button');
-            const languageMenu = document.getElementById('language-menu');
-            
-            languageButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                languageMenu.classList.toggle('hidden');
-            });
-            
-            // 言語メニューの外側クリックで閉じる
-            document.addEventListener('click', function(e) {
-                if (!languageButton.contains(e.target) && !languageMenu.contains(e.target)) {
-                    languageMenu.classList.add('hidden');
-                }
-            });
-        });
-    </script>
+    <script src="/js/header-loader.js" defer></script>
+    <script src="/js/footer-loader.js" defer></script>
 </head>
 <body>
-    <!-- Header will be injected by /js/header-loader.js -->
-    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
@@ -104,17 +50,14 @@
 
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
-</head>
-<body>
     <!-- Header will be injected by /js/header-loader.js -->
-    <script src="/js/header-loader.js" defer></script>
 
     <main>
         <section id="hero" class="hero" style="background-image: url('/images/background.jpg');">
             <div class="hero-content text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">商務與生活平衡的<br>一體化解決方案</h1>
                 <p class="text-xl text-white mb-8">四款便捷應用，支持40多歲和50多歲商務人士的充實生活</p>
-                <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即下載</a>
+                <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即下載</a>
             </div>
         </section>
 
@@ -146,28 +89,28 @@
                 <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                     <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/online-meetings-schedule/zhhant" target="_self">在線會議時間表</a></h3>
                     <p class="text-gray-600 mb-4">擺脫繁瑣的會議管理，專注於核心工作。只需複製貼上即可輕鬆註冊日程。</p>
-                    <a href="https://apps.apple.com/tw/app/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/id1515253382" target="_blank" class="block w-48 mx-auto">
+                    <a href="https://apps.apple.com/tw/app/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/id1515253382" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
                         <img src="../images/app-store-badge.png" alt="從App Store下載" class="w-full h-auto"/>
                     </a>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                     <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/nomireco/zhhant" target="_self">NomiReco</a></h3>
                     <p class="text-gray-600 mb-4">支持商務人士的健康管理和社交義務。客觀追蹤飲酒習慣，助力健康生活方式的發展。</p>
-                    <a href="https://apps.apple.com/tw/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_blank" class="block w-48 mx-auto">
+                    <a href="https://apps.apple.com/tw/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
                         <img src="../images/app-store-badge.png" alt="從App Store下載" class="w-full h-auto"/>
                     </a>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/shopping-list/zhhant" target="_blank">購物清單</a></h3>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/shopping-list/zhhant" target="_blank" rel="noopener noreferrer">購物清單</a></h3>
                     <p class="text-gray-600 mb-4">通過高效購物有效利用寶貴時間。自動分類功能讓您即使在工作繁忙時也能順利管理家庭生活。</p>
-                    <a href="https://apps.apple.com/tw/app/%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E8%87%AA%E5%8B%95%E6%95%B4%E5%88%97/id1546963840" target="_blank" class="block w-48 mx-auto">
+                    <a href="https://apps.apple.com/tw/app/%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E8%87%AA%E5%8B%95%E6%95%B4%E5%88%97/id1546963840" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
                         <img src="../images/app-store-badge.png" alt="從App Store下載" class="w-full h-auto"/>
                     </a>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/go-home-navi/zhhant" target="_blank">回家導航</a></h3>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/go-home-navi/zhhant" target="_blank" rel="noopener noreferrer">回家導航</a></h3>
                     <p class="text-gray-600 mb-4">從工作或社交聚會順利回家。一鍵路線搜索和末班車時間確認，確保安全回家。</p>
-                    <a href="https://apps.apple.com/tw/app/%E5%B8%B0%E5%AE%85%E3%83%8A%E3%83%93/id1491940511" target="_blank" class="block w-48 mx-auto">
+                    <a href="https://apps.apple.com/tw/app/%E5%B8%B0%E5%AE%85%E3%83%8A%E3%83%93/id1491940511" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
                         <img src="../images/app-store-badge.png" alt="從App Store下載" class="w-full h-auto"/>
                     </a>
                 </div>
@@ -196,23 +139,10 @@
         <section id="cta" class="text-center py-16 bg-blue-50 rounded-lg">
             <h2 class="text-3xl font-bold mb-4">現在就開始使用BizLiv，開啟充實生活</h2>
             <p class="text-xl text-gray-600 mb-8">高效管理您的商務和生活，實現更豐富的日常生活</p>
-            <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即下載</a>
+            <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即下載</a>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p>&copy; 2024 BizLiv。保留所有權利。</p>
-                <nav class="space-x-4">
-                    <a href="https://bizliv.life/privacy/zhhant/#privacy-policy" class="text-white hover:text-blue-300">隱私政策</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/privacy/zhhant/#terms-of-service" class="text-white hover:text-blue-300">服務條款</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/support/zhhant/" class="text-white hover:text-blue-300">聯絡我們</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer will be injected by /js/footer-loader.js -->
 </body>
 </html>
