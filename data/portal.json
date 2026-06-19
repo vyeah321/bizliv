@@ -18,32 +18,6 @@
         "building": "開発中",
         "live": "公開中"
       },
-      "signals": [
-        {
-          "date": "2026-06-19",
-          "label": "Portal",
-          "title": "迷った状態から選べる入口へ更新",
-          "text": "話す、設計する、使う。今の状態から次に進みやすい導線に整理しています。",
-          "href": "/ja/",
-          "cta": "入口を見る"
-        },
-        {
-          "date": "2026-06-19",
-          "label": "Design",
-          "title": "次の一歩を決める入口を前へ",
-          "text": "頭の中にある不安や選択肢を整理し、今日から動ける小さな計画へつなげます。",
-          "href": "https://design.bizliv.life/",
-          "cta": "Designへ"
-        },
-        {
-          "date": "2026-06-18",
-          "label": "Apps",
-          "title": "アプリ群は専用LPへ集約",
-          "text": "生活改善アプリの詳細はapps.bizliv.lifeへ。日々の小さな手間を軽くする入口として案内します。",
-          "href": "https://apps.bizliv.life/ja/",
-          "cta": "Appsへ"
-        }
-      ],
       "properties": {
         "about": {
           "name": "BizLiv.life",
@@ -127,32 +101,6 @@
         "building": "Building",
         "live": "Live"
       },
-      "signals": [
-        {
-          "date": "2026-06-19",
-          "label": "Portal",
-          "title": "Updating BizLiv as a clearer entry point",
-          "text": "Talk, design, or use tools. Choose the route that fits where you are now.",
-          "href": "/en/",
-          "cta": "View portal"
-        },
-        {
-          "date": "2026-06-19",
-          "label": "Design",
-          "title": "A clearer route for deciding the next step",
-          "text": "Sort through worries and options, then turn them into a small plan you can try today.",
-          "href": "https://design.bizliv.life/",
-          "cta": "View Design"
-        },
-        {
-          "date": "2026-06-18",
-          "label": "Apps",
-          "title": "The app lineup has its own LP",
-          "text": "Details for the practical apps live at apps.bizliv.life. Use them to reduce small daily friction.",
-          "href": "https://apps.bizliv.life/en/",
-          "cta": "View Apps"
-        }
-      ],
       "properties": {
         "about": { "name": "BizLiv.life", "verb": "Know", "map_label": "Lighthouse", "map_note": "Point of view", "audience": "I want the whole picture first", "description": "A place to choose between talking, designing, recording, using tools, and reading.", "cta": "Read the idea" },
         "coach": { "name": "BizLiv Coach", "verb": "Talk", "map_label": "Question Garden", "map_note": "Start talking", "audience": "I want to talk before it is clear", "description": "Untangle an unnamed concern through conversation and narrow the next thing to think about.", "cta": "Go to Coach" },
@@ -169,11 +117,6 @@
     },
     "zhhans": {
       "status": { "open": "开放中", "building": "开发中", "live": "公开中" },
-      "signals": [
-        { "date": "2026-06-19", "label": "Portal", "title": "更新为更容易选择的入口", "text": "聊聊、设计、使用工具。根据现在的状态选择下一步。", "href": "/zhhans/", "cta": "查看入口" },
-        { "date": "2026-06-19", "label": "Design", "title": "把下一步变得更清楚", "text": "整理不安和选项，变成今天就能尝试的小计划。", "href": "https://design.bizliv.life/", "cta": "查看 Design" },
-        { "date": "2026-06-18", "label": "Apps", "title": "应用群已集中到专用 LP", "text": "生活改善应用的详细内容在 apps.bizliv.life。用工具减轻日常小麻烦。", "href": "https://apps.bizliv.life/zhhans/", "cta": "查看 Apps" }
-      ],
       "properties": {
         "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "灯塔", "map_note": "姿态", "audience": "先想了解整体", "description": "可以从聊聊、设计、记录、使用、阅读中选择入口的地方。", "cta": "阅读想法" },
         "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提问之庭", "map_note": "先聊聊", "audience": "还说不清楚，也想先聊聊", "description": "通过对话整理还没命名的烦恼，缩小下一步要思考的事。", "cta": "去 Coach" },
@@ -190,11 +133,6 @@
     },
     "zhhant": {
       "status": { "open": "開放中", "building": "開發中", "live": "公開中" },
-      "signals": [
-        { "date": "2026-06-19", "label": "Portal", "title": "更新為更容易選擇的入口", "text": "聊聊、設計、使用工具。依照現在的狀態選擇下一步。", "href": "/zhhant/", "cta": "查看入口" },
-        { "date": "2026-06-19", "label": "Design", "title": "把下一步變得更清楚", "text": "整理不安和選項，變成今天就能嘗試的小計畫。", "href": "https://design.bizliv.life/", "cta": "查看 Design" },
-        { "date": "2026-06-18", "label": "Apps", "title": "App 群已集中到專用 LP", "text": "生活改善 App 的詳細內容在 apps.bizliv.life。用工具減輕日常小麻煩。", "href": "https://apps.bizliv.life/zhhant/", "cta": "查看 Apps" }
-      ],
       "properties": {
         "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "燈塔", "map_note": "姿態", "audience": "先想了解整體", "description": "可以從聊聊、設計、記錄、使用、閱讀中選擇入口的地方。", "cta": "閱讀想法" },
         "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提問之庭", "map_note": "先聊聊", "audience": "還說不清楚，也想先聊聊", "description": "透過對話整理還沒命名的煩惱，縮小下一步要思考的事。", "cta": "去 Coach" },

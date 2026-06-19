@@ -41,11 +41,6 @@
       .replace(/'/g, "&#039;");
   }
 
-  function formatDate(value) {
-    if (!value) return "";
-    return value.replace(/-/g, ".");
-  }
-
   function mergeProperties(data, translations) {
     const localized = translations.properties || {};
     return (data.properties || []).map((property) => ({
@@ -53,30 +48,6 @@
       ...localized[property.id],
       href: resolveHref(property.href)
     }));
-  }
-
-  function renderSignals(signals) {
-    const mount = document.querySelector("[data-portal-signals]");
-    if (!mount) return;
-
-    mount.innerHTML = "";
-    signals.forEach((signal) => {
-      const article = document.createElement("article");
-      article.className = "portal-signal-card";
-      article.innerHTML = `
-        <div class="signal-meta">
-          <time datetime="${escapeText(signal.date)}">${escapeText(formatDate(signal.date))}</time>
-          <span>${escapeText(signal.label)}</span>
-        </div>
-        <h3>${escapeText(signal.title)}</h3>
-        <p>${escapeText(signal.text)}</p>
-      `;
-      const link = document.createElement("a");
-      link.textContent = signal.cta;
-      enhanceLink(link, signal.href);
-      article.appendChild(link);
-      mount.appendChild(article);
-    });
   }
 
   function renderMapPins(properties) {
@@ -160,7 +131,6 @@
     const translations = data.locales[activeLocale] || data.locales.ja;
     const properties = mergeProperties(data, translations);
 
-    renderSignals(translations.signals || []);
     renderMapPins(properties);
     renderProperties(properties, translations.status || {});
     renderFunnel(translations.funnel || [], properties);
