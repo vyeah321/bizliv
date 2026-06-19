@@ -416,6 +416,44 @@ nav ul li { display: inline; margin-right: 10px; }
   background: rgba(255, 255, 255, 0.74);
 }
 
+.portal-language-switcher {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex: 0 0 auto;
+  padding: 3px;
+  border: 1px solid rgba(222, 214, 191, 0.92);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.portal-language-switcher a {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 30px;
+  padding: 0 8px;
+  border-radius: 6px;
+  color: var(--portal-muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.portal-language-switcher a:hover {
+  color: var(--portal-ink);
+  background: rgba(244, 236, 215, 0.92);
+}
+
+.portal-language-switcher a[aria-current="page"] {
+  color: var(--portal-ink);
+  background: var(--portal-gold);
+}
+
 .portal-section {
   padding: 88px 0;
 }
@@ -953,6 +991,21 @@ nav ul li { display: inline; margin-right: 10px; }
     display: none;
   }
 
+  .portal-nav {
+    gap: 12px;
+  }
+
+  .portal-brand {
+    min-width: auto;
+  }
+
+  .portal-language-switcher a {
+    min-width: 28px;
+    min-height: 28px;
+    padding: 0 6px;
+    font-size: 0.74rem;
+  }
+
   .portal-section {
     padding: 64px 0;
   }
@@ -1052,6 +1105,29 @@ nav ul li { display: inline; margin-right: 10px; }
 
   .portal-map-hero .map-pin {
     display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .portal-nav {
+    width: min(1180px, calc(100% - 24px));
+    gap: 8px;
+  }
+
+  .portal-brand-text {
+    font-size: 1.34rem;
+  }
+
+  .portal-language-switcher {
+    gap: 2px;
+    padding: 2px;
+  }
+
+  .portal-language-switcher a {
+    min-width: 27px;
+    min-height: 27px;
+    padding: 0 5px;
+    font-size: 0.7rem;
   }
 }
 
