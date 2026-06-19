@@ -727,6 +727,7 @@ nav ul li { display: inline; margin-right: 10px; }
 
 .map-pin {
   --pin-accent: var(--portal-gold);
+  box-sizing: border-box;
   position: absolute;
   transform: translate(-50%, -50%);
   display: grid;
@@ -742,6 +743,9 @@ nav ul li { display: inline; margin-right: 10px; }
   font-size: 0.74rem;
   font-weight: 900;
   line-height: 1.2;
+  text-decoration: none;
+  touch-action: manipulation;
+  z-index: 2;
 }
 
 .map-pin::before {
@@ -765,6 +769,11 @@ nav ul li { display: inline; margin-right: 10px; }
 
 .map-pin:hover {
   color: var(--portal-blue);
+}
+
+.map-pin:focus-visible {
+  outline: 3px solid rgba(47, 95, 122, 0.36);
+  outline-offset: 4px;
 }
 
 .portal-properties-grid {
@@ -1078,7 +1087,7 @@ nav ul li { display: inline; margin-right: 10px; }
   }
 
   .portal-map-frame {
-    width: min(100%, 270px);
+    width: min(100%, 340px);
     margin: 0 auto;
     aspect-ratio: 1672 / 941;
   }
@@ -1088,19 +1097,32 @@ nav ul li { display: inline; margin-right: 10px; }
     object-position: center;
   }
 
-  .map-pin {
-    max-width: 108px;
-    min-width: auto;
-    font-size: 0.68rem;
-    padding: 7px 8px;
-  }
-
-  .map-pin small {
-    display: none;
-  }
-
   .portal-map-hero .map-pin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 82px;
+    min-width: 34px;
+    min-height: 30px;
+    padding: 5px 7px;
+    border-radius: 999px;
+    font-size: 0.58rem;
+    line-height: 1.15;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-shadow: 0 7px 16px rgba(31, 33, 25, 0.13);
+  }
+
+  .portal-map-hero .map-pin small {
     display: none;
+  }
+
+  .portal-map-hero .map-pin::before {
+    width: 8px;
+    height: 8px;
+    bottom: -7px;
   }
 }
 
@@ -1126,6 +1148,18 @@ nav ul li { display: inline; margin-right: 10px; }
     max-width: 108px;
     min-height: 30px;
     font-size: 0.74rem;
+  }
+
+  .portal-map-frame {
+    width: min(100%, 310px);
+  }
+
+  .portal-map-hero .map-pin {
+    max-width: 72px;
+    min-width: 30px;
+    min-height: 28px;
+    padding: 4px 6px;
+    font-size: 0.52rem;
   }
 }
 
