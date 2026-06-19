@@ -23,10 +23,10 @@
           "name": "BizLiv.life",
           "verb": "知る",
           "map_label": "灯台",
-          "map_note": "姿勢",
+          "map_note": "運営者を知る",
           "audience": "まず全体像を知りたい",
           "description": "話す、設計する、記録する、使う、読む。今の状態から入口を選べる場所です。",
-          "cta": "考え方を読む"
+          "cta": "運営者を知る"
         },
         "coach": {
           "name": "BizLiv Coach",
@@ -102,7 +102,7 @@
         "live": "Live"
       },
       "properties": {
-        "about": { "name": "BizLiv.life", "verb": "Know", "map_label": "Lighthouse", "map_note": "Point of view", "audience": "I want the whole picture first", "description": "A place to choose between talking, designing, recording, using tools, and reading.", "cta": "Read the idea" },
+        "about": { "name": "BizLiv.life", "verb": "Know", "map_label": "Lighthouse", "map_note": "About the operator", "audience": "I want the whole picture first", "description": "A place to choose between talking, designing, recording, using tools, and reading.", "cta": "Meet the operator" },
         "coach": { "name": "BizLiv Coach", "verb": "Talk", "map_label": "Question Garden", "map_note": "Start talking", "audience": "I want to talk before it is clear", "description": "Untangle an unnamed concern through conversation and narrow the next thing to think about.", "cta": "Go to Coach" },
         "design": { "name": "BizLiv Design", "verb": "Design", "map_label": "Design Plaza", "map_note": "Design the next step", "audience": "I want to decide how to move", "description": "Organize work, life, and AI use into a small plan you can try today.", "cta": "Go to Design" },
         "emosnap": { "name": "EmoSnap", "verb": "Record", "map_label": "Emotion Observatory", "map_note": "Record emotion", "audience": "I want to look back on mood changes", "description": "Record feelings quickly so you can notice your own patterns and changes later.", "cta": "Go to EmoSnap" },
@@ -118,7 +118,7 @@
     "zhhans": {
       "status": { "open": "开放中", "building": "开发中", "live": "公开中" },
       "properties": {
-        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "灯塔", "map_note": "姿态", "audience": "先想了解整体", "description": "可以从聊聊、设计、记录、使用、阅读中选择入口的地方。", "cta": "阅读想法" },
+        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "灯塔", "map_note": "了解运营者", "audience": "先想了解整体", "description": "可以从聊聊、设计、记录、使用、阅读中选择入口的地方。", "cta": "了解运营者" },
         "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提问之庭", "map_note": "先聊聊", "audience": "还说不清楚，也想先聊聊", "description": "通过对话整理还没命名的烦恼，缩小下一步要思考的事。", "cta": "去 Coach" },
         "design": { "name": "BizLiv Design", "verb": "设计", "map_label": "设计广场", "map_note": "设计下一步", "audience": "想决定接下来怎么动", "description": "整理工作、生活和 AI 使用，变成今天就能尝试的小计划。", "cta": "去 Design" },
         "emosnap": { "name": "EmoSnap", "verb": "记录", "map_label": "情绪观测所", "map_note": "记录情绪", "audience": "想回看自己的情绪变化", "description": "快速留下当下的情绪，之后更容易发现自己的节奏和变化。", "cta": "去 EmoSnap" },
@@ -134,7 +134,7 @@
     "zhhant": {
       "status": { "open": "開放中", "building": "開發中", "live": "公開中" },
       "properties": {
-        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "燈塔", "map_note": "姿態", "audience": "先想了解整體", "description": "可以從聊聊、設計、記錄、使用、閱讀中選擇入口的地方。", "cta": "閱讀想法" },
+        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "燈塔", "map_note": "了解營運者", "audience": "先想了解整體", "description": "可以從聊聊、設計、記錄、使用、閱讀中選擇入口的地方。", "cta": "了解營運者" },
         "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提問之庭", "map_note": "先聊聊", "audience": "還說不清楚，也想先聊聊", "description": "透過對話整理還沒命名的煩惱，縮小下一步要思考的事。", "cta": "去 Coach" },
         "design": { "name": "BizLiv Design", "verb": "設計", "map_label": "設計廣場", "map_note": "設計下一步", "audience": "想決定接下來怎麼動", "description": "整理工作、生活和 AI 使用，變成今天就能嘗試的小計畫。", "cta": "去 Design" },
         "emosnap": { "name": "EmoSnap", "verb": "記錄", "map_label": "情緒觀測所", "map_note": "記錄情緒", "audience": "想回看自己的情緒變化", "description": "快速留下當下的情緒，之後更容易發現自己的節奏和變化。", "cta": "去 EmoSnap" },
@@ -149,7 +149,7 @@
     }
   },
   "properties": [
-    { "id": "about", "zone": "lighthouse", "x": 19, "y": 30, "href": "#manifesto", "status": "open", "accent": "#e3a72f", "show_in_map": true, "show_in_properties": false },
+    { "id": "about", "zone": "lighthouse", "x": 19, "y": 30, "href": { "ja": "/ja/about/", "en": "/en/about/", "zhhans": "/zhhans/about/", "zhhant": "/zhhant/about/" }, "status": "open", "accent": "#e3a72f", "show_in_map": true, "show_in_properties": false },
     { "id": "coach", "zone": "garden", "x": 43, "y": 34, "href": "https://coach.bizliv.life/", "status": "open", "accent": "#607d58", "show_in_map": true, "show_in_properties": true },
     { "id": "design", "zone": "studio", "x": 20, "y": 79, "href": "https://design.bizliv.life/", "status": "open", "accent": "#e3a72f", "show_in_map": true, "show_in_properties": true },
     { "id": "emosnap", "zone": "observatory", "x": 69, "y": 25, "href": { "ja": "https://www.emosnap.com/", "en": "https://www.emosnap.com/en/", "zhhans": "https://www.emosnap.com/zh-cn/", "zhhant": "https://www.emosnap.com/zh-tw/" }, "status": "building", "accent": "#2f6f91", "show_in_map": true, "show_in_properties": true },
