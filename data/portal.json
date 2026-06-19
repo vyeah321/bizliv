@@ -152,8 +152,8 @@
     { "id": "about", "zone": "lighthouse", "x": 19, "y": 30, "href": "#manifesto", "status": "open", "accent": "#e3a72f", "show_in_map": true, "show_in_properties": false },
     { "id": "coach", "zone": "garden", "x": 43, "y": 34, "href": "https://coach.bizliv.life/", "status": "open", "accent": "#607d58", "show_in_map": true, "show_in_properties": true },
     { "id": "design", "zone": "studio", "x": 20, "y": 79, "href": "https://design.bizliv.life/", "status": "open", "accent": "#e3a72f", "show_in_map": true, "show_in_properties": true },
-    { "id": "emosnap", "zone": "observatory", "x": 69, "y": 25, "href": "https://emosnap.com/", "status": "building", "accent": "#2f6f91", "show_in_map": true, "show_in_properties": true },
+    { "id": "emosnap", "zone": "observatory", "x": 69, "y": 25, "href": { "ja": "https://www.emosnap.com/", "en": "https://www.emosnap.com/en/", "zhhans": "https://www.emosnap.com/zh-cn/", "zhhant": "https://www.emosnap.com/zh-tw/" }, "status": "building", "accent": "#2f6f91", "show_in_map": true, "show_in_properties": true },
     { "id": "apps", "zone": "workshop", "x": 48, "y": 57, "href": { "ja": "https://apps.bizliv.life/ja/", "en": "https://apps.bizliv.life/en/", "zhhans": "https://apps.bizliv.life/zhhans/", "zhhant": "https://apps.bizliv.life/zhhant/" }, "status": "live", "accent": "#b46a4a", "show_in_map": true, "show_in_properties": true },
-    { "id": "media", "zone": "library", "x": 81, "y": 47, "href": "https://media.bizliv.life/", "status": "live", "accent": "#78664b", "show_in_map": true, "show_in_properties": true }
+    { "id": "media", "zone": "library", "x": 81, "y": 47, "href": { "ja": "https://media.bizliv.life/", "en": "https://media.bizliv.life/en/", "zhhans": "https://media.bizliv.life/zh-cn/", "zhhant": "https://media.bizliv.life/zh-tw/" }, "status": "live", "accent": "#78664b", "show_in_map": true, "show_in_properties": true }
   ]
 }
