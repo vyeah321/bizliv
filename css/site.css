@@ -373,13 +373,28 @@ nav ul li { display: inline; margin-right: 10px; }
 .portal-brand {
   display: inline-flex;
   align-items: center;
-  min-width: 132px;
+  color: var(--portal-ink);
+  min-width: 184px;
 }
 
 .portal-brand-logo {
   display: block;
   width: 132px;
   height: auto;
+}
+
+.portal-brand-text {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--portal-ink);
+  font-size: 1.68rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.portal-brand-text span {
+  color: var(--portal-gold);
 }
 
 .portal-links {
@@ -412,7 +427,7 @@ nav ul li { display: inline; margin-right: 10px; }
 
 .portal-hero {
   box-sizing: border-box;
-  min-height: calc(100svh - 40px);
+  min-height: calc(100svh - 104px);
   display: grid;
   align-items: center;
   padding: 64px 0 8px;
@@ -732,6 +747,7 @@ nav ul li { display: inline; margin-right: 10px; }
 
 .portal-properties-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
 }
 
 .portal-property-card {
@@ -753,6 +769,7 @@ nav ul li { display: inline; margin-right: 10px; }
 }
 
 .portal-property-card a {
+  margin-top: 0;
   padding-top: 14px;
 }
 
@@ -941,6 +958,7 @@ nav ul li { display: inline; margin-right: 10px; }
   }
 
   .portal-hero {
+    min-height: auto;
     padding: 16px 0 18px;
   }
 
@@ -983,10 +1001,6 @@ nav ul li { display: inline; margin-right: 10px; }
     font-size: 0.92rem;
     line-height: 1.64;
     margin-top: 12px;
-  }
-
-  .portal-hero .portal-lead {
-    display: none;
   }
 
   .portal-heading h2 {
