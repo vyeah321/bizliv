@@ -3,349 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizLiv - ビジネスパーソンの充実ライフをサポート</title>
+    <title>BizLiv.life | モヤモヤを、次の一歩に変える。</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/ja/">
     <link rel="alternate" hreflang="en" href="https://bizliv.life/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/">
     <link rel="canonical" href="https://bizliv.life/ja/">
-    <meta name="description" content="BizLivは生活と仕事を支えるアプリと、役立つブログ・音声コンテンツで、あなたの毎日をもっと快適に、日々の課題解決をサポートします。">
-    <meta name="keywords" content="ワークライフバランス,ビジネスパーソン,40代50代,生産性向上,飲酒記録,帰宅サポート,買い物リスト,会議管理,iOS">
-    <meta property="og:title" content="BizLiv - ビジネスパーソンの充実ライフをサポート">
-    <meta property="og:description" content="BizLivは生活と仕事を支えるアプリと、役立つブログ・音声コンテンツで、あなたの毎日をもっと快適に、日々の課題解決をサポートします。">
-    <meta property="og:image" content="/images/background.jpg">
+    <meta name="description" content="BizLiv.lifeは、つぶの活動全体を束ねる母艦ポータルです。話す、設計する、記録する、使う、読む・聴く。そして作る。モヤモヤを次の一歩に変える入口をまとめています。">
+    <meta name="keywords" content="BizLiv.life,つぶ,BizLiv Coach,BizLiv Design,EmoSnap,BizLiv Apps,BizLiv Media,コーチング,AI活用支援">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="BizLiv.life | モヤモヤを、次の一歩に変える。">
+    <meta property="og:description" content="話す。設計する。記録する。使う。読む・聴く。そして、作る。BizLivの母艦ポータルです。">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BizLiv.lifeの島地図イラスト">
     <meta property="og:url" content="https://bizliv.life/ja/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@bizliv_jp">
-    <meta name="twitter:title" content="BizLiv - ビジネスパーソンの充実ライフをサポート">
-    <meta name="twitter:description" content="BizLivは生活と仕事を支えるアプリと、役立つブログ・音声コンテンツで、あなたの毎日をもっと快適に、日々の課題解決をサポートします。">
-    <meta name="twitter:image" content="/images/background.jpg">
-    <link rel="apple-touch-icon" href="/images/app-store-badge.png">
+    <meta name="twitter:site" content="@bizliv_life">
+    <meta name="twitter:title" content="BizLiv.life | モヤモヤを、次の一歩に変える。">
+    <meta name="twitter:description" content="つぶの活動を束ねる母艦ポータル。いま必要な入口を選べます。">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2563eb">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "BizLiv",
-      "url": "https://bizliv.life/ja/"
-    }
-    </script>
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
     <link rel="stylesheet" href="/css/site.css">
-
-    <!-- Header will be injected by /js/header-loader.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KZ2GMHNF9E');
+    </script>
+    <script src="/js/portal-data.js" defer></script>
 </head>
-<body>
-    <script src="/js/header-loader.js" defer></script>
-    <script src="/js/footer-loader.js" defer></script>
+<body class="portal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="メインナビゲーション">
+            <a class="portal-brand" href="/ja/" aria-label="BizLiv.life">
+                <img class="portal-brand-logo" src="/images/bizliv-life-logo.svg" alt="BizLiv.life">
+            </a>
+            <div class="portal-links">
+                <a href="#signals">Signals</a>
+                <a href="#properties">Properties</a>
+                <a href="#manifesto">Manifesto</a>
+                <a href="#next">Next</a>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section id="hero" class="hero" style="background-image: url('/images/background.jpg');">
-            <div class="hero-content text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">ビジネスと生活の調和を実現する<br>オールインワンソリューション</h1>
-                <p class="text-xl text-white mb-8">40代・50代のビジネスパーソンの充実ライフをサポートする4つの便利なアプリ</p>
-                <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">今すぐダウンロード</a>
-            </div>
-        </section>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <div class="portal-hero-grid">
+                    <div>
+                        <p class="portal-eyebrow">BizLiv Mother Portal</p>
+                        <h1 class="portal-title">モヤモヤを、<br><span class="keep">次の一歩に変える。</span></h1>
+                        <div class="portal-statement portal-verb-stack" aria-label="BizLiv.lifeでできること">
+                            <span>話す。</span>
+                            <span>設計する。</span>
+                            <span>記録する。</span>
+                            <span>使う。</span>
+                            <span>読む・聴く。</span>
+                            <span class="portal-statement-break">そして、作る。</span>
+                        </div>
+                        <p class="portal-lead">BizLiv.lifeは、つぶの活動全体を束ねる母艦です。コーチング、設計支援、感情記録、生活改善アプリ、発信をつなぎ、今の自分に合う入口を選べるようにします。</p>
+                        <div class="portal-actions">
+                            <a class="portal-button primary" href="#properties">入口を選ぶ</a>
+                            <a class="portal-button secondary" href="#signals">今動いているものを見る</a>
+                        </div>
+                    </div>
 
-        <div class="container mx-auto px-4 py-8">
-            <div class="mb-8"></div>
-        <span class="anchor" id="features"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">特徴</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">ワークライフバランス</h3>
-                    <p>ビジネスと私生活の両立をサポートし、充実したキャリアと豊かな生活を実現します。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">時間管理の効率化</h3>
-                    <p>日々の煩わしい作業を効率化し、本来の業務や家族との時間に集中できます。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">シンプルな操作性</h3>
-                    <p>直感的なインターフェースで、デジタルツールが苦手な方でも簡単に活用できます。</p>
-                </div>
-            </div>
-        </section>
-
-        <span class="anchor" id="apps"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">BizLiv アプリ</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/online-meetings-schedule/ja" target="_self">オンライン会議スケジュール</a></h3>
-                    <p class="text-gray-600 mb-4">招待状をコピペするだけで簡単にスケジュール管理。Zoom、Google Meet、Skypeなどの予定を追加でき、カレンダーと連携して通知も可能です。</p>
-                    <a href="https://apps.apple.com/jp/app/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/id1515253382" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/nomireco/ja" target="_self">NomiReco</a></h3>
-                    <p class="text-gray-600 mb-4">飲酒日や休肝日を記録し、健康的な飲酒習慣をサポート。飲み会の予定管理や参加者との連絡、お店の場所検索も簡単にできます。</p>
-                    <a href="https://apps.apple.com/jp/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_self" class="block w-48 mx-auto">
-                        <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/shopping-list/ja" target="_self">買い物リスト</a></h3>
-                    <p class="text-gray-600 mb-4">商品を自動でジャンル分類し、整理された買い物リストを作成。メールやLINEで受け取ったリストも簡単に取り込めます。</p>
-                    <a href="https://apps.apple.com/jp/app/%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E8%87%AA%E5%8B%95%E6%95%B4%E5%88%97/id1546963840" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/go-home-navi/ja" target="_self">帰宅ナビ</a></h3>
-                    <p class="text-gray-600 mb-4">ワンタップで帰宅経路や終電時間、タクシー料金を検索。通知機能で終電の乗り過ごしを防ぎ、安全な帰宅をサポートします。</p>
-                    <a href="https://apps.apple.com/jp/app/%E5%B8%B0%E5%AE%85%E3%83%8A%E3%83%93/id1491940511" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="https://bizliv.life/images/app-store-badge.png" alt="Download on the App Store" class="mx-auto w-auto h-auto"/>
-                    </a>
+                    <figure class="portal-map-frame portal-map-hero" aria-label="BizLiv.lifeの活動を島として表したイラストマップ">
+                        <picture>
+                            <source srcset="/images/portal/map.webp" type="image/webp">
+                            <img src="/images/portal/map.jpg" alt="灯台、問いの庭、観測所、道具小屋、書斎があるBizLiv.lifeの島地図">
+                        </picture>
+                        <div class="portal-map-pins" data-portal-map-pins></div>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <span class="anchor" id="blog"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">BizLiv ブログ</h2>
-            <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold mb-4 text-gray-800">ビジネスパーソンのワークライフバランス・生産性向上のためのヒント</h3>
-                <p class="text-gray-600 mb-6">
-                    40代・50代のビジネスパーソン向けのワークライフバランス改善、生産性向上、ライフハック情報を定期更新しています。
-                    日常の気づきから実践的なヒントまで、充実したビジネスライフをサポートする情報をお届けします。
-                </p>
-                <div class="mb-6">
-                    <div class="inline-flex items-center text-sm text-green-600 mb-4">
-                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                        <span>5分間隔で自動更新</span>
+        <section id="signals" class="portal-section portal-signal-section">
+            <div class="portal-container">
+                <div class="portal-heading">
+                    <p class="portal-eyebrow">Signals</p>
+                    <h2>今、動いていること。</h2>
+                    <p class="portal-lead">母艦は名刺で終わらせない。つぶが作り、整え、届けていることを活動ログとして残します。</p>
+                </div>
+                <div class="portal-signal-grid" data-portal-signals></div>
+            </div>
+        </section>
+
+        <section id="properties" class="portal-section">
+            <div class="portal-container">
+                <div class="portal-heading">
+                    <p class="portal-eyebrow">Properties</p>
+                    <h2>今の状態から、入口を選ぶ。</h2>
+                    <p class="portal-lead">地図は雰囲気、ここは具体的な導線。何に困っているか、何をしたいかから選べます。</p>
+                </div>
+                <div class="portal-properties-grid" data-portal-properties></div>
+                <noscript>
+                    <div class="portal-grid two">
+                        <article class="portal-card"><h3>BizLiv Coach</h3><p>話す入口。</p><a href="https://coach.bizliv.life/">開く</a></article>
+                        <article class="portal-card"><h3>BizLiv Design</h3><p>設計する入口。</p><a href="https://design.bizliv.life/">開く</a></article>
+                        <article class="portal-card"><h3>EmoSnap</h3><p>記録する入口。</p><a href="https://emosnap.com/">開く</a></article>
+                        <article class="portal-card"><h3>BizLiv Apps</h3><p>使う入口。</p><a href="https://apps.bizliv.life/ja/">開く</a></article>
+                        <article class="portal-card"><h3>BizLiv Media</h3><p>読む・聴く入口。</p><a href="https://media.bizliv.life/">開く</a></article>
+                    </div>
+                </noscript>
+            </div>
+        </section>
+
+        <section id="manifesto" class="portal-section portal-manifesto">
+            <div class="portal-container">
+                <div class="portal-manifesto-grid">
+                    <div class="portal-heading compact">
+                        <p class="portal-eyebrow">Manifesto</p>
+                        <h2>AI時代の生活と仕事を、自分の手触りに戻す。</h2>
+                    </div>
+                    <div>
+                        <p class="portal-manifesto-copy">話す。設計する。記録する。使う。読む・聴く。<br>そして、作る。</p>
+                        <p class="portal-manifesto-note">ここにある入口は、すべて「いきなり正解に飛ばない」ための道具です。問いを置き、見取り図を作り、感情を残し、日々の面倒を軽くし、考えたことを外へ出す。BizLivは、その積み重ねをつぶ自身が作りながら育てていく場所です。</p>
                     </div>
                 </div>
-                <!-- セクションレベルの外部リンク（note） -->
-                <div class="mb-4">
-                    <a href="https://note.com/vyeah" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">note で記事を読む</a>
-                </div>
-                <a href="../blog/ja/" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors inline-flex items-center">
-                    ブログを読む
-                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
             </div>
         </section>
 
-        <span class="anchor" id="podcast"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">Note & Voice</h2>
-            <div class="bg-white p-8 rounded-lg shadow-md text-center mb-8">
-                <h3 class="text-2xl font-bold mb-4 text-gray-800">AIが解説する日々のノート</h3>
-                <p class="text-gray-600 mb-6">
-                    noteに書いた記事を、Google Notebook LMのAIが自動で音声解説。
-                    コーチングで学んだ気づき、日常の出来事、アプリ開発の話など、
-                    「聴くノート」として新しい体験をお楽しみください。
-                </p>
-                <!-- セクションレベルの外部リンク（STAND.FM） -->
-                <div class="mt-4">
-                    <a href="https://stand.fm/channels/673606cf69bc2015d03c44d8" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:underline">STAND.FM で聴く</a>
+        <section id="next" class="portal-section portal-final">
+            <div class="portal-container">
+                <div class="portal-heading compact">
+                    <p class="portal-eyebrow">Next</p>
+                    <h2>次は、どこへ進む？</h2>
+                    <p class="portal-lead">母艦で直接抱え込まず、目的に合う場所へ渡します。</p>
                 </div>
+                <div class="portal-funnel-grid" data-portal-funnel></div>
+                <noscript>
+                    <div class="portal-funnel-grid">
+                        <article class="portal-funnel-card"><h3>BizLiv Design</h3><p>次の一歩を設計したい。</p><a href="https://design.bizliv.life/">Designへ</a></article>
+                        <article class="portal-funnel-card"><h3>BizLiv Coach</h3><p>まず話して整理したい。</p><a href="https://coach.bizliv.life/">Coachへ</a></article>
+                        <article class="portal-funnel-card"><h3>BizLiv Apps</h3><p>道具を使って軽くしたい。</p><a href="https://apps.bizliv.life/ja/">Appsへ</a></article>
+                    </div>
+                </noscript>
             </div>
-            
-            <!-- 音声エピソード一覧（最新のみ） -->
-            <div id="podcast-loading" class="text-center py-8 hidden">
-                <div class="loading-skeleton bg-gray-200 h-8 w-64 mx-auto mb-4 rounded"></div>
-                <div class="loading-skeleton bg-gray-200 h-4 w-48 mx-auto rounded"></div>
-            </div>
-            
-            <div id="podcast-error" class="text-center py-8 hidden">
-                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-red-800 mb-2">音声コンテンツの読み込みに失敗しました</h3>
-                    <p class="text-red-600">しばらく時間をおいてから再度お試しください。</p>
-                </div>
-            </div>
-            
-            <div id="podcast-episodes" class="space-y-4 mb-8">
-                <!-- 最新1-2エピソードがここに表示 -->
-            </div>
-            
-            <div class="text-center">
-                <a href="../podcast/ja/" class="bg-purple-600 text-white font-bold py-3 px-8 rounded-full hover:bg-purple-700 transition-colors inline-flex items-center">
-                    全エピソードを聴く
-                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
-        </section>
-
-        <span class="anchor" id="faq"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">よくある質問</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Q: BizLivの利用は無料ですか？</h3>
-                    <p>A: はい、基本機能は無料でご利用いただけます。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Q: データのセキュリティは大丈夫ですか？</h3>
-                    <p>A: はい、安心してご利用いただけます。ユーザーデータはスマートフォン内またはiCloudにのみ保存され、外部サーバーには保存されません。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Q: 40代・50代以外は使えないのですか？</h3>
-                    <p>A: そんなことはありません。BizLivは幅広い年齢層の方にご利用いただけます。40代・50代のビジネスパーソンをメインターゲットとしていますが、それ以外の方々にも役立つ機能を多数搭載しています。</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="cta" class="text-center py-16 bg-blue-50 rounded-lg">
-            <h2 class="text-3xl font-bold mb-4">今すぐBizLivで充実ライフを始めよう</h2>
-            <p class="text-xl text-gray-600 mb-8">ビジネスと生活を効率的に管理し、より豊かな毎日を実現しましょう</p>
-            <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">無料でダウンロード</a>
         </section>
     </main>
 
-    <!-- Footer will be injected by /js/footer-loader.js -->
-
-    <script>
-        // STAND.FM RSS フィード URL
-        const STANDFM_RSS_URL = 'https://stand.fm/rss/673606cf69bc2015d03c44d8';
-        const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
-        
-        // 軽量版：最新エピソードのみ読み込み
-        async function loadLatestPodcastEpisodes() {
-            const loading = document.getElementById('podcast-loading');
-            const error = document.getElementById('podcast-error');
-            const episodes = document.getElementById('podcast-episodes');
-            
-            try {
-                loading.classList.remove('hidden');
-                error.classList.add('hidden');
-                
-                const response = await fetch(CORS_PROXY + encodeURIComponent(STANDFM_RSS_URL));
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                
-                const xmlText = await response.text();
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-                
-                const items = xmlDoc.querySelectorAll('item');
-                
-                if (items.length === 0) {
-                    throw new Error('No podcast items found');
-                }
-                
-                let htmlContent = '';
-                // 最新2エピソードのみ表示
-                items.forEach((item, index) => {
-                    if (index < 2) {
-                        const title = item.querySelector('title')?.textContent || '無題のエピソード';
-                        const description = item.querySelector('description')?.textContent || '';
-                        const audioUrl = item.querySelector('enclosure')?.getAttribute('url') || '';
-                        const pubDate = item.querySelector('pubDate')?.textContent || '';
-                        const duration = item.querySelector('itunes\\:duration, duration')?.textContent || '';
-                        const episodeUrl = item.querySelector('link')?.textContent || '';
-                        
-                        // 説明文をクリーンアップ（短縮版）
-                        const cleanDescription = description.replace(/<[^>]*>/g, '').substring(0, 120) + '...';
-                        
-                        // 日付をフォーマット
-                        const formattedDate = pubDate ? new Date(pubDate).toLocaleDateString('ja-JP') : '';
-                        
-                        htmlContent += `
-                            <div class="bg-white p-6 rounded-lg shadow-md podcast-item">
-                                <div class="flex flex-col gap-4">
-                                    <div class="flex items-center text-sm text-gray-500">
-                                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217z" clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span class="mr-3">${formattedDate}</span>
-                                        ${duration ? `<span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">${duration}</span>` : ''}
-                                    </div>
-                                    
-                                    <h3 class="text-xl font-bold text-gray-800 leading-tight">${title}</h3>
-                                    
-                                    <p class="text-gray-600 leading-relaxed">${cleanDescription}</p>
-                                    
-                                    ${audioUrl ? `
-                                    <div class="mt-2">
-                                        <audio controls class="w-full" preload="none">
-                                            <source src="${audioUrl}" type="audio/mpeg">
-                                            <source src="${audioUrl}" type="audio/mp4">
-                                            お使いのブラウザでは音声の再生がサポートされていません。
-                                        </audio>
-                                    </div>
-                                    ` : ''}
-                                    
-                                    <div class="flex justify-between items-center mt-4">
-                                        <a href="${episodeUrl}" 
-                                           target="_blank" rel="noopener noreferrer"
-                                           class="text-purple-600 hover:text-purple-800 font-semibold text-sm">
-                                            STAND.FMで詳細を見る →
-                                        </a>
-                                        ${index === 0 ? '<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">最新</span>' : ''}
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                    }
-                });
-                
-                episodes.innerHTML = htmlContent;
-                
-                // アニメーション付きで表示
-                setTimeout(() => {
-                    const podcastItems = document.querySelectorAll('.podcast-item');
-                    podcastItems.forEach((item, index) => {
-                        setTimeout(() => {
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px)';
-                            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                            item.style.display = 'block';
-                            
-                            requestAnimationFrame(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0)';
-                            });
-                        }, index * 200);
-                    });
-                }, 100);
-                
-            } catch (err) {
-                console.error('Latest podcast episodes loading error:', err);
-                error.classList.remove('hidden');
-            } finally {
-                loading.classList.add('hidden');
-            }
-        }
-        
-        // Intersection Observer で遅延読み込み
-        function initLazyLoadPodcast() {
-            const podcastSection = document.getElementById('podcast-episodes');
-            if (!podcastSection) return;
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // セクションが画面に入ったら読み込み開始
-                        loadLatestPodcastEpisodes();
-                        observer.unobserve(entry.target); // 一度だけ実行
-                    }
-                });
-            }, {
-                rootMargin: '50px' // 50px手前で読み込み開始
-            });
-            
-            observer.observe(podcastSection);
-        }
-        
-        // ページ読み込み時に遅延読み込みを初期化
-        document.addEventListener('DOMContentLoaded', () => {
-            initLazyLoadPodcast();
-        });
-    </script>
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <p>&copy; 2026 BizLiv.life</p>
+            <nav class="portal-footer-links" aria-label="フッターナビゲーション">
+                <a href="/privacy/ja/#privacy-policy">プライバシーポリシー</a>
+                <a href="/privacy/ja/#terms-of-service">利用規約</a>
+                <a href="/support/ja/">お問い合わせ</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">BizLiv.life favicon</title>
+  <desc id="desc">A compact BizLiv.life favicon with a cream circular background, deep green B, and gold accent.</desc>
+  <circle cx="256" cy="256" r="224" fill="#fffdf7"/>
+  <g transform="translate(-12 -23)">
+    <g transform="translate(253 294.5) scale(0.92) translate(-253 -294.5)">
+      <path d="M145 132h112c56 0 92 31 92 80 0 31-16 56-45 69 36 12 57 40 57 80 0 59-44 96-109 96H145V132Zm76 65v59h38c19 0 31-11 31-30 0-18-12-29-31-29h-38Zm0 120v71h45c23 0 36-13 36-36 0-24-13-35-36-35h-45Z" fill="#1f332f"/>
+    </g>
+    <circle cx="387" cy="130" r="22" fill="#eba72a"/>
+    <path d="M394 168c5 20 17 32 37 37-20 5-32 17-37 37-5-20-17-32-37-37 20-5 32-17 37-37Z" fill="#eba72a"/>
+  </g>
+</svg>

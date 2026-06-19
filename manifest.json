@@ -1,17 +1,22 @@
 {
-  "name": "BizLiv - ビジネスパーソンの充実ライフをサポート",
+  "name": "BizLiv.life - モヤモヤを、次の一歩に変える。",
   "short_name": "BizLiv",
-  "description": "40代・50代のビジネスパーソンのワークライフバランスを支援する4つの便利なアプリを提供しています。",
+  "description": "つぶの活動全体を束ねる母艦ポータル。話す、設計する、記録する、使う、読む・聴く入口をまとめています。",
   "start_url": "/ja/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "background_color": "#fbf7eb",
+  "theme_color": "#1f332f",
   "orientation": "portrait",
   "scope": "/",
   "icons": [
     {
-      "src": "/images/app-store-badge.png",
-      "sizes": "any",
+      "src": "/images/bizliv-life-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/bizliv-life-icon-512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],

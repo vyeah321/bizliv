@@ -1,0 +1,221 @@
+{
+  "version": 2,
+  "updated_at": "2026-06-19",
+  "brand": {
+    "gold": "#e3a72f",
+    "green": "#607d58",
+    "ink": "#1f332f"
+  },
+  "assets": {
+    "map": "/images/portal/map.webp",
+    "map_fallback": "/images/portal/map.jpg",
+    "og": "/images/portal/og-card.jpg"
+  },
+  "locales": {
+    "ja": {
+      "status": {
+        "open": "受付中",
+        "building": "開発中",
+        "live": "公開中"
+      },
+      "signals": [
+        {
+          "date": "2026-06-19",
+          "label": "Portal",
+          "title": "母艦トップを新しい入口へ更新",
+          "text": "島地図をHeroへ戻し、Design、Coach、Appsへ進みやすい導線に整理しています。",
+          "href": "/ja/",
+          "cta": "母艦を見る"
+        },
+        {
+          "date": "2026-06-19",
+          "label": "Design",
+          "title": "設計支援を主導線へ",
+          "text": "モヤモヤを言葉にしたあと、次の一歩を設計する入口としてBizLiv Designへつなぐ。",
+          "href": "https://design.bizliv.life/",
+          "cta": "Designへ"
+        },
+        {
+          "date": "2026-06-18",
+          "label": "Apps",
+          "title": "アプリ群は専用LPへ集約",
+          "text": "生活改善アプリの詳細はapps.bizliv.lifeへ。母艦では「使う」入口として案内する。",
+          "href": "https://apps.bizliv.life/ja/",
+          "cta": "Appsへ"
+        }
+      ],
+      "properties": {
+        "about": {
+          "name": "つぶ / BizLiv.life",
+          "verb": "知る",
+          "map_label": "灯台",
+          "map_note": "姿勢",
+          "audience": "まず全体像を知りたい",
+          "description": "エンジニア、コーチ、三児の父として、仕事と暮らしのモヤモヤを次の一歩へ変える活動の起点。",
+          "cta": "姿勢を読む"
+        },
+        "coach": {
+          "name": "BizLiv Coach",
+          "verb": "話す",
+          "map_label": "問いの庭",
+          "map_note": "まず話す",
+          "audience": "まだ相談内容がまとまっていない",
+          "description": "違和感や願いを、問いと対話で少しずつ言葉にする無料入口。",
+          "cta": "Coachへ"
+        },
+        "design": {
+          "name": "BizLiv Design",
+          "verb": "設計する",
+          "map_label": "設計の広場",
+          "map_note": "次を設計",
+          "audience": "仕事・暮らし・AI活用を整えたい",
+          "description": "見取り図を作り、継続して進むための有償伴走支援。",
+          "cta": "Designへ"
+        },
+        "emosnap": {
+          "name": "EmoSnap",
+          "verb": "記録する",
+          "map_label": "感情の観測所",
+          "map_note": "感情を残す",
+          "audience": "日々の感情変化を見える化したい",
+          "description": "1秒で感情を残し、あとから自分の変化に気づきやすくするプロダクト。",
+          "cta": "EmoSnapへ"
+        },
+        "apps": {
+          "name": "BizLiv Apps",
+          "verb": "使う",
+          "map_label": "道具小屋",
+          "map_note": "日々に使う",
+          "audience": "生活の小さな面倒を減らしたい",
+          "description": "会議、買い物、帰宅、飲酒記録を支える生活改善アプリ群。",
+          "cta": "Appsへ"
+        },
+        "media": {
+          "name": "BizLiv Media",
+          "verb": "読む・聴く",
+          "map_label": "発信の書斎",
+          "map_note": "読む・聴く",
+          "audience": "考え方や制作過程を追いたい",
+          "description": "コーチング、AI、開発、日常の問いを記事と音声で残す場所。",
+          "cta": "Mediaへ"
+        }
+      },
+      "funnel": [
+        {
+          "id": "design",
+          "title": "次の一歩を設計したい",
+          "text": "モヤモヤを構造化して、仕事・暮らし・AI活用の見取り図へ落とす。",
+          "cta": "BizLiv Designへ"
+        },
+        {
+          "id": "coach",
+          "title": "まず話して整理したい",
+          "text": "まだ言葉になっていない違和感を、問いと対話で外へ出す。",
+          "cta": "BizLiv Coachへ"
+        },
+        {
+          "id": "apps",
+          "title": "道具を使って軽くしたい",
+          "text": "生活の小さな面倒を、アプリで少しずつ減らす。",
+          "cta": "BizLiv Appsへ"
+        }
+      ]
+    },
+    "en": {
+      "status": {
+        "open": "Open",
+        "building": "Building",
+        "live": "Live"
+      },
+      "signals": [
+        {
+          "date": "2026-06-19",
+          "label": "Portal",
+          "title": "Updating the mother portal as a clearer entry",
+          "text": "The island map moves into the hero, and the final route now leads to Design, Coach, and Apps.",
+          "href": "/en/",
+          "cta": "View portal"
+        },
+        {
+          "date": "2026-06-19",
+          "label": "Design",
+          "title": "Design support becomes the main route",
+          "text": "After naming the vague feeling, BizLiv Design helps turn it into the next step.",
+          "href": "https://design.bizliv.life/",
+          "cta": "View Design"
+        },
+        {
+          "date": "2026-06-18",
+          "label": "Apps",
+          "title": "The app lineup has its own LP",
+          "text": "Details for the practical apps live at apps.bizliv.life. The portal keeps Apps as the place to use tools.",
+          "href": "https://apps.bizliv.life/en/",
+          "cta": "View Apps"
+        }
+      ],
+      "properties": {
+        "about": { "name": "Tsubu / BizLiv.life", "verb": "Know", "map_label": "Lighthouse", "map_note": "Point of view", "audience": "I want the whole picture first", "description": "The starting point for turning vague discomfort in work and life into a next step.", "cta": "Read manifesto" },
+        "coach": { "name": "BizLiv Coach", "verb": "Talk", "map_label": "Question Garden", "map_note": "Start talking", "audience": "I cannot explain the issue yet", "description": "A free entry point to put vague feelings and wishes into words through questions and conversation.", "cta": "Go to Coach" },
+        "design": { "name": "BizLiv Design", "verb": "Design", "map_label": "Design Plaza", "map_note": "Design the next step", "audience": "I want to organize work, life, and AI use", "description": "Paid support for drawing a map and moving forward with structure.", "cta": "Go to Design" },
+        "emosnap": { "name": "EmoSnap", "verb": "Record", "map_label": "Emotion Observatory", "map_note": "Record emotion", "audience": "I want to see emotional change", "description": "A product for recording feelings in a second and noticing your own changes later.", "cta": "Go to EmoSnap" },
+        "apps": { "name": "BizLiv Apps", "verb": "Use", "map_label": "Tool Workshop", "map_note": "Use in daily life", "audience": "I want to reduce small daily friction", "description": "Small apps for meetings, shopping, getting home, and drinking records.", "cta": "Go to Apps" },
+        "media": { "name": "BizLiv Media", "verb": "Read / Listen", "map_label": "Media Library", "map_note": "Read and listen", "audience": "I want to follow the thinking and making", "description": "Articles and audio about coaching, AI, development, and everyday questions.", "cta": "Go to Media" }
+      },
+      "funnel": [
+        { "id": "design", "title": "Design the next step", "text": "Turn vague discomfort into a map for work, life, and AI use.", "cta": "Go to BizLiv Design" },
+        { "id": "coach", "title": "Talk before it is clear", "text": "Put unnamed feelings into words through questions and conversation.", "cta": "Go to BizLiv Coach" },
+        { "id": "apps", "title": "Use tools to lighten daily life", "text": "Reduce small daily friction with practical apps.", "cta": "Go to BizLiv Apps" }
+      ]
+    },
+    "zhhans": {
+      "status": { "open": "开放中", "building": "开发中", "live": "公开中" },
+      "signals": [
+        { "date": "2026-06-19", "label": "Portal", "title": "把母舰入口更新得更清晰", "text": "岛屿地图回到 Hero，最后导线连接到 Design、Coach 和 Apps。", "href": "/zhhans/", "cta": "查看母舰" },
+        { "date": "2026-06-19", "label": "Design", "title": "把设计支持作为主导线", "text": "把模糊的不安说出来之后，连接到 BizLiv Design 设计下一步。", "href": "https://design.bizliv.life/", "cta": "查看 Design" },
+        { "date": "2026-06-18", "label": "Apps", "title": "应用群已集中到专用 LP", "text": "生活改善应用的详细内容在 apps.bizliv.life。母舰中保留为「使用」入口。", "href": "https://apps.bizliv.life/zhhans/", "cta": "查看 Apps" }
+      ],
+      "properties": {
+        "about": { "name": "Tsubu / BizLiv.life", "verb": "了解", "map_label": "灯塔", "map_note": "姿态", "audience": "先想了解整体", "description": "把工作与生活中的模糊不安，转成下一步行动的起点。", "cta": "阅读宣言" },
+        "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提问之庭", "map_note": "先聊聊", "audience": "还说不清楚问题", "description": "通过问题和对话，把还没成形的违和感与愿望慢慢说出来。", "cta": "去 Coach" },
+        "design": { "name": "BizLiv Design", "verb": "设计", "map_label": "设计广场", "map_note": "设计下一步", "audience": "想整理工作、生活和 AI 使用", "description": "画出地图，并持续伴走到实际行动。", "cta": "去 Design" },
+        "emosnap": { "name": "EmoSnap", "verb": "记录", "map_label": "情绪观测所", "map_note": "记录情绪", "audience": "想看见情绪变化", "description": "用 1 秒留下情绪，之后更容易看见自己的变化。", "cta": "去 EmoSnap" },
+        "apps": { "name": "BizLiv Apps", "verb": "使用", "map_label": "工具小屋", "map_note": "日常使用", "audience": "想减轻日常小麻烦", "description": "会议、购物、回家、饮酒记录。减轻日常小摩擦的应用群。", "cta": "去 Apps" },
+        "media": { "name": "BizLiv Media", "verb": "读・听", "map_label": "发布书房", "map_note": "读・听", "audience": "想追踪想法和制作过程", "description": "通过文章和音声发布教练、AI、开发和日常问题。", "cta": "去 Media" }
+      },
+      "funnel": [
+        { "id": "design", "title": "想设计下一步", "text": "把模糊的不安整理成工作、生活和 AI 使用的地图。", "cta": "去 BizLiv Design" },
+        { "id": "coach", "title": "想先聊聊整理", "text": "通过问题和对话，把还没命名的感觉说出来。", "cta": "去 BizLiv Coach" },
+        { "id": "apps", "title": "想用工具减轻日常", "text": "用应用慢慢减少生活中的小摩擦。", "cta": "去 BizLiv Apps" }
+      ]
+    },
+    "zhhant": {
+      "status": { "open": "開放中", "building": "開發中", "live": "公開中" },
+      "signals": [
+        { "date": "2026-06-19", "label": "Portal", "title": "把母艦入口更新得更清晰", "text": "島嶼地圖回到 Hero，最後導線連接到 Design、Coach 和 Apps。", "href": "/zhhant/", "cta": "查看母艦" },
+        { "date": "2026-06-19", "label": "Design", "title": "把設計支援作為主導線", "text": "把模糊的不安說出來之後，連接到 BizLiv Design 設計下一步。", "href": "https://design.bizliv.life/", "cta": "查看 Design" },
+        { "date": "2026-06-18", "label": "Apps", "title": "App 群已集中到專用 LP", "text": "生活改善 App 的詳細內容在 apps.bizliv.life。母艦中保留為「使用」入口。", "href": "https://apps.bizliv.life/zhhant/", "cta": "查看 Apps" }
+      ],
+      "properties": {
+        "about": { "name": "Tsubu / BizLiv.life", "verb": "了解", "map_label": "燈塔", "map_note": "姿態", "audience": "先想了解整體", "description": "把工作與生活中的模糊不安，轉成下一步行動的起點。", "cta": "閱讀宣言" },
+        "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提問之庭", "map_note": "先聊聊", "audience": "還說不清楚問題", "description": "透過問題和對話，把還沒成形的違和感與願望慢慢說出來。", "cta": "去 Coach" },
+        "design": { "name": "BizLiv Design", "verb": "設計", "map_label": "設計廣場", "map_note": "設計下一步", "audience": "想整理工作、生活和 AI 使用", "description": "畫出地圖，並持續陪伴到實際行動。", "cta": "去 Design" },
+        "emosnap": { "name": "EmoSnap", "verb": "記錄", "map_label": "情緒觀測所", "map_note": "記錄情緒", "audience": "想看見情緒變化", "description": "用 1 秒留下情緒，之後更容易看見自己的變化。", "cta": "去 EmoSnap" },
+        "apps": { "name": "BizLiv Apps", "verb": "使用", "map_label": "工具小屋", "map_note": "日常使用", "audience": "想減輕日常小麻煩", "description": "會議、購物、回家、飲酒記錄。減輕日常小摩擦的 App 群。", "cta": "去 Apps" },
+        "media": { "name": "BizLiv Media", "verb": "讀・聽", "map_label": "發布書房", "map_note": "讀・聽", "audience": "想追蹤想法和製作過程", "description": "透過文章和音聲發布教練、AI、開發和日常問題。", "cta": "去 Media" }
+      },
+      "funnel": [
+        { "id": "design", "title": "想設計下一步", "text": "把模糊的不安整理成工作、生活和 AI 使用的地圖。", "cta": "去 BizLiv Design" },
+        { "id": "coach", "title": "想先聊聊整理", "text": "透過問題和對話，把還沒命名的感覺說出來。", "cta": "去 BizLiv Coach" },
+        { "id": "apps", "title": "想用工具減輕日常", "text": "用 App 慢慢減少生活中的小摩擦。", "cta": "去 BizLiv Apps" }
+      ]
+    }
+  },
+  "properties": [
+    { "id": "about", "zone": "lighthouse", "x": 19, "y": 30, "href": "#manifesto", "status": "open", "accent": "#e3a72f", "show_in_map": true, "show_in_properties": false },
+    { "id": "coach", "zone": "garden", "x": 43, "y": 34, "href": "https://coach.bizliv.life/", "status": "open", "accent": "#607d58", "show_in_map": true, "show_in_properties": true },
+    { "id": "design", "zone": "studio", "x": 20, "y": 79, "href": "https://design.bizliv.life/", "status": "open", "accent": "#e3a72f", "show_in_map": true, "show_in_properties": true },
+    { "id": "emosnap", "zone": "observatory", "x": 69, "y": 25, "href": "https://emosnap.com/", "status": "building", "accent": "#2f6f91", "show_in_map": true, "show_in_properties": true },
+    { "id": "apps", "zone": "workshop", "x": 48, "y": 57, "href": { "ja": "https://apps.bizliv.life/ja/", "en": "https://apps.bizliv.life/en/", "zhhans": "https://apps.bizliv.life/zhhans/", "zhhant": "https://apps.bizliv.life/zhhant/" }, "status": "live", "accent": "#b46a4a", "show_in_map": true, "show_in_properties": true },
+    { "id": "media", "zone": "library", "x": 81, "y": 47, "href": "https://media.bizliv.life/", "status": "live", "accent": "#78664b", "show_in_map": true, "show_in_properties": true }
+  ]
+}

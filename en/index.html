@@ -3,147 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizLiv - Supporting Fulfilling Lives for Business Professionals</title>
-    <link rel="alternate" hreflang="en" href="https://bizliv.life/en/">
+    <title>BizLiv.life | Turn vague feelings into the next step.</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/">
     <link rel="canonical" href="https://bizliv.life/en/">
-    <meta name="description" content="BizLiv provides practical apps and helpful content — blogs and audio — to make work and daily life smoother and support everyday problem solving.">
-    <meta name="keywords" content="work-life balance,business professionals,productivity apps,drinking tracker,commute assistance,shopping list,meeting scheduler,iOS apps">
-    <meta property="og:title" content="BizLiv - Supporting Fulfilling Lives for Business Professionals">
-    <meta property="og:description" content="BizLiv provides practical apps and helpful content — blogs and audio — to make work and daily life smoother and support everyday problem solving.">
-    <meta property="og:image" content="/images/background.jpg">
+    <meta name="description" content="BizLiv.life is the mother portal for Tsubu's work: coaching, life design support, EmoSnap, BizLiv Apps, and media. Talk, design, record, use, read and listen. Then make.">
+    <meta name="keywords" content="BizLiv.life,Tsubu,BizLiv Coach,BizLiv Design,EmoSnap,BizLiv Apps,BizLiv Media,coaching,AI support">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="BizLiv.life | Turn vague feelings into the next step.">
+    <meta property="og:description" content="Talk. Design. Record. Use. Read and listen. Then make. The mother portal for BizLiv.">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Illustrated island map of BizLiv.life">
     <meta property="og:url" content="https://bizliv.life/en/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@bizliv_jp">
-    <meta name="twitter:title" content="BizLiv - Supporting Fulfilling Lives for Business Professionals">
-    <meta name="twitter:description" content="BizLiv provides practical apps and helpful content — blogs and audio — to make work and daily life smoother and support everyday problem solving.">
-    <meta name="twitter:image" content="/images/background.jpg">
-    <link rel="apple-touch-icon" href="/images/app-store-badge.png">
+    <meta name="twitter:site" content="@bizliv_life">
+    <meta name="twitter:title" content="BizLiv.life | Turn vague feelings into the next step.">
+    <meta name="twitter:description" content="Choose the BizLiv entry point that fits where you are now.">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2563eb">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "BizLiv",
-      "url": "https://bizliv.life/en/"
-    }
-    </script>
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
     <link rel="stylesheet" href="/css/site.css">
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
+    <script src="/js/portal-data.js" defer></script>
 </head>
-<body>
-    <!-- Header will be injected by /js/header-loader.js -->
-    <script src="/js/header-loader.js" defer></script>
-    <script src="/js/footer-loader.js" defer></script>
+<body class="portal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="Main navigation">
+            <a class="portal-brand" href="/en/" aria-label="BizLiv.life">
+                <img class="portal-brand-logo" src="/images/bizliv-life-logo.svg" alt="BizLiv.life">
+            </a>
+            <div class="portal-links">
+                <a href="#signals">Signals</a>
+                <a href="#properties">Properties</a>
+                <a href="#manifesto">Manifesto</a>
+                <a href="#next">Next</a>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section id="hero" class="hero" style="background-image: url('/images/background.jpg');">
-            <div class="hero-content text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">All-in-One Solution for<br>Business and Life Balance</h1>
-                <p class="text-xl text-white mb-8">Four convenient apps supporting fulfilling lives for business professionals in their 40s and 50s</p>
-                <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">Download Now</a>
-            </div>
-        </section>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <div class="portal-hero-grid">
+                    <div>
+                        <p class="portal-eyebrow">BizLiv Mother Portal</p>
+                        <h1 class="portal-title">Turn vague feelings into the next step.</h1>
+                        <div class="portal-statement portal-verb-stack" aria-label="What you can do from BizLiv.life">
+                            <span>Talk.</span>
+                            <span>Design.</span>
+                            <span>Record.</span>
+                            <span>Use.</span>
+                            <span>Read and listen.</span>
+                            <span class="portal-statement-break">Then make.</span>
+                        </div>
+                        <p class="portal-lead">BizLiv.life gathers Tsubu's coaching, design support, emotion logging, practical apps, and media into one portal so you can choose the entry point that fits where you are now.</p>
+                        <div class="portal-actions">
+                            <a class="portal-button primary" href="#properties">Choose an entry</a>
+                            <a class="portal-button secondary" href="#signals">See what is moving</a>
+                        </div>
+                    </div>
 
-        <div class="container mx-auto px-4 py-8">
-            <div class="mb-8"></div>
-        <span class="anchor" id="features"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">BizLiv Features</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Work-Life Balance</h3>
-                    <p>Supports balancing business and personal life, achieving a fulfilling career and rich lifestyle.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Efficient Time Management</h3>
-                    <p>Streamlines daily tasks, allowing focus on core work and family time.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Simple Operation</h3>
-                    <p>Intuitive interface for easy use, even for those unfamiliar with digital tools.</p>
-                </div>
-            </div>
-        </section>
-
-        <span class="anchor" id="apps"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">BizLiv Apps</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/online-meetings-schedule/en" target="_self">Online Meetings Schedule</a></h3>
-                    <p class="text-gray-600 mb-4">Free yourself from tedious meeting management and focus on your core work. Easy schedule registration with just copy and paste.</p>
-                    <a href="https://apps.apple.com/jp/app/online-meetings-schedule/id1515253382?l=en-US" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="Download on the App Store" class="w-full h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/nomireco/en" target="_self">NomiReco</a></h3>
-                    <p class="text-gray-600 mb-4">Supports health management and social obligations for business professionals. Objectively track drinking habits and contribute to healthy lifestyle development.</p>
-                    <a href="https://apps.apple.com/jp/app/nomireco-drinking-day-record/id1483451979?l=en-US" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="Download on the App Store" class="w-full h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/shopping-list/en" target="_self">Shopping List</a></h3>
-                    <p class="text-gray-600 mb-4">Make effective use of valuable time with efficient shopping. Automatic category classification feature allows smooth management of home life even when busy with work.</p>
-                    <a href="https://apps.apple.com/jp/app/shopping-list-auto-organize/id1546963840?l=en-US" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="Download on the App Store" class="w-full h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/go-home-navi/en" target="_self">Go Home Navi</a></h3>
-                    <p class="text-gray-600 mb-4">Smooth return home from work or social gatherings. One-tap route search and last train time confirmation for safe return home.</p>
-                    <a href="https://apps.apple.com/jp/app/go-home-navi/id1491940511?l=en-US" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="Download on the App Store" class="w-full h-auto"/>
-                    </a>
+                    <figure class="portal-map-frame portal-map-hero" aria-label="Illustrated island map of BizLiv.life">
+                        <picture>
+                            <source srcset="/images/portal/map.webp" type="image/webp">
+                            <img src="/images/portal/map.jpg" alt="An illustrated BizLiv.life island with a lighthouse, question garden, observatory, workshop, and library">
+                        </picture>
+                        <div class="portal-map-pins" data-portal-map-pins></div>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <span class="anchor" id="faq"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Q: Is BizLiv free to use?</h3>
-                    <p>A: Yes, basic features are available for free.</p>
+        <section id="signals" class="portal-section portal-signal-section">
+            <div class="portal-container">
+                <div class="portal-heading">
+                    <p class="portal-eyebrow">Signals</p>
+                    <h2>What is moving now.</h2>
+                    <p class="portal-lead">This portal should not stop at a profile. It keeps a log of what Tsubu is making, refining, and sending out.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Q: Is data security guaranteed?</h3>
-                    <p>A: Yes, you can use it with peace of mind. User data is stored only on your smartphone or iCloud and is not saved on external servers.</p>
+                <div class="portal-signal-grid" data-portal-signals></div>
+            </div>
+        </section>
+
+        <section id="properties" class="portal-section">
+            <div class="portal-container">
+                <div class="portal-heading">
+                    <p class="portal-eyebrow">Properties</p>
+                    <h2>Choose an entry from where you are now.</h2>
+                    <p class="portal-lead">The map carries the atmosphere; these cards are the practical routes. Start from what you need to do next.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Q: Can only people in their 40s and 50s use it?</h3>
-                    <p>A: Not at all. BizLiv can be used by a wide range of age groups. While our main target is business professionals in their 40s and 50s, we have many features that are useful for people of other age groups as well.</p>
+                <div class="portal-properties-grid" data-portal-properties></div>
+                <noscript>
+                    <div class="portal-grid two">
+                        <article class="portal-card"><h3>BizLiv Coach</h3><p>Talk.</p><a href="https://coach.bizliv.life/">Open</a></article>
+                        <article class="portal-card"><h3>BizLiv Design</h3><p>Design.</p><a href="https://design.bizliv.life/">Open</a></article>
+                        <article class="portal-card"><h3>EmoSnap</h3><p>Record.</p><a href="https://emosnap.com/">Open</a></article>
+                        <article class="portal-card"><h3>BizLiv Apps</h3><p>Use.</p><a href="https://apps.bizliv.life/en/">Open</a></article>
+                        <article class="portal-card"><h3>BizLiv Media</h3><p>Read and listen.</p><a href="https://media.bizliv.life/">Open</a></article>
+                    </div>
+                </noscript>
+            </div>
+        </section>
+
+        <section id="manifesto" class="portal-section portal-manifesto">
+            <div class="portal-container">
+                <div class="portal-manifesto-grid">
+                    <div class="portal-heading compact">
+                        <p class="portal-eyebrow">Manifesto</p>
+                        <h2>Bring life and work in the AI era back into your own hands.</h2>
+                    </div>
+                    <div>
+                        <p class="portal-manifesto-copy">Talk. Design. Record. Use. Read and listen.<br>Then make.</p>
+                        <p class="portal-manifesto-note">Every entry here is a tool for not jumping too quickly to someone else's answer. Place questions, draw a map, record feelings, reduce daily friction, and send thoughts outward. BizLiv grows because Tsubu keeps making those tools in public.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="cta" class="text-center py-16 bg-blue-50 rounded-lg">
-            <h2 class="text-3xl font-bold mb-4">Start Your Fulfilling Life with BizLiv Now</h2>
-            <p class="text-xl text-gray-600 mb-8">Efficiently manage your business and life to achieve a richer daily life</p>
-            <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">Download Now</a>
+        <section id="next" class="portal-section portal-final">
+            <div class="portal-container">
+                <div class="portal-heading compact">
+                    <p class="portal-eyebrow">Next</p>
+                    <h2>Where do you go next?</h2>
+                    <p class="portal-lead">The portal hands you to the place that fits your purpose.</p>
+                </div>
+                <div class="portal-funnel-grid" data-portal-funnel></div>
+                <noscript>
+                    <div class="portal-funnel-grid">
+                        <article class="portal-funnel-card"><h3>BizLiv Design</h3><p>Design the next step.</p><a href="https://design.bizliv.life/">Go to Design</a></article>
+                        <article class="portal-funnel-card"><h3>BizLiv Coach</h3><p>Talk before it is clear.</p><a href="https://coach.bizliv.life/">Go to Coach</a></article>
+                        <article class="portal-funnel-card"><h3>BizLiv Apps</h3><p>Use tools to lighten daily life.</p><a href="https://apps.bizliv.life/en/">Go to Apps</a></article>
+                    </div>
+                </noscript>
+            </div>
         </section>
     </main>
 
-    <!-- Footer will be injected by /js/footer-loader.js -->
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <p>&copy; 2026 BizLiv.life</p>
+            <nav class="portal-footer-links" aria-label="Footer navigation">
+                <a href="/privacy/en/#privacy-policy">Privacy Policy</a>
+                <a href="/privacy/en/#terms-of-service">Terms of Service</a>
+                <a href="/support/en/">Contact</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

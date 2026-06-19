@@ -3,150 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizLiv - 支持商务人士充实生活</title>
-    <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/zhhans/">
+    <title>BizLiv.life | 把模糊的不安，变成下一步。</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/ja/">
     <link rel="alternate" hreflang="en" href="https://bizliv.life/en/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/">
     <link rel="canonical" href="https://bizliv.life/zhhans/">
-    <meta name="description" content="BizLiv 提供实用的应用与优质内容（博客与音频），帮助您更轻松地管理工作与生活、解决日常问题。">
-    <meta name="keywords" content="工作生活平衡,商务人士,40岁50岁,提高生产力,饮酒记录,回家支援,购物清单,会议管理,iOS">
-    <meta property="og:title" content="BizLiv - 支持商务人士充实生活">
-    <meta property="og:description" content="BizLiv 提供实用的应用与优质内容（博客与音频），帮助您更轻松地管理工作与生活、解决日常问题。">
-    <meta property="og:image" content="/images/background.jpg">
+    <meta name="description" content="BizLiv.life 是 Tsubu 活动整体的母舰入口。聊聊、设计、记录、使用、读・听，然后继续制作。这里连接 BizLiv Coach、BizLiv Design、EmoSnap、BizLiv Apps 和 BizLiv Media。">
+    <meta name="keywords" content="BizLiv.life,Tsubu,BizLiv Coach,BizLiv Design,EmoSnap,BizLiv Apps,BizLiv Media,教练,AI支持">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="BizLiv.life | 把模糊的不安，变成下一步。">
+    <meta property="og:description" content="聊聊。设计。记录。使用。读・听。然后，制作。BizLiv 的母舰入口。">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BizLiv.life 的岛屿地图插画">
     <meta property="og:url" content="https://bizliv.life/zhhans/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@bizliv_jp">
-    <meta name="twitter:title" content="BizLiv - 支持商务人士充实生活">
-    <meta name="twitter:description" content="BizLiv 提供实用的应用与优质内容（博客与音频），帮助您更轻松地管理工作与生活、解决日常问题。">
-    <meta name="twitter:image" content="/images/background.jpg">
-    <link rel="apple-touch-icon" href="/images/app-store-badge.png">
+    <meta name="twitter:site" content="@bizliv_life">
+    <meta name="twitter:title" content="BizLiv.life | 把模糊的不安，变成下一步。">
+    <meta name="twitter:description" content="选择现在最适合你的 BizLiv 入口。">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2563eb">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "BizLiv",
-      "url": "https://bizliv.life/zhhans/"
-    }
-    </script>
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
     <link rel="stylesheet" href="/css/site.css">
-    
-    <!-- Header will be injected by /js/header-loader.js -->
-    <script src="/js/header-loader.js" defer></script>
-    <script src="/js/footer-loader.js" defer></script>
-    <!-- duplicate styles removed; using /css/site.css -->
-    
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
+    <script src="/js/portal-data.js" defer></script>
 </head>
-<body>
-    <!-- Header is injected by /js/header-loader.js (shared header includes Blog/Podcast links) -->
+<body class="portal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="主导航">
+            <a class="portal-brand" href="/zhhans/" aria-label="BizLiv.life">
+                <img class="portal-brand-logo" src="/images/bizliv-life-logo.svg" alt="BizLiv.life">
+            </a>
+            <div class="portal-links">
+                <a href="#signals">Signals</a>
+                <a href="#properties">Properties</a>
+                <a href="#manifesto">Manifesto</a>
+                <a href="#next">Next</a>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section id="hero" class="hero" style="background-image: url('/images/background.jpg');">
-            <div class="hero-content text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">商务与生活平衡的<br>一体化解决方案</h1>
-                <p class="text-xl text-white mb-8">四款便捷应用，支持40多岁和50多岁商务人士的充实生活</p>
-                <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即下载</a>
-            </div>
-        </section>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <div class="portal-hero-grid">
+                    <div>
+                        <p class="portal-eyebrow">BizLiv Mother Portal</p>
+                        <h1 class="portal-title">把模糊的不安，<br>变成下一步。</h1>
+                        <div class="portal-statement portal-verb-stack" aria-label="可以从 BizLiv.life 做的事">
+                            <span>聊聊。</span>
+                            <span>设计。</span>
+                            <span>记录。</span>
+                            <span>使用。</span>
+                            <span>读・听。</span>
+                            <span class="portal-statement-break">然后，制作。</span>
+                        </div>
+                        <p class="portal-lead">BizLiv.life 是 Tsubu 活动整体的母舰。它连接教练、设计支持、情绪记录、生活改善应用和媒体，让你从现在最合适的入口开始。</p>
+                        <div class="portal-actions">
+                            <a class="portal-button primary" href="#properties">选择入口</a>
+                            <a class="portal-button secondary" href="#signals">查看正在进行的事</a>
+                        </div>
+                    </div>
 
-        <div class="container mx-auto px-4 py-8">
-            <div class="mb-8"></div>
-        <span class="anchor" id="features"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">BizLiv特点</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">工作生活平衡</h3>
-                    <p>支持平衡商务和个人生活，实现充实的职业生涯和丰富的生活方式。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">高效时间管理</h3>
-                    <p>简化日常任务，让您专注于核心工作和家庭时间。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">简单操作</h3>
-                    <p>直观的界面，即使不熟悉数字工具的人也能轻松使用。</p>
-                </div>
-            </div>
-        </section>
-
-        <span class="anchor" id="apps"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">BizLiv应用</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/online-meetings-schedule/zhhans" target="_self">在线会议时间表</a></h3>
-                    <p class="text-gray-600 mb-4">摆脱繁琐的会议管理，专注于核心工作。只需复制粘贴即可轻松注册日程。</p>
-                    <a href="https://apps.apple.com/cn/app/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/id1515253382" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/nomireco/zhhans" target="_self">NomiReco</a></h3>
-                    <p class="text-gray-600 mb-4">支持商务人士的健康管理和社交义务。客观跟踪饮酒习惯，助力健康生活方式的发展。</p>
-                    <a href="https://apps.apple.com/cn/app/nomireco-%E9%A3%B2%E9%85%92%E6%97%A5%E8%A8%98%E9%8C%B2/id1483451979" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/shopping-list/zhhans" target="_self">购物清单</a></h3>
-                    <p class="text-gray-600 mb-4">通过高效购物有效利用宝贵时间。自动分类功能让您即使在工作繁忙时也能顺利管理家庭生活。</p>
-                    <a href="https://apps.apple.com/cn/app/%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E8%87%AA%E5%8B%95%E6%95%B4%E5%88%97/id1546963840" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                    </a>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><a href="https://www.bizliv.life/go-home-navi/zhhans" target="_self">回家导航</a></h3>
-                    <p class="text-gray-600 mb-4">从工作或社交聚会顺利回家。一键路线搜索和末班车时间确认，确保安全回家。</p>
-                    <a href="https://apps.apple.com/cn/app/%E5%B8%B0%E5%AE%85%E3%83%8A%E3%83%93/id1491940511" target="_blank" rel="noopener noreferrer" class="block w-48 mx-auto">
-                        <img src="../images/app-store-badge.png" alt="从App Store下载" class="w-full h-auto"/>
-                    </a>
+                    <figure class="portal-map-frame portal-map-hero" aria-label="BizLiv.life 的岛屿地图">
+                        <picture>
+                            <source srcset="/images/portal/map.webp" type="image/webp">
+                            <img src="/images/portal/map.jpg" alt="带有灯塔、提问之庭、观测所、工具小屋和书房的 BizLiv.life 岛屿地图">
+                        </picture>
+                        <div class="portal-map-pins" data-portal-map-pins></div>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <span class="anchor" id="faq"></span>
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">常见问题</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">问：BizLiv是免费使用的吗？</h3>
-                    <p>答：是的，基本功能是免费提供的。</p>
+        <section id="signals" class="portal-section portal-signal-section">
+            <div class="portal-container">
+                <div class="portal-heading">
+                    <p class="portal-eyebrow">Signals</p>
+                    <h2>现在正在推进的事。</h2>
+                    <p class="portal-lead">母舰不只是名片。这里记录 Tsubu 正在制作、调整、传递的活动。</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">问：数据安全有保障吗？</h3>
-                    <p>答：是的，您可以放心使用。用户数据仅存储在您的智能手机或iCloud中，不会保存在外部服务器上。</p>
+                <div class="portal-signal-grid" data-portal-signals></div>
+            </div>
+        </section>
+
+        <section id="properties" class="portal-section">
+            <div class="portal-container">
+                <div class="portal-heading">
+                    <p class="portal-eyebrow">Properties</p>
+                    <h2>从现在的状态选择入口。</h2>
+                    <p class="portal-lead">地图负责氛围，这里负责实际导线。可以从现在想做的事开始。</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-2">问：只有40多岁和50多岁的人才能使用吗？</h3>
-                    <p>答：不是的。BizLiv可以被广泛的年龄群体使用。虽然我们的主要目标是40多岁和50多岁的商务人士，但我们也有许多适用于其他年龄段人群的功能。</p>
+                <div class="portal-properties-grid" data-portal-properties></div>
+                <noscript>
+                    <div class="portal-grid two">
+                        <article class="portal-card"><h3>BizLiv Coach</h3><p>聊聊。</p><a href="https://coach.bizliv.life/">打开</a></article>
+                        <article class="portal-card"><h3>BizLiv Design</h3><p>设计。</p><a href="https://design.bizliv.life/">打开</a></article>
+                        <article class="portal-card"><h3>EmoSnap</h3><p>记录。</p><a href="https://emosnap.com/">打开</a></article>
+                        <article class="portal-card"><h3>BizLiv Apps</h3><p>使用。</p><a href="https://apps.bizliv.life/zhhans/">打开</a></article>
+                        <article class="portal-card"><h3>BizLiv Media</h3><p>读・听。</p><a href="https://media.bizliv.life/">打开</a></article>
+                    </div>
+                </noscript>
+            </div>
+        </section>
+
+        <section id="manifesto" class="portal-section portal-manifesto">
+            <div class="portal-container">
+                <div class="portal-manifesto-grid">
+                    <div class="portal-heading compact">
+                        <p class="portal-eyebrow">Manifesto</p>
+                        <h2>把 AI 时代的生活和工作，重新放回自己的手中。</h2>
+                    </div>
+                    <div>
+                        <p class="portal-manifesto-copy">聊聊。设计。记录。使用。读・听。<br>然后，制作。</p>
+                        <p class="portal-manifesto-note">这里的入口，都是为了不急着跳到别人的答案。提出问题，画出地图，留下情绪，减轻日常的小摩擦，并把想法放到外面。BizLiv 会随着 Tsubu 持续制作这些工具而成长。</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="cta" class="text-center py-16 bg-blue-50 rounded-lg">
-            <h2 class="text-3xl font-bold mb-4">现在就开始使用BizLiv，开启充实生活</h2>
-            <p class="text-xl text-gray-600 mb-8">高效管理您的商务和生活，实现更丰富的日常生活</p>
-            <a href="https://apps.apple.com/jp/developer/akihiro-tsubusaki/id1483451978" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">立即下载</a>
+        <section id="next" class="portal-section portal-final">
+            <div class="portal-container">
+                <div class="portal-heading compact">
+                    <p class="portal-eyebrow">Next</p>
+                    <h2>接下来，去哪里？</h2>
+                    <p class="portal-lead">母舰不会把所有事情都留在这里，而是把你带到合适的入口。</p>
+                </div>
+                <div class="portal-funnel-grid" data-portal-funnel></div>
+                <noscript>
+                    <div class="portal-funnel-grid">
+                        <article class="portal-funnel-card"><h3>BizLiv Design</h3><p>想设计下一步。</p><a href="https://design.bizliv.life/">去 Design</a></article>
+                        <article class="portal-funnel-card"><h3>BizLiv Coach</h3><p>想先聊聊整理。</p><a href="https://coach.bizliv.life/">去 Coach</a></article>
+                        <article class="portal-funnel-card"><h3>BizLiv Apps</h3><p>想用工具减轻日常。</p><a href="https://apps.bizliv.life/zhhans/">去 Apps</a></article>
+                    </div>
+                </noscript>
+            </div>
         </section>
     </main>
 
-    <!-- Footer will be injected by /js/footer-loader.js -->
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <p>&copy; 2026 BizLiv.life</p>
+            <nav class="portal-footer-links" aria-label="页脚导航">
+                <a href="/privacy/zhhans/#privacy-policy">隐私政策</a>
+                <a href="/privacy/zhhans/#terms-of-service">服务条款</a>
+                <a href="/support/zhhans/">联系</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
