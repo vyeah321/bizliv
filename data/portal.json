@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-06-19",
+  "updated_at": "2026-06-20",
   "brand": {
     "gold": "#e3a72f",
     "green": "#607d58",
@@ -25,16 +25,16 @@
           "map_label": "灯台",
           "map_note": "運営者を知る",
           "audience": "まず全体像を知りたい",
-          "description": "話す、設計する、記録する、使う、読む。今の状態から入口を選べる場所です。",
+          "description": "問いに答える、設計する、記録する、使う、読む。今の状態から入口を選べる場所です。",
           "cta": "運営者を知る"
         },
         "coach": {
           "name": "BizLiv Coach",
-          "verb": "話す",
+          "verb": "問いに答える",
           "map_label": "問いの庭",
-          "map_note": "まず話す",
-          "audience": "考えがまとまらないまま話したい",
-          "description": "言葉にならない悩みを話しながらほどき、次に考えることを1つに絞ります。",
+          "map_note": "自分を整える",
+          "audience": "自分で問いに答えながら整理したい",
+          "description": "セルフコーチングの問いに答えながら、言葉にならない悩みをほどき、次に考えることを1つに絞ります。",
           "cta": "Coachへ"
         },
         "design": {
@@ -83,8 +83,8 @@
         },
         {
           "id": "coach",
-          "title": "まず話して整理したい",
-          "text": "まだ言葉にならない悩みを話しながらほどき、次に考えることを1つに絞る。",
+          "title": "問いに答えて整理したい",
+          "text": "セルフコーチングの問いに答えながら、まだ言葉にならない悩みを整理し、次に考えることを1つに絞る。",
           "cta": "BizLiv Coachへ"
         },
         {
@@ -102,8 +102,8 @@
         "live": "Live"
       },
       "properties": {
-        "about": { "name": "BizLiv.life", "verb": "Know", "map_label": "Lighthouse", "map_note": "About the operator", "audience": "I want the whole picture first", "description": "A place to choose between talking, designing, recording, using tools, and reading.", "cta": "Meet the operator" },
-        "coach": { "name": "BizLiv Coach", "verb": "Talk", "map_label": "Question Garden", "map_note": "Start talking", "audience": "I want to talk before it is clear", "description": "Untangle an unnamed concern through conversation and narrow the next thing to think about.", "cta": "Go to Coach" },
+        "about": { "name": "BizLiv.life", "verb": "Know", "map_label": "Lighthouse", "map_note": "About the operator", "audience": "I want the whole picture first", "description": "A place to choose between self-coaching prompts, designing, recording, using tools, and reading.", "cta": "Meet the operator" },
+        "coach": { "name": "BizLiv Coach", "verb": "Answer prompts", "map_label": "Question Garden", "map_note": "Self-coaching", "audience": "I want to sort my thoughts on my own", "description": "Use self-coaching prompts to untangle unnamed concerns and narrow what to think about next.", "cta": "Go to Coach" },
         "design": { "name": "BizLiv Design", "verb": "Design", "map_label": "Design Plaza", "map_note": "Design the next step", "audience": "I want to decide how to move", "description": "Organize work, life, and AI use into a small plan you can try today.", "cta": "Go to Design" },
         "emosnap": { "name": "EmoSnap", "verb": "Record", "map_label": "Emotion Observatory", "map_note": "Record emotion", "audience": "I want to look back on mood changes", "description": "Record feelings quickly so you can notice your own patterns and changes later.", "cta": "Go to EmoSnap" },
         "apps": { "name": "BizLiv Apps", "verb": "Use", "map_label": "Tool Workshop", "map_note": "Use in daily life", "audience": "I want to reduce small daily friction", "description": "Use simple tools for meetings, shopping, getting home, and daily records.", "cta": "Go to Apps" },
@@ -111,15 +111,15 @@
       },
       "funnel": [
         { "id": "design", "title": "Decide what to do next", "text": "Sort through worries and options, then make a small plan you can try today.", "cta": "Go to BizLiv Design" },
-        { "id": "coach", "title": "Talk before it is clear", "text": "Untangle unnamed concerns through conversation and narrow the next thing to think about.", "cta": "Go to BizLiv Coach" },
+        { "id": "coach", "title": "Use self-coaching prompts", "text": "Answer prompts to organize unnamed concerns and narrow what to think about next.", "cta": "Go to BizLiv Coach" },
         { "id": "apps", "title": "Use tools to lighten daily life", "text": "Reduce small daily tasks with tools for meetings, shopping, getting home, and records.", "cta": "Go to BizLiv Apps" }
       ]
     },
     "zhhans": {
       "status": { "open": "开放中", "building": "开发中", "live": "公开中" },
       "properties": {
-        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "灯塔", "map_note": "了解运营者", "audience": "先想了解整体", "description": "可以从聊聊、设计、记录、使用、阅读中选择入口的地方。", "cta": "了解运营者" },
-        "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提问之庭", "map_note": "先聊聊", "audience": "还说不清楚，也想先聊聊", "description": "通过对话整理还没命名的烦恼，缩小下一步要思考的事。", "cta": "去 Coach" },
+        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "灯塔", "map_note": "了解运营者", "audience": "先想了解整体", "description": "可以从自我提问、设计、记录、使用、阅读中选择入口的地方。", "cta": "了解运营者" },
+        "coach": { "name": "BizLiv Coach", "verb": "自我提问", "map_label": "提问之庭", "map_note": "自我教练", "audience": "想用提问整理自己的想法", "description": "通过自我教练的提问，整理还没命名的烦恼，缩小下一步要思考的事。", "cta": "去 Coach" },
         "design": { "name": "BizLiv Design", "verb": "设计", "map_label": "设计广场", "map_note": "设计下一步", "audience": "想决定接下来怎么动", "description": "整理工作、生活和 AI 使用，变成今天就能尝试的小计划。", "cta": "去 Design" },
         "emosnap": { "name": "EmoSnap", "verb": "记录", "map_label": "情绪观测所", "map_note": "记录情绪", "audience": "想回看自己的情绪变化", "description": "快速留下当下的情绪，之后更容易发现自己的节奏和变化。", "cta": "去 EmoSnap" },
         "apps": { "name": "BizLiv Apps", "verb": "使用", "map_label": "工具小屋", "map_note": "日常使用", "audience": "想减轻日常小麻烦", "description": "使用会议、购物、回家、记录等小工具，减轻每天的麻烦。", "cta": "去 Apps" },
@@ -127,15 +127,15 @@
       },
       "funnel": [
         { "id": "design", "title": "想决定下一步做什么", "text": "整理不安和选项，变成今天就能尝试的小计划。", "cta": "去 BizLiv Design" },
-        { "id": "coach", "title": "想先聊聊整理", "text": "通过对话整理还没命名的烦恼，缩小下一步要思考的事。", "cta": "去 BizLiv Coach" },
+        { "id": "coach", "title": "想用提问整理自己", "text": "通过自我教练的提问，整理还没命名的烦恼，缩小下一步要思考的事。", "cta": "去 BizLiv Coach" },
         { "id": "apps", "title": "想用工具减轻日常", "text": "用会议、购物、回家、记录等工具，减轻每天的小麻烦。", "cta": "去 BizLiv Apps" }
       ]
     },
     "zhhant": {
       "status": { "open": "開放中", "building": "開發中", "live": "公開中" },
       "properties": {
-        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "燈塔", "map_note": "了解營運者", "audience": "先想了解整體", "description": "可以從聊聊、設計、記錄、使用、閱讀中選擇入口的地方。", "cta": "了解營運者" },
-        "coach": { "name": "BizLiv Coach", "verb": "聊聊", "map_label": "提問之庭", "map_note": "先聊聊", "audience": "還說不清楚，也想先聊聊", "description": "透過對話整理還沒命名的煩惱，縮小下一步要思考的事。", "cta": "去 Coach" },
+        "about": { "name": "BizLiv.life", "verb": "了解", "map_label": "燈塔", "map_note": "了解營運者", "audience": "先想了解整體", "description": "可以從自我提問、設計、記錄、使用、閱讀中選擇入口的地方。", "cta": "了解營運者" },
+        "coach": { "name": "BizLiv Coach", "verb": "自我提問", "map_label": "提問之庭", "map_note": "自我教練", "audience": "想用提問整理自己的想法", "description": "透過自我教練的提問，整理還沒命名的煩惱，縮小下一步要思考的事。", "cta": "去 Coach" },
         "design": { "name": "BizLiv Design", "verb": "設計", "map_label": "設計廣場", "map_note": "設計下一步", "audience": "想決定接下來怎麼動", "description": "整理工作、生活和 AI 使用，變成今天就能嘗試的小計畫。", "cta": "去 Design" },
         "emosnap": { "name": "EmoSnap", "verb": "記錄", "map_label": "情緒觀測所", "map_note": "記錄情緒", "audience": "想回看自己的情緒變化", "description": "快速留下當下的情緒，之後更容易發現自己的節奏和變化。", "cta": "去 EmoSnap" },
         "apps": { "name": "BizLiv Apps", "verb": "使用", "map_label": "工具小屋", "map_note": "日常使用", "audience": "想減輕日常小麻煩", "description": "使用會議、購物、回家、記錄等小工具，減輕每天的麻煩。", "cta": "去 Apps" },
@@ -143,7 +143,7 @@
       },
       "funnel": [
         { "id": "design", "title": "想決定下一步做什麼", "text": "整理不安和選項，變成今天就能嘗試的小計畫。", "cta": "去 BizLiv Design" },
-        { "id": "coach", "title": "想先聊聊整理", "text": "透過對話整理還沒命名的煩惱，縮小下一步要思考的事。", "cta": "去 BizLiv Coach" },
+        { "id": "coach", "title": "想用提問整理自己", "text": "透過自我教練的提問，整理還沒命名的煩惱，縮小下一步要思考的事。", "cta": "去 BizLiv Coach" },
         { "id": "apps", "title": "想用工具減輕日常", "text": "用會議、購物、回家、記錄等工具，減輕每天的小麻煩。", "cta": "去 BizLiv Apps" }
       ]
     }

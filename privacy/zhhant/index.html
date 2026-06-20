@@ -1,222 +1,236 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizLiv服務 - 隱私政策與服務條款</title>
-    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
+    <title>隱私政策與服務條款 | BizLiv.life</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="/css/site.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            padding-top: 64px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        h1 {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        h2 {
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 5px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        ul li a:hover {
-            text-decoration: underline;
-        }
-        .anchor {
-            display: block;
-            position: relative;
-            top: -75px;
-            visibility: hidden;
-        }
-    </style>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
-    <!-- Google tag (gtag.js) -->
+    <link rel="canonical" href="https://bizliv.life/privacy/zhhant/">
+    <meta name="description" content="BizLiv.life 及相關應用程式、網站、媒體和支援服務的隱私政策與服務條款。">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:title" content="隱私政策與服務條款 | BizLiv.life">
+    <meta property="og:description" content="說明 BizLiv.life 如何處理資訊，以及使用相關服務時適用的規則。">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:url" content="https://bizliv.life/privacy/zhhant/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="隱私政策與服務條款 | BizLiv.life">
+    <meta name="twitter:description" content="BizLiv.life 與相關服務的隱私政策和使用規則。">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-legal">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
 </head>
-<body>
+<body class="portal-page portal-legal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="主導覽">
+            <a class="portal-brand" href="/zhhant/" aria-label="BizLiv.life">
+                <span class="portal-brand-text">BizLiv<span>.life</span></span>
+            </a>
+            <div class="portal-links">
+                <a href="#privacy-policy">隱私</a>
+                <a href="#terms-of-service">條款</a>
+                <a href="/support/zhhant/">聯絡我們</a>
+                <select class="portal-lang-select" aria-label="Language / 語言" onchange="location.href=this.value">
+                    <option value="/privacy/ja/" lang="ja">日本語</option>
+                    <option value="/privacy/en/" lang="en">English</option>
+                    <option value="/privacy/zhhans/" lang="zh-Hans">简体中文</option>
+                    <option value="/privacy/zhhant/" lang="zh-Hant" selected>🌐 繁體中文</option>
+                </select>
+            </div>
+        </nav>
+    </header>
 
-<header id="site-header">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="https://bizliv.life/zhhant/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-        
-        <!-- デスクトップメニュー -->
-        <ul class="hidden md:flex space-x-4">
-            <li><a href="#privacy-policy" class="text-gray-600 hover:text-blue-600">隱私政策</a></li>
-            <li><a href="#terms-of-service" class="text-gray-600 hover:text-blue-600">服務條款</a></li>
-        </ul>
-        
-        <!-- ハンバーガーメニューボタン -->
-        <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-        </button>
-    </nav>
-    
-    <!-- モバイルメニュー -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-        <div class="container mx-auto px-4 py-4">
-            <ul class="space-y-2">
-                <li><a href="#privacy-policy" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">隱私政策</a></li>
-                <li><a href="#terms-of-service" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">服務條款</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+    <main>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <p class="portal-eyebrow">Policy / Terms</p>
+                <h1 class="portal-title">為了安心使用而寫下的約定。</h1>
+                <p class="portal-lead">本頁面說明 BizLiv.life 以及相關應用程式、網站、媒體和支援服務如何處理個人資訊，以及使用這些服務時適用的規則。</p>
+                <p class="portal-legal-updated">最後更新日期：2026年6月20日</p>
+            </div>
+        </section>
 
-<main class="container mx-auto px-4 py-8">
-    <h1>BizLiv服務 - 隱私政策與服務條款</h1>
+        <section class="portal-section">
+            <div class="portal-container portal-legal-layout">
+                <aside class="portal-legal-toc" aria-label="頁面導覽">
+                    <span>Contents</span>
+                    <a href="#privacy-policy">隱私政策</a>
+                    <a href="#terms-of-service">服務條款</a>
+                    <a href="#scope">適用範圍</a>
+                    <a href="/support/zhhant/">聯絡我們</a>
+                </aside>
 
-    <div class="mb-8"></div>
+                <div class="portal-legal-doc">
+                    <article id="privacy-policy" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Privacy Policy</p>
+                            <h2>隱私政策</h2>
+                        </div>
 
-    <!-- 隱私政策 -->
-    <span class="anchor" id="privacy-policy"></span>
-    <h2 class="text-xl font-bold mb-2">隱私政策</h2>
-    
-    <h3>1. 個人信息的收集與使用</h3>
-    <p>BizLiv服務（以下簡稱「本服務」）可能會收集用戶的個人信息（如姓名和電子郵件地址）。這些信息僅用於特定目的，如提供客戶支持和處理查詢。未經用戶同意，不會向第三方共享或披露這些信息。</p>
+                        <section class="portal-legal-section">
+                            <h3>1. 取得的資訊</h3>
+                            <p>本服務會在必要範圍內取得以下資訊。</p>
+                            <ul class="portal-legal-list">
+                                <li>諮詢時傳送的姓名、電子郵件地址、選擇的服務、標題和正文等資訊</li>
+                                <li>應用程式或網站的使用情況、存取記錄、裝置和瀏覽器資訊、錯誤資訊、Cookie 或類似技術產生的識別碼</li>
+                                <li>確認 App 內購買和恢復購買所需的購買狀態、商店識別碼和部分收據資訊</li>
+                                <li>使用者在應用程式中輸入或記錄的資訊。保存於裝置或 iCloud 等位置的記錄，原則上 BizLiv 不會直接查看。</li>
+                            </ul>
+                        </section>
 
-    <h3>2. 數據存儲與安全性</h3>
-    <p>通過本服務記錄的數據（例如，飲酒事件、健康數據、日程管理數據）將安全地存儲在用戶設備或通過Apple ID登錄的iCloud上。所有數據均經過加密，以防止未經授權的第三方訪問。</p>
+                        <section class="portal-legal-section">
+                            <h3>2. 使用目的</h3>
+                            <p>取得的資訊將用於以下目的。</p>
+                            <ul class="portal-legal-list">
+                                <li>提供、維護、改進本服務，以及調查故障</li>
+                                <li>回覆諮詢、提供支援和發送重要通知</li>
+                                <li>分析使用情況、改進功能、投放廣告和最佳化顯示內容</li>
+                                <li>確認購買狀態、恢復已購功能和防止不正當使用</li>
+                                <li>依法律法規或本條款進行必要處理</li>
+                            </ul>
+                        </section>
 
-    <h3>3. 訪問權限</h3>
-    <p>本服務可能會請求訪問您的日曆、聯絡人、位置等權限。這些權限僅用於應用程式的功能（例如，管理飲酒事件或日程安排），不會用於其他目的。</p>
+                        <section class="portal-legal-section">
+                            <h3>3. 外部服務和第三方提供</h3>
+                            <p>本服務可能使用 Google Analytics、Firebase、Google AdMob、Apple App 內購買系統、電子郵件和託管服務等外部服務。各提供方可能會依其自身政策處理資訊。</p>
+                            <p>除法律要求、本人同意，或在服務營運所需範圍內委託處理的情況外，BizLiv 不會出售個人資訊。</p>
+                        </section>
 
-    <h3>4. 使用數據</h3>
-    <p>本服務使用Google Analytics和Firebase收集使用數據（以不可識別個人身份的形式），以改進服務並增強功能。詳情請參閱Google和Firebase的隱私政策。</p>
+                        <section class="portal-legal-section">
+                            <h3>4. Cookie、分析和廣告</h3>
+                            <p>網站可能使用 Cookie 等技術進行存取分析和改善。應用程式可能使用識別碼進行使用情況分析、錯誤分析和廣告投放。使用者可透過瀏覽器、作業系統、裝置或廣告設定限制 Cookie 或廣告識別碼的使用。</p>
+                            <p>關於 Google 對資訊的處理，請參閱 <a href="https://policies.google.com/privacy" rel="noopener">Google 隱私政策</a>。</p>
+                        </section>
 
-    <h3>5. 廣告投放</h3>
-    <p>本服務使用Google AdMob進行廣告投放。在廣告展示期間，可能會使用Cookie和跟踪技術。更多信息請查看Google的廣告政策。</p>
+                        <section class="portal-legal-section">
+                            <h3>5. 應用程式權限</h3>
+                            <p>部分應用程式可能請求存取日曆、通知、位置資訊、聯絡人、照片等權限。這些權限僅用於使用者選擇使用的功能，並可透過作業系統設定隨時更改。</p>
+                        </section>
 
-    <h3>6. App 內購買</h3>
-    <p>部分應用提供 App 內購買（非消耗型）。購買將計入您的 Apple ID，並依 Apple 的條款處理。已購內容可透過「恢復購買」功能，使用相同 Apple ID 隨時恢復。與購買相關的問題請聯絡 Apple 支援。</p>
+                        <section class="portal-legal-section">
+                            <h3>6. 保存期間和安全管理</h3>
+                            <p>資訊僅在達成使用目的所需期間、法律要求期間或支援處理所需期間內保存。不再需要的資訊將在合理範圍內刪除或匿名化。</p>
+                            <p>BizLiv 會採取合理的安全管理措施，防止未經授權的存取、遺失、竄改和洩漏。但基於網際網路和裝置服務的性質，無法保證絕對安全。</p>
+                        </section>
 
-    <h3>7. 隱私政策的變更</h3>
-    <p>本隱私政策可能會根據需要進行更新。任何更改將在此頁面上通知。</p>
+                        <section class="portal-legal-section">
+                            <h3>7. 關於個人資訊的請求</h3>
+                            <p>如本人要求公開、更正、刪除、停止使用等，BizLiv 會在確認本人身分後，依適用法律在合理範圍內處理。請透過<a href="/support/zhhant/">聯絡頁面</a>或 <a href="mailto:bizliv.life@gmail.com">bizliv.life@gmail.com</a> 聯絡我們。</p>
+                        </section>
 
-    <p><strong>最後更新日期：</strong>2026年4月4日</p>
+                        <section class="portal-legal-section">
+                            <h3>8. 未成年人使用</h3>
+                            <p>未成年人使用本服務時，請取得監護人的同意。如監護人提出刪除等請求，BizLiv 會在進行必要確認後處理。</p>
+                        </section>
 
-    <!-- 服務條款 -->
-    <span class="anchor" id="terms-of-service"></span>
-    <h2 class="text-xl font-bold mb-2">服務條款</h2>
+                        <section class="portal-legal-section">
+                            <h3>9. 變更</h3>
+                            <p>本政策可能會依服務內容、法律法規或外部服務的變化進行更新。若有重要變更，將在本頁面明確告知。</p>
+                        </section>
+                    </article>
 
-    <h3>1. 服務說明</h3>
-    <p>BizLiv提供應用程式和網站，允許用戶記錄和管理他們的飲酒習慣、健康數據、日程管理、購物清單等日常生活活動。本服務免費提供，但某些功能可能會顯示廣告。</p>
+                    <article id="terms-of-service" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Terms of Service</p>
+                            <h2>服務條款</h2>
+                        </div>
 
-    <h3>2. 禁止行為</h3>
-    <p>用戶不得將本服務用於以下目的：</p>
-    <ul>
-        <li>- 未經授權的訪問或黑客行為</li>
-        <li>- 騷擾或擾亂他人行為</li>
-        <li>- 從事非法活動</li>
-    </ul>
+                        <section class="portal-legal-section">
+                            <h3>1. 適用</h3>
+                            <p>本條款適用於 BizLiv.life 及相關應用程式、網站、媒體和支援服務。使用者使用本服務，即視為同意本條款。</p>
+                        </section>
 
-    <h3>3. 責任範圍</h3>
-    <p>本服務提供商對因使用本服務而造成的任何損害不承擔責任。這包括與應用程式或網站相關的問題，例如漏洞或數據丟失。</p>
+                        <section class="portal-legal-section">
+                            <h3>2. 服務內容</h3>
+                            <p>本服務提供自我教練工具、設計支援、情緒和日常記錄、生活工具應用程式、文章和音訊內容等。出於改進或營運需要，服務內容可能會變更、追加、暫停或結束。</p>
+                        </section>
 
-    <h3>4. 服務條款變更</h3>
-    <p>本服務條款可能會根據需要進行更新。任何更改將在此頁面上通知。</p>
+                        <section class="portal-legal-section">
+                            <h3>3. 不屬於專業建議</h3>
+                            <p>本服務提供的資訊、提問、記錄、分析和內容，不替代醫療、法律、稅務、投資、心理治療或其他專業建議。涉及健康、法律、財務或緊急事項時，請諮詢適當的專業人士或公共機構。</p>
+                        </section>
 
-    <p><strong>最後更新日期：</strong>2026年4月4日</p>
+                        <section class="portal-legal-section">
+                            <h3>4. 購買和付費功能</h3>
+                            <p>部分應用程式或功能可能透過 App Store 等商店提供 App 內購買或付費功能。購買、計費、退款和取消，依各商店或銷售頁面顯示的條件處理。支援恢復購買的情況下，可使用同一 Apple ID 等帳戶恢復已購功能。</p>
+                        </section>
 
-    <!-- 適用範圍 -->
-    <h2 class="text-xl font-bold mb-2">適用範圍</h2>
-    
-    <p>本隱私政策和服務條款適用於BizLiv提供的所有應用程式和網站（例如：NomiReco應用程式、在線會議時間表應用程式、購物清單應用程式等）。</p>
+                        <section class="portal-legal-section">
+                            <h3>5. 禁止行為</h3>
+                            <p>使用者不得進行以下行為。</p>
+                            <ul class="portal-legal-list">
+                                <li>違反法律法規或公序良俗的行為</li>
+                                <li>未經授權的存取、解析、竄改或施加過度負載的行為</li>
+                                <li>侵害他人權利、隱私或信用的行為</li>
+                                <li>妨礙本服務營運的行為</li>
+                                <li>未經許可複製、銷售或再分發本服務內容的行為</li>
+                            </ul>
+                        </section>
 
-</main>
+                        <section class="portal-legal-section">
+                            <h3>6. 智慧財產權</h3>
+                            <p>本服務中的文字、圖片、標誌、設計、程式和其他內容的權利歸 BizLiv 或合法權利人所有。使用者自行輸入或記錄的資料，原則上歸使用者所有。</p>
+                        </section>
 
-<footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-4">
-        <div class="text-center">
-            <p class="mb-4">&copy; 2024 BizLiv. 版權所有。</p>
-            <nav class="space-x-4">
-                <a href="#privacy-policy" class="text-white hover:text-blue-300">隱私政策</a>
-                |
-                <a href="#terms-of-service" class="text-white hover:text-blue-300">服務條款</a>
-                |
-                <a href="https://bizliv.life/support/zhhant/" class="text-white hover:text-blue-300">聯絡我們</a>
+                        <section class="portal-legal-section">
+                            <h3>7. 外部服務和連結</h3>
+                            <p>本服務可能與外部網站、商店、社群平台、分析工具或廣告服務連接。外部服務的使用適用各自的條款和政策。</p>
+                        </section>
+
+                        <section class="portal-legal-section">
+                            <h3>8. 免責聲明和責任範圍</h3>
+                            <p>BizLiv 會盡力提供準確、穩定的服務，但不保證內容的完整性、準確性、持續性或適合特定目的。在法律允許的範圍內，BizLiv 對因使用或無法使用本服務而產生的損害不承擔責任。但 BizLiv 存在故意或重大過失的情況除外。</p>
+                        </section>
+
+                        <section class="portal-legal-section">
+                            <h3>9. 條款變更</h3>
+                            <p>本條款可能會依服務內容或適用法律的變化進行更新。變更後繼續使用本服務，即視為同意更新後的條款。</p>
+                        </section>
+
+                        <section class="portal-legal-section">
+                            <h3>10. 準據法和管轄</h3>
+                            <p>本條款適用日本法律。與本服務有關的爭議，在法律允許的範圍內，以東京地方法院為第一審專屬合意管轄法院。</p>
+                        </section>
+                    </article>
+
+                    <article id="scope" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Scope</p>
+                            <h2>適用範圍和語言</h2>
+                        </div>
+                        <p class="portal-legal-note">本頁面適用於 BizLiv.life、BizLiv Design、BizLiv Coach、BizLiv Apps、EmoSnap、BizLiv Media 以及相關應用程式和網站。如個別服務另有條款或說明，則以該個別內容優先。翻譯版本與日文版本不一致時，以日文版本為準。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <p>&copy; 2026 BizLiv.life</p>
+            <nav class="portal-footer-links" aria-label="頁尾導覽">
+                <a href="/privacy/zhhant/#privacy-policy">隱私政策</a>
+                <a href="/privacy/zhhant/#terms-of-service">服務條款</a>
+                <a href="/support/zhhant/">聯絡我們</a>
             </nav>
         </div>
-    </div>
-</footer>
-
+    </footer>
 </body>
 </html>

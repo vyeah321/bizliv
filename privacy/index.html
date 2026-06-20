@@ -4,81 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>BizLiv - Privacy Policy</title>
-    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
+    <title>Privacy Policy and Terms of Service | BizLiv.life</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/">
-    <link rel="stylesheet" href="/css/site.css">
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
-        header { margin-bottom: 20px; }
-        nav ul { list-style-type: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 10px; }
-    </style>
+    <meta name="description" content="Choose a language for the BizLiv.life Privacy Policy and Terms of Service.">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-legal">
     <script>
-        function detectLanguage() {
-            var lang = navigator.language || navigator.userLanguage;
-            lang = lang.toLowerCase().split('-')[0];
-            var supportedLangs = ['en', 'ja', 'zh'];
-            return supportedLangs.includes(lang) ? lang : 'en';
-        }
-
-        function redirect() {
-            var lang = detectLanguage();
-            var langUrls = {
-                'en': '/privacy/en/',
-                'ja': '/privacy/ja/',
-                'zh': '/privacy/zhhans/'
-            };
-
-            if (lang === 'zh') {
-                if (navigator.language === 'zh-TW' || navigator.language === 'zh-HK') {
-                    langUrls['zh'] = '/privacy/zhhant/';
-                }
+        function redirectToLanguage() {
+            var language = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+            var target = "/privacy/en/";
+            if (language.indexOf("ja") === 0) {
+                target = "/privacy/ja/";
+            } else if (language === "zh-tw" || language === "zh-hk" || language === "zh-mo" || language.indexOf("zh-hant") === 0) {
+                target = "/privacy/zhhant/";
+            } else if (language.indexOf("zh") === 0) {
+                target = "/privacy/zhhans/";
             }
-
-            window.location.href = 'https://bizliv.life' + langUrls[lang];
+            window.location.replace(target);
         }
-
-        // ページ読み込み時にリダイレクト関数を実行
-        window.onload = redirect;
+        window.addEventListener("load", redirectToLanguage);
     </script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
 </head>
-<body>
-    <header>
-        <nav aria-label="Language selection">
-            <ul>
-                <li><a href="https://bizliv.life/privacy/en" hreflang="en" lang="en" aria-label="Switch to English">English</a></li>
-                <li><a href="https://bizliv.life/privacy/ja" hreflang="ja" lang="ja" aria-label="日本語に切り替え">日本語</a></li>
-                <li><a href="https://bizliv.life/privacy/zhhans" hreflang="zh-Hans" lang="zh-Hans" aria-label="切换到简体中文">简体中文</a></li>
-                <li><a href="https://bizliv.life/privacy/zhhant" hreflang="zh-Hant" lang="zh-Hant" aria-label="切換到繁體中文">繁體中文</a></li>
-            </ul>
+<body class="portal-page portal-legal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="Language selection">
+            <a class="portal-brand" href="/" aria-label="BizLiv.life">
+                <span class="portal-brand-text">BizLiv<span>.life</span></span>
+            </a>
+            <div class="portal-links">
+                <a href="/privacy/ja/" lang="ja">日本語</a>
+                <a href="/privacy/en/" lang="en">English</a>
+                <a href="/privacy/zhhans/" lang="zh-Hans">简体中文</a>
+                <a href="/privacy/zhhant/" lang="zh-Hant">繁體中文</a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <h1>BizLiv - Privacy Policy</h1>
-        <p>Welcome to the BizLiv Privacy Policy page. Please select your preferred language from the menu above to view our privacy policy.</p>
-
-        <noscript>
-            <p><strong>JavaScript is disabled in your browser.</strong></p>
-            <p>You can access our privacy policy by selecting your preferred language from the links above.</p>
-        </noscript>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <p class="portal-eyebrow">Policy / Terms</p>
+                <h1 class="portal-title">Choose a language.</h1>
+                <p class="portal-lead">You will be redirected automatically. If nothing happens, choose a language below.</p>
+                <div class="portal-actions">
+                    <a class="portal-button primary" href="/privacy/ja/" lang="ja">日本語</a>
+                    <a class="portal-button secondary" href="/privacy/en/" lang="en">English</a>
+                    <a class="portal-button secondary" href="/privacy/zhhans/" lang="zh-Hans">简体中文</a>
+                    <a class="portal-button secondary" href="/privacy/zhhant/" lang="zh-Hant">繁體中文</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 BizLiv. All rights reserved.</p>
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <p>&copy; 2026 BizLiv.life</p>
+            <nav class="portal-footer-links" aria-label="Footer navigation">
+                <a href="/privacy/en/#privacy-policy">Privacy Policy</a>
+                <a href="/privacy/en/#terms-of-service">Terms of Service</a>
+                <a href="/support/en/">Contact</a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>

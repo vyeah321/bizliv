@@ -3,223 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizLiv Services - Privacy Policy and Terms of Service</title>
-    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
+    <title>Privacy Policy and Terms of Service | BizLiv.life</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="/css/site.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            padding-top: 64px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        h1 {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        h2 {
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 5px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        ul li a:hover {
-            text-decoration: underline;
-        }
-        .anchor {
-            display: block;
-            position: relative;
-            top: -75px;
-            visibility: hidden;
-        }
-    </style>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
-    <!-- Google tag (gtag.js) -->
+    <link rel="canonical" href="https://bizliv.life/privacy/en/">
+    <meta name="description" content="Privacy Policy and Terms of Service for BizLiv.life and related apps, websites, media, and support services.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Privacy Policy and Terms of Service | BizLiv.life">
+    <meta property="og:description" content="How BizLiv.life handles data and the rules for using related services.">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:url" content="https://bizliv.life/privacy/en/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy and Terms of Service | BizLiv.life">
+    <meta name="twitter:description" content="How BizLiv.life handles data and the rules for using related services.">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-legal">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
 </head>
-<body>
+<body class="portal-page portal-legal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="Main navigation">
+            <a class="portal-brand" href="/en/" aria-label="BizLiv.life">
+                <span class="portal-brand-text">BizLiv<span>.life</span></span>
+            </a>
+            <div class="portal-links">
+                <a href="#privacy-policy">Privacy</a>
+                <a href="#terms-of-service">Terms</a>
+                <a href="/support/en/">Contact</a>
+                <select class="portal-lang-select" aria-label="Language" onchange="location.href=this.value">
+                    <option value="/privacy/ja/" lang="ja">日本語</option>
+                    <option value="/privacy/en/" lang="en" selected>🌐 English</option>
+                    <option value="/privacy/zhhans/" lang="zh-Hans">简体中文</option>
+                    <option value="/privacy/zhhant/" lang="zh-Hant">繁體中文</option>
+                </select>
+            </div>
+        </nav>
+    </header>
 
-<header id="site-header">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="https://bizliv.life/en/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-        
-        <!-- デスクトップメニュー -->
-        <ul class="hidden md:flex space-x-4">
-            <li><a href="#privacy-policy" class="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
-            <li><a href="#terms-of-service" class="text-gray-600 hover:text-blue-600">Terms of Service</a></li>
-        </ul>
-        
-        <!-- ハンバーガーメニューボタン -->
-        <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-        </button>
-    </nav>
-    
-    <!-- モバイルメニュー -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-        <div class="container mx-auto px-4 py-4">
-            <ul class="space-y-2">
-                <li><a href="#privacy-policy" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Privacy Policy</a></li>
-                <li><a href="#terms-of-service" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">Terms of Service</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+    <main>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <p class="portal-eyebrow">Policy / Terms</p>
+                <h1 class="portal-title">A clear agreement for using BizLiv.</h1>
+                <p class="portal-lead">This page explains how BizLiv.life and related apps, websites, media, and support services handle personal information, and the rules that apply when you use them.</p>
+                <p class="portal-legal-updated">Last updated: June 20, 2026</p>
+            </div>
+        </section>
 
-<main class="container mx-auto px-4 py-8">
-    <h1>BizLiv Services - Privacy Policy and Terms of Service</h1>
+        <section class="portal-section">
+            <div class="portal-container portal-legal-layout">
+                <aside class="portal-legal-toc" aria-label="Page navigation">
+                    <span>Contents</span>
+                    <a href="#privacy-policy">Privacy Policy</a>
+                    <a href="#terms-of-service">Terms of Service</a>
+                    <a href="#scope">Scope and Language</a>
+                    <a href="/support/en/">Contact</a>
+                </aside>
 
-    <div class="mb-8"></div>
+                <div class="portal-legal-doc">
+                    <article id="privacy-policy" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Privacy Policy</p>
+                            <h2>Privacy Policy</h2>
+                        </div>
 
-    <!-- Privacy Policy -->
-    <span class="anchor" id="privacy-policy"></span>
-    <h2 class="text-xl font-bold mb-2">Privacy Policy</h2>
-    
-    <h3>1. Collection and Use of Personal Information</h3>
-    <p>BizLiv services (hereinafter referred to as "the Service") may collect personal information from users, such as name and email address. This information will only be used for specific purposes such as providing customer support and handling inquiries. It will not be shared or disclosed to third parties without the user's consent.</p>
+                        <section class="portal-legal-section">
+                            <h3>1. Information We Collect</h3>
+                            <p>We may collect the following information only when needed for the services.</p>
+                            <ul class="portal-legal-list">
+                                <li>Information you send through inquiries, such as name, email address, selected service, subject, and message</li>
+                                <li>Usage data, access logs, device and browser information, crash data, cookies, and similar identifiers</li>
+                                <li>Purchase status, store identifiers, and limited receipt information needed to restore in-app purchases</li>
+                                <li>Information you enter or record in an app. Records saved on your device or iCloud are generally not directly viewed by BizLiv.</li>
+                            </ul>
+                        </section>
 
-    <h3>2. Data Storage and Security</h3>
-    <p>Data recorded through the Service (e.g., drinking events, health data, schedule management data) is securely stored on the user's device or iCloud when signed in with an Apple ID. All data is encrypted to prevent unauthorized access by third parties.</p>
+                        <section class="portal-legal-section">
+                            <h3>2. How We Use Information</h3>
+                            <p>We use collected information for the following purposes.</p>
+                            <ul class="portal-legal-list">
+                                <li>Providing, maintaining, improving, and troubleshooting the services</li>
+                                <li>Responding to inquiries, support requests, and important notices</li>
+                                <li>Analyzing usage, improving features, serving ads, and optimizing content</li>
+                                <li>Confirming purchase status, restoring paid features, and preventing misuse</li>
+                                <li>Complying with laws, regulations, and these terms</li>
+                            </ul>
+                        </section>
 
-    <h3>3. Access Permissions</h3>
-    <p>The Service may request access to your calendar, contacts, location, and other permissions. These permissions are used only for the features of the app (e.g., managing drinking events or scheduling) and will not be used for other purposes.</p>
+                        <section class="portal-legal-section">
+                            <h3>3. External Services and Third Parties</h3>
+                            <p>The services may use external providers such as Google Analytics, Firebase, Google AdMob, Apple in-app purchase systems, email services, and hosting services. These providers may process information under their own policies.</p>
+                            <p>We do not sell personal information. We may share or entrust information only when required by law, with your consent, or within the scope necessary to operate the services.</p>
+                        </section>
 
-    <h3>4. Usage Data</h3>
-    <p>The Service collects usage data (in a non-personally identifiable format) using Google Analytics and Firebase to improve services and enhance features. For more details, please refer to the privacy policies of Google and Firebase.</p>
+                        <section class="portal-legal-section">
+                            <h3>4. Cookies, Analytics, and Ads</h3>
+                            <p>Websites may use cookies and similar technologies for analytics and improvement. Apps may use identifiers for analytics, crash reporting, and ad delivery. You may be able to limit cookies or advertising identifiers through browser, OS, device, or ad settings.</p>
+                            <p>For Google's handling of information, please see the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+                        </section>
 
-    <h3>5. Advertising</h3>
-    <p>The Service uses Google AdMob for ad delivery. Cookies and tracking technologies may be used during ad display. For more information, please review Google's advertising policies.</p>
+                        <section class="portal-legal-section">
+                            <h3>5. App Permissions</h3>
+                            <p>Some apps may request access to calendars, notifications, location, contacts, photos, or similar permissions. These permissions are used only for the features you choose to use, and can be changed through your OS settings.</p>
+                        </section>
 
-    <h3>6. In-App Purchases</h3>
-    <p>Some apps offer in-app purchases (non-consumable). Purchases are charged to your Apple ID and processed in accordance with Apple's terms. Purchased content can be restored at any time with the same Apple ID using the "Restore Purchases" feature. For purchase-related inquiries, please contact Apple Support.</p>
+                        <section class="portal-legal-section">
+                            <h3>6. Retention and Security</h3>
+                            <p>We retain information only for as long as necessary for the purposes above, for legal obligations, or for support records. Information that is no longer needed will be deleted or anonymized where reasonably possible.</p>
+                            <p>We take reasonable safeguards against unauthorized access, loss, alteration, and leakage. However, no internet or device-based service can guarantee absolute security.</p>
+                        </section>
 
-    <h3>7. Changes to the Privacy Policy</h3>
-    <p>This Privacy Policy may be updated as needed. Any changes will be notified on this page.</p>
+                        <section class="portal-legal-section">
+                            <h3>7. Requests About Your Information</h3>
+                            <p>If you request disclosure, correction, deletion, suspension of use, or similar action regarding personal information we hold, we will respond within a reasonable scope in accordance with applicable law after confirming your identity. Please contact us through the <a href="/support/en/">contact page</a> or at <a href="mailto:bizliv.life@gmail.com">bizliv.life@gmail.com</a>.</p>
+                        </section>
 
-    <p><strong>Last Updated:</strong> April 4, 2026</p>
+                        <section class="portal-legal-section">
+                            <h3>8. Use by Minors</h3>
+                            <p>If you are a minor, please use the services with consent from a parent or guardian. If a guardian requests deletion or another action, we will respond after necessary confirmation.</p>
+                        </section>
 
-    <!-- Terms of Service -->
-    <span class="anchor" id="terms-of-service"></span>
-    <h2 class="text-xl font-bold mb-2">Terms of Service</h2>
+                        <section class="portal-legal-section">
+                            <h3>9. Changes</h3>
+                            <p>This policy may be updated when the services, laws, or external services change. Material changes will be made clear on this page.</p>
+                        </section>
+                    </article>
 
-    <h3>1. Service Description</h3>
-    <p>BizLiv provides applications and websites that allow users to record and manage their drinking habits, health data, schedule management, shopping lists, and other daily life activities. The service is provided free of charge; however, some features may display ads.</p>
+                    <article id="terms-of-service" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Terms of Service</p>
+                            <h2>Terms of Service</h2>
+                        </div>
 
-    <h3>2. Prohibited Activities</h3>
-    <p>Users are prohibited from using the Service for the following purposes:</p>
-    <ul>
-        <li>- Unauthorized access or hacking activities</li>
-        <li>- Harassment or disruptive behavior towards others</li>
-        <li>- Engaging in illegal activities</li>
-    </ul>
+                        <section class="portal-legal-section">
+                            <h3>1. Scope</h3>
+                            <p>These terms apply to BizLiv.life and related apps, websites, media, and support services. By using the services, you are deemed to agree to these terms.</p>
+                        </section>
 
-    <h3>3. Limitation of Liability</h3>
-    <p>The service provider is not responsible for any damages caused by the use of the Service. This includes issues such as bugs or data loss related to the app or website.</p>
+                        <section class="portal-legal-section">
+                            <h3>2. Services</h3>
+                            <p>The services include self-coaching tools, design support, emotion and daily-life records, utility apps, articles, and audio content. We may change, add, suspend, or end service features for improvement or operational reasons.</p>
+                        </section>
 
-    <h3>4. In-App Purchases</h3>
-    <p>Some apps offer paid features (in-app purchases). Charges are applied to your Apple ID. Purchases cannot be cancelled after confirmation. Purchased content can be restored using the "Restore Purchases" feature within the app.</p>
+                        <section class="portal-legal-section">
+                            <h3>3. Not Professional Advice</h3>
+                            <p>Information, prompts, records, analysis, and content provided through the services do not replace medical, legal, tax, investment, psychotherapy, or other professional advice. For health, legal, financial, or urgent matters, please consult an appropriate professional or public authority.</p>
+                        </section>
 
-    <h3>5. Changes to the Terms of Service</h3>
-    <p>These Terms of Service may be updated as needed. Any changes will be notified on this page.</p>
+                        <section class="portal-legal-section">
+                            <h3>4. Purchases and Paid Features</h3>
+                            <p>Some apps or features may offer paid functionality or in-app purchases through the App Store or similar stores. Purchases, billing, refunds, and cancellations are handled under the conditions shown by each store or sales page. Where supported, purchased features may be restored with the same Apple ID or equivalent store account.</p>
+                        </section>
 
-    <p><strong>Last Updated:</strong> April 4, 2026</p>
+                        <section class="portal-legal-section">
+                            <h3>5. Prohibited Conduct</h3>
+                            <p>You may not engage in the following conduct.</p>
+                            <ul class="portal-legal-list">
+                                <li>Actions that violate laws, regulations, or public order</li>
+                                <li>Unauthorized access, reverse engineering, alteration, or excessive load</li>
+                                <li>Infringement of another person's rights, privacy, or reputation</li>
+                                <li>Interference with the operation of the services</li>
+                                <li>Unauthorized copying, selling, or redistribution of service content</li>
+                            </ul>
+                        </section>
 
-    <!-- Applicability -->
-    <h2 class="text-xl font-bold mb-2">Applicability</h2>
-    
-    <p>This Privacy Policy and Terms of Service apply to all applications and websites provided by BizLiv (e.g., NomiReco app, Online Meetings Schedule app, Shopping List app).</p>
+                        <section class="portal-legal-section">
+                            <h3>6. Intellectual Property</h3>
+                            <p>Text, images, logos, designs, programs, and other content in the services belong to BizLiv or their rightful owners. Data that you enter or record yourself generally belongs to you.</p>
+                        </section>
 
-</main>
+                        <section class="portal-legal-section">
+                            <h3>7. External Services and Links</h3>
+                            <p>The services may connect to external websites, stores, social platforms, analytics tools, or advertising services. Each external service is governed by its own terms and policies.</p>
+                        </section>
 
-<footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-4">
-        <div class="text-center">
-            <p class="mb-4">&copy; 2024 BizLiv. All rights reserved.</p>
-            <nav class="space-x-4">
-                <a href="#privacy-policy" class="text-white hover:text-blue-300">Privacy Policy</a>
-                |
-                <a href="#terms-of-service" class="text-white hover:text-blue-300">Terms of Service</a>
-                |
-                <a href="https://bizliv.life/support/en/" class="text-white hover:text-blue-300">Contact Us</a>
+                        <section class="portal-legal-section">
+                            <h3>8. Disclaimer and Liability</h3>
+                            <p>We try to provide accurate and stable services, but we do not guarantee completeness, accuracy, continuity, or fitness for a particular purpose. To the extent permitted by law, BizLiv is not liable for damages arising from use or inability to use the services, except in cases of intentional misconduct or gross negligence.</p>
+                        </section>
+
+                        <section class="portal-legal-section">
+                            <h3>9. Changes to the Terms</h3>
+                            <p>These terms may be updated when the services or applicable laws change. If you continue using the services after changes, you are deemed to agree to the updated terms.</p>
+                        </section>
+
+                        <section class="portal-legal-section">
+                            <h3>10. Governing Law and Jurisdiction</h3>
+                            <p>These terms are governed by the laws of Japan. To the extent permitted by law, the Tokyo District Court will be the exclusive court of first instance for disputes related to the services.</p>
+                        </section>
+                    </article>
+
+                    <article id="scope" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Scope</p>
+                            <h2>Scope and Language</h2>
+                        </div>
+                        <p class="portal-legal-note">This page applies to BizLiv.life, BizLiv Design, BizLiv Coach, BizLiv Apps, EmoSnap, BizLiv Media, and related apps and websites. If a specific service has additional terms or notices, those specific terms take priority. If there is any difference between a translation and the Japanese version, the Japanese version controls.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <p>&copy; 2026 BizLiv.life</p>
+            <nav class="portal-footer-links" aria-label="Footer navigation">
+                <a href="/privacy/en/#privacy-policy">Privacy Policy</a>
+                <a href="/privacy/en/#terms-of-service">Terms of Service</a>
+                <a href="/support/en/">Contact</a>
             </nav>
         </div>
-    </div>
-</footer>
-
+    </footer>
 </body>
 </html>

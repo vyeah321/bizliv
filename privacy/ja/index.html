@@ -3,214 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizLivサービス - プライバシーポリシーと利用規約</title>
-    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
+    <title>プライバシーポリシーと利用規約 | BizLiv.life</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/privacy/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/privacy/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/privacy/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/privacy/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/privacy/">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="/css/site.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            padding-top: 64px; /* ヘッダーの高さ分のパディング */
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        h1 {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        h2 {
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 5px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        ul li a:hover {
-            text-decoration: underline;
-        }
-        .anchor {
-            display: block;
-            position: relative;
-            top: -75px;
-            visibility: hidden;
-        }
-    </style>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
+    <link rel="canonical" href="https://bizliv.life/privacy/ja/">
+    <meta name="description" content="BizLiv.lifeと関連するアプリ・Webサイトのプライバシーポリシーと利用規約です。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="プライバシーポリシーと利用規約 | BizLiv.life">
+    <meta property="og:description" content="BizLiv.lifeと関連するアプリ・Webサイトを安心して使うための約束をまとめています。">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:url" content="https://bizliv.life/privacy/ja/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="プライバシーポリシーと利用規約 | BizLiv.life">
+    <meta name="twitter:description" content="BizLiv.lifeと関連サービスを安心して使うための約束です。">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-legal">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KZ2GMHNF9E');
     </script>
 </head>
-<body>
+<body class="portal-page portal-legal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="メインナビゲーション">
+            <a class="portal-brand" href="/ja/" aria-label="BizLiv.life">
+                <span class="portal-brand-text">BizLiv<span>.life</span></span>
+            </a>
+            <div class="portal-links">
+                <a href="#privacy-policy">プライバシー</a>
+                <a href="#terms-of-service">利用規約</a>
+                <a href="/support/ja/">お問い合わせ</a>
+                <select class="portal-lang-select" aria-label="Language / 言語" onchange="location.href=this.value">
+                    <option value="/privacy/ja/" lang="ja" selected>🌐 日本語</option>
+                    <option value="/privacy/en/" lang="en">English</option>
+                    <option value="/privacy/zhhans/" lang="zh-Hans">简体中文</option>
+                    <option value="/privacy/zhhant/" lang="zh-Hant">繁體中文</option>
+                </select>
+            </div>
+        </nav>
+    </header>
 
-<header id="site-header">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="https://bizliv.life/ja/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-        
-        <!-- デスクトップメニュー -->
-        <ul class="hidden md:flex space-x-4">
-            <li><a href="#privacy-policy" class="text-gray-600 hover:text-blue-600">プライバシーポリシー</a></li>
-            <li><a href="#terms-of-service" class="text-gray-600 hover:text-blue-600">利用規約</a></li>
-        </ul>
-        
-        <!-- ハンバーガーメニューボタン -->
-        <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-            <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-        </button>
-    </nav>
-    
-    <!-- モバイルメニュー -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-        <div class="container mx-auto px-4 py-4">
-            <ul class="space-y-2">
-                <li><a href="#privacy-policy" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">プライバシーポリシー</a></li>
-                <li><a href="#terms-of-service" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">利用規約</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+    <main>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <p class="portal-eyebrow">Policy / Terms</p>
+                <h1 class="portal-title">安心して使うための約束。</h1>
+                <p class="portal-lead">BizLiv.lifeと、そこからつながるアプリ・Webサイト・メディア・支援サービスを使うときの、個人情報の扱い方と利用ルールをまとめています。</p>
+                <p class="portal-legal-updated">最終更新日: 2026年6月20日</p>
+            </div>
+        </section>
 
-<main class="container mx-auto px-4 py-8">
-    <h1>BizLivサービス - プライバシーポリシーと利用規約</h1>
+        <section class="portal-section">
+            <div class="portal-container portal-legal-layout">
+                <aside class="portal-legal-toc" aria-label="ページ内ナビゲーション">
+                    <span>Contents</span>
+                    <a href="#privacy-policy">プライバシーポリシー</a>
+                    <a href="#terms-of-service">利用規約</a>
+                    <a href="#scope">適用範囲</a>
+                    <a href="/support/ja/">お問い合わせ</a>
+                </aside>
 
-    <div class="mb-8"></div>
+                <div class="portal-legal-doc">
+                    <article id="privacy-policy" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Privacy Policy</p>
+                            <h2>プライバシーポリシー</h2>
+                        </div>
 
-    <!-- プライバシーポリシー -->
-    <span class="anchor" id="privacy-policy"></span>
-    <h2 class="text-xl font-bold mb-2">プライバシーポリシー</h2>
-    
-    <h3>1. 個人情報の収集と利用</h3>
-    <p>BizLivサービス（以下「本サービス」）では、ユーザーの個人情報（氏名、メールアドレスなど）を収集することがあります。これらの情報は、お問い合わせ対応やサポート提供など、特定の目的でのみ使用されます。ユーザーの許可なく第三者へ開示・共有することはありません。</p>
+                        <section class="portal-legal-section">
+                            <h3>1. 取得する情報</h3>
+                            <p>本サービスでは、必要な範囲で次の情報を取得することがあります。</p>
+                            <ul class="portal-legal-list">
+                                <li>お問い合わせ時に送信される氏名、メールアドレス、選択したサービス名、件名、本文など</li>
+                                <li>アプリやWebサイトの利用状況、アクセスログ、端末情報、ブラウザ情報、クラッシュ情報、Cookieまたは類似技術による識別子</li>
+                                <li>アプリ内課金や購入復元に必要な購入状態、ストアが発行する識別子、レシート情報の一部</li>
+                                <li>ユーザーがアプリ内で入力・記録する情報。ただし、端末またはiCloud等に保存される記録は、原則として運営者が直接閲覧するものではありません。</li>
+                            </ul>
+                        </section>
 
-    <h3>2. データ保存とセキュリティ</h3>
-    <p>本サービスで記録されたデータ（例: 飲酒イベント、健康データ、スケジュール管理データなど）は、ユーザーご自身のデバイスまたはApple IDでサインインしたiCloud上に安全に保存されます。すべてのデータは暗号化され、第三者がアクセスできないよう保護されています。</p>
+                        <section class="portal-legal-section">
+                            <h3>2. 利用目的</h3>
+                            <p>取得した情報は、次の目的で利用します。</p>
+                            <ul class="portal-legal-list">
+                                <li>本サービスの提供、保守、改善、不具合調査のため</li>
+                                <li>お問い合わせへの回答、サポート、重要なお知らせのため</li>
+                                <li>利用状況の分析、機能改善、広告配信、表示内容の最適化のため</li>
+                                <li>購入状態の確認、購入済み機能の復元、不正利用の防止のため</li>
+                                <li>法令または利用規約に基づく対応のため</li>
+                            </ul>
+                        </section>
 
-    <h3>3. アクセス権限</h3>
-    <p>本サービスでは、カレンダーや連絡先、位置情報などへのアクセス権限を求める場合があります。これらの情報は、アプリ機能（例：飲酒イベント管理や予定管理）の提供にのみ使用され、それ以外の目的で使用されることはありません。</p>
+                        <section class="portal-legal-section">
+                            <h3>3. 外部サービスと第三者提供</h3>
+                            <p>本サービスでは、Google Analytics、Firebase、Google AdMob、Appleのアプリ内課金、メール、ホスティング等の外部サービスを利用することがあります。これらの提供者が、各社のポリシーに基づき情報を取り扱う場合があります。</p>
+                            <p>法令に基づく場合、本人の同意がある場合、サービス提供に必要な範囲で業務委託先に取り扱いを委託する場合を除き、個人情報を第三者に販売することはありません。</p>
+                        </section>
 
-    <h3>4. 利用状況データ</h3>
-    <p>本サービスではGoogle AnalyticsおよびFirebaseを用いて、利用状況データ（個人識別不能な形式）を収集し、サービス向上および機能改善に役立てています。詳細はGoogle社およびFirebase社のプライバシーポリシーをご参照ください。</p>
+                        <section class="portal-legal-section">
+                            <h3>4. Cookie・解析・広告</h3>
+                            <p>Webサイトでは、アクセス解析や改善のためにCookie等を利用することがあります。アプリでは、利用状況分析、クラッシュ解析、広告配信のために識別子等が利用される場合があります。ブラウザ、OS、端末、広告設定から、Cookieや広告識別子の利用を制限できる場合があります。</p>
+                            <p>Googleの情報の取り扱いについては、<a href="https://policies.google.com/privacy" rel="noopener">Googleのプライバシーポリシー</a>をご確認ください。</p>
+                        </section>
 
-    <h3>5. 広告配信</h3>
-    <p>本サービスではGoogle AdMobによる広告配信サービスを使用しています。広告表示時にはクッキー等によるトラッキング技術が使用される場合があります。詳細はGoogle社の広告ポリシーをご確認ください。</p>
+                        <section class="portal-legal-section">
+                            <h3>5. アプリの権限</h3>
+                            <p>一部のアプリでは、カレンダー、通知、位置情報、連絡先、写真などへのアクセス許可を求める場合があります。これらは、ユーザーが選んだ機能を動かすためにのみ使用します。権限は、OSの設定からいつでも変更できます。</p>
+                        </section>
 
-    <h3>6. アプリ内課金</h3>
-    <p>一部のアプリでは、アプリ内課金（非消耗型）を提供しています。購入はApple IDに請求され、Apple社の利用規約に従い処理されます。購入済みの内容は「購入を復元」機能から同じApple IDでいつでも復元できます。購入に関するお問い合わせはAppleサポートまでご連絡ください。</p>
+                        <section class="portal-legal-section">
+                            <h3>6. 保存期間と安全管理</h3>
+                            <p>取得した情報は、利用目的の達成に必要な期間、法令上必要な期間、または問い合わせ対応に必要な期間に限って保存します。不要になった情報は、合理的な範囲で削除または匿名化します。</p>
+                            <p>個人情報への不正アクセス、紛失、改ざん、漏えい等を防ぐため、必要かつ合理的な安全管理措置を講じます。ただし、インターネットや端末を利用するサービスの性質上、完全な安全性を保証するものではありません。</p>
+                        </section>
 
-    <h3>7. プライバシーポリシーの変更</h3>
-    <p>本プライバシーポリシーは必要に応じて変更されることがあります。変更があった場合には、本ページで通知いたします。</p>
+                        <section class="portal-legal-section">
+                            <h3>7. 開示・訂正・削除等の請求</h3>
+                            <p>本人から、保有する個人情報の開示、訂正、追加、削除、利用停止等の請求があった場合、本人確認のうえ、法令に従って合理的な範囲で対応します。お問い合わせは、<a href="/support/ja/">お問い合わせページ</a>または <a href="mailto:bizliv.life@gmail.com">bizliv.life@gmail.com</a> までご連絡ください。</p>
+                        </section>
 
-    <p><strong>最終更新日:</strong> 2026年4月4日</p>
+                        <section class="portal-legal-section">
+                            <h3>8. 未成年の利用</h3>
+                            <p>未成年の方が本サービスを利用する場合は、保護者の同意を得たうえで利用してください。保護者から削除等の依頼があった場合は、必要な確認を行ったうえで対応します。</p>
+                        </section>
 
-    <!-- 利用規約 -->
-    <span class="anchor" id="terms-of-service"></span>
-    <h2 class="text-xl font-bold mb-2">利用規約</h2>
+                        <section class="portal-legal-section">
+                            <h3>9. 変更</h3>
+                            <p>本ポリシーは、サービス内容、法令、外部サービスの変更に応じて更新することがあります。重要な変更がある場合は、本ページ上で分かるようにお知らせします。</p>
+                        </section>
+                    </article>
 
-    <h3>1. サービス内容</h3>
-    <p>BizLivは、ユーザーが飲酒日や健康データを記録・管理したり、スケジュール管理や買い物リスト作成などの日常生活をサポートするためのアプリケーションおよびウェブサイトです。本サービスは無料で提供されますが、一部機能には広告が表示される場合があります。</p>
+                    <article id="terms-of-service" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Terms of Service</p>
+                            <h2>利用規約</h2>
+                        </div>
 
-    <h3>2. 禁止事項</h3>
-    <p>ユーザーは、本サービスを以下の目的で使用してはいけません。</p>
-    <ul>
-        <li>- 不正アクセスやハッキング行為</li>
-        <li>- 他者への迷惑行為や嫌がらせ</li>
-        <li>- 法律に違反する行為</li>
-    </ul>
+                        <section class="portal-legal-section">
+                            <h3>1. 適用</h3>
+                            <p>本規約は、BizLiv.lifeおよび関連するアプリ、Webサイト、メディア、支援サービスの利用に適用されます。ユーザーは、本サービスを利用することで本規約に同意したものとみなされます。</p>
+                        </section>
 
-    <h3>3. 責任範囲</h3>
-    <p>本サービスの利用によって生じた損害について、運営者は一切責任を負いません。また、本サービスに関する不具合やデータ損失についても同様です。</p>
+                        <section class="portal-legal-section">
+                            <h3>2. サービスの内容</h3>
+                            <p>本サービスは、考えを整理するためのセルフコーチングツール、設計支援、感情や日常の記録、生活を軽くするアプリ、記事・音声コンテンツなどを提供します。サービス内容は、改善や運営上の理由により変更、追加、停止されることがあります。</p>
+                        </section>
 
-    <h3>4. アプリ内課金</h3>
-    <p>一部のアプリでは有料機能（アプリ内課金）を提供しています。料金はApple IDに請求されます。購入の確認後、キャンセルはできません。購入済みコンテンツはアプリ内の「購入を復元」から復元できます。</p>
+                        <section class="portal-legal-section">
+                            <h3>3. 専門的助言ではないこと</h3>
+                            <p>本サービスで提供する情報、問い、記録、分析、コンテンツは、医療、法律、税務、投資、心理療法その他の専門的助言を代替するものではありません。健康、法律、財務、緊急性のある問題については、専門家または公的機関に相談してください。</p>
+                        </section>
 
-    <h3>5. 利用規約の変更</h3>
-    <p>本利用規約は必要に応じて変更されることがあります。変更があった場合には、本ページで通知いたします。</p>
+                        <section class="portal-legal-section">
+                            <h3>4. 購入・課金</h3>
+                            <p>一部のアプリや機能では、App Store等を通じたアプリ内課金や有料機能を提供する場合があります。購入、請求、返金、キャンセルは、各ストアまたは販売ページに表示される条件に従います。購入済み機能の復元が可能な場合は、同じApple ID等で復元できます。</p>
+                        </section>
 
-    <p><strong>最終更新日:</strong> 2026年4月4日</p>
+                        <section class="portal-legal-section">
+                            <h3>5. 禁止事項</h3>
+                            <p>ユーザーは、次の行為をしてはいけません。</p>
+                            <ul class="portal-legal-list">
+                                <li>法令または公序良俗に反する行為</li>
+                                <li>不正アクセス、解析、改ざん、過度な負荷をかける行為</li>
+                                <li>他者の権利、プライバシー、信用を侵害する行為</li>
+                                <li>本サービスの運営を妨げる行為</li>
+                                <li>許可なく本サービスの内容を複製、販売、再配布する行為</li>
+                            </ul>
+                        </section>
 
-    <!-- 適用範囲 -->
-    <h2 class="text-xl font-bold mb-2">適用範囲</h2>
-    
-    <p>このプライバシーポリシーおよび利用規約は、BizLivが提供するすべてのアプリケーションおよびウェブサイト（例：NomiRecoアプリ、オンライン会議スケジュールアプリ、買い物リストアプリなど）に適用されます。</p>
+                        <section class="portal-legal-section">
+                            <h3>6. 知的財産権</h3>
+                            <p>本サービスに含まれる文章、画像、ロゴ、デザイン、プログラム、その他のコンテンツに関する権利は、運営者または正当な権利者に帰属します。ユーザーが自分で入力・記録したデータの権利は、原則としてユーザーに帰属します。</p>
+                        </section>
 
-</main>
+                        <section class="portal-legal-section">
+                            <h3>7. 外部サービス・外部リンク</h3>
+                            <p>本サービスは、外部サイト、ストア、SNS、解析・広告サービス等と連携する場合があります。外部サービスの利用には、それぞれの規約やポリシーが適用されます。</p>
+                        </section>
 
-<footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-4">
-        <div class="text-center">
-            <p class="mb-4">&copy; 2024 BizLiv. All rights reserved.</p>
-            <nav class="space-x-4">
-                <a href="#privacy-policy" class="text-white hover:text-blue-300">プライバシーポリシー</a>
-                |
-                <a href="#terms-of-service" class="text-white hover:text-blue-300">利用規約</a>
-                |
-                <a href="https://bizliv.life/support/ja/" class="text-white hover:text-blue-300">お問い合わせ</a>
+                        <section class="portal-legal-section">
+                            <h3>8. 免責と責任の範囲</h3>
+                            <p>本サービスは、可能な限り正確で安定した提供に努めますが、内容の完全性、正確性、継続性、特定目的への適合性を保証するものではありません。運営者は、法令上認められる範囲で、本サービスの利用または利用不能により生じた損害について責任を負いません。ただし、運営者の故意または重過失による場合を除きます。</p>
+                        </section>
+
+                        <section class="portal-legal-section">
+                            <h3>9. 規約の変更</h3>
+                            <p>本規約は、サービス内容や法令の変更に応じて更新することがあります。変更後に本サービスを利用した場合、変更後の規約に同意したものとみなされます。</p>
+                        </section>
+
+                        <section class="portal-legal-section">
+                            <h3>10. 準拠法・管轄</h3>
+                            <p>本規約は日本法に準拠します。本サービスに関して紛争が生じた場合、法令上認められる範囲で、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+                        </section>
+                    </article>
+
+                    <article id="scope" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Scope</p>
+                            <h2>適用範囲と言語</h2>
+                        </div>
+                        <p class="portal-legal-note">このページは、BizLiv.life、BizLiv Design、BizLiv Coach、BizLiv Apps、EmoSnap、BizLiv Media、および関連するアプリ・Webサイトに適用されます。個別サービスに別の規約や説明がある場合は、個別の内容が優先されます。翻訳版と日本語版に差異がある場合は、日本語版を優先します。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <p>&copy; 2026 BizLiv.life</p>
+            <nav class="portal-footer-links" aria-label="フッターナビゲーション">
+                <a href="/privacy/ja/#privacy-policy">プライバシーポリシー</a>
+                <a href="/privacy/ja/#terms-of-service">利用規約</a>
+                <a href="/support/ja/">お問い合わせ</a>
             </nav>
         </div>
-    </div>
-</footer>
-
+    </footer>
 </body>
 </html>
