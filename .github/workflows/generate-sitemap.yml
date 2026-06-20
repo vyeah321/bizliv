@@ -1,9 +1,7 @@
 name: Generate Sitemap
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 2 * * *'  # 毎日2:00 UTC
+  workflow_dispatch:  # ローカルcronに移行したため手動実行のみ残す
 
 jobs:
   generate-sitemap:

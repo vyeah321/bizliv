@@ -1,9 +1,24 @@
 import os
+import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 import urllib.request
 import urllib.error
 from urllib.parse import urljoin
+
+NOINDEX_PATTERN = re.compile(
+    r'<meta\s+name=["\']robots["\']\s+content=["\'][^"\']*noindex[^"\']*["\']',
+    re.IGNORECASE
+)
+
+def is_noindex(file_path):
+    """ページがnoindex指定されているかをmetaタグから判定する"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return bool(NOINDEX_PATTERN.search(content))
+    except OSError:
+        return False
 
 def fetch_rss_last_updated(rss_url, timeout=10):
     """
@@ -229,9 +244,13 @@ def create_sitemap(base_url, root_dir):
                 rel_path = os.path.relpath(file_path, root_dir).replace(os.path.sep, '/')
                 
                 # テンプレートファイルや不要なファイルを除外
-                if ('_includes' in rel_path or 
+                if ('_includes' in rel_path or
                     rel_path.startswith('.') or
                     'template' in rel_path.lower()):
+                    continue
+
+                # noindex指定のページはサイトマップから除外
+                if is_noindex(file_path):
                     continue
                 
                 # URLの基本形を生成
