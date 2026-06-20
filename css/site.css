@@ -680,7 +680,6 @@ nav ul li { display: inline; margin-right: 10px; }
 }
 
 .portal-signal-card a,
-.portal-property-card a,
 .portal-card a {
   display: inline-flex;
   margin-top: auto;
@@ -778,14 +777,18 @@ nav ul li { display: inline; margin-right: 10px; }
 
 .portal-properties-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
   align-items: start;
+  grid-auto-rows: auto;
 }
 
 .portal-property-card {
   --property-accent: var(--portal-gold);
+  align-self: start;
   border-top: 4px solid var(--property-accent);
   display: flex;
   flex-direction: column;
+  height: auto;
   min-height: 0;
   padding: 18px;
 }
