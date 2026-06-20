@@ -28,7 +28,7 @@
     <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
     <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
-    <link rel="stylesheet" href="/css/site.css?v=20260620-legal">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-contact">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -46,7 +46,7 @@
             <div class="portal-links">
                 <a href="#privacy-policy">Privacy</a>
                 <a href="#terms-of-service">Terms</a>
-                <a href="/support/en/">Contact</a>
+                <a href="/support/en/?cache=20260620-contact">Contact</a>
                 <select class="portal-lang-select" aria-label="Language" onchange="location.href=this.value">
                     <option value="/privacy/ja/" lang="ja">日本語</option>
                     <option value="/privacy/en/" lang="en" selected>🌐 English</option>
@@ -74,7 +74,7 @@
                     <a href="#privacy-policy">Privacy Policy</a>
                     <a href="#terms-of-service">Terms of Service</a>
                     <a href="#scope">Scope and Language</a>
-                    <a href="/support/en/">Contact</a>
+                    <a href="/support/en/?cache=20260620-contact">Contact</a>
                 </aside>
 
                 <div class="portal-legal-doc">
@@ -88,7 +88,7 @@
                             <h3>1. Information We Collect</h3>
                             <p>We may collect the following information only when needed for the services.</p>
                             <ul class="portal-legal-list">
-                                <li>Information you send through inquiries, such as name, email address, selected service, subject, and message</li>
+                                <li>Information you send through inquiries, such as name, email address, related service name, subject, and message</li>
                                 <li>Usage data, access logs, device and browser information, crash data, cookies, and similar identifiers</li>
                                 <li>Purchase status, store identifiers, and limited receipt information needed to restore in-app purchases</li>
                                 <li>Information you enter or record in an app. Records saved on your device or iCloud are generally not directly viewed by BizLiv.</li>
@@ -132,7 +132,7 @@
 
                         <section class="portal-legal-section">
                             <h3>7. Requests About Your Information</h3>
-                            <p>If you request disclosure, correction, deletion, suspension of use, or similar action regarding personal information we hold, we will respond within a reasonable scope in accordance with applicable law after confirming your identity. Please contact us through the <a href="/support/en/">contact page</a> or at <a href="mailto:bizliv.life@gmail.com">bizliv.life@gmail.com</a>.</p>
+                            <p>If you request disclosure, correction, deletion, suspension of use, or similar action regarding personal information we hold, we will respond within a reasonable scope in accordance with applicable law after confirming your identity. Please contact us through the <a href="/support/en/?cache=20260620-contact">contact page</a> or at <a class="portal-contact-email" data-contact-mail href="/support/en/?cache=20260620-contact">bizliv.life [at] gmail.com</a>.</p>
                         </section>
 
                         <section class="portal-legal-section">
@@ -224,13 +224,22 @@
 
     <footer class="portal-site-footer">
         <div class="portal-container">
-            <p>&copy; 2026 BizLiv.life</p>
+            <div class="portal-footer-stack">
+                <p>&copy; 2026 BizLiv.life</p>
+                <p class="portal-footer-contact">Contact: <a class="portal-contact-email" data-contact-mail href="/support/en/?cache=20260620-contact">bizliv.life [at] gmail.com</a></p>
+            </div>
             <nav class="portal-footer-links" aria-label="Footer navigation">
                 <a href="/privacy/en/#privacy-policy">Privacy Policy</a>
                 <a href="/privacy/en/#terms-of-service">Terms of Service</a>
-                <a href="/support/en/">Contact</a>
+                <a href="/support/en/?cache=20260620-contact">Contact</a>
             </nav>
         </div>
     </footer>
+    <script>
+        const mail = ['bizliv.life', 'gmail.com'].join('@');
+        document.querySelectorAll('[data-contact-mail]').forEach((link) => {
+            link.href = 'mailto:' + mail;
+        });
+    </script>
 </body>
 </html>

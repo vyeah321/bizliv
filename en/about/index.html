@@ -32,7 +32,7 @@
     <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
     <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
-    <link rel="stylesheet" href="/css/site.css?v=20260620-stillbuilding">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-contact">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -197,13 +197,22 @@
 
     <footer class="portal-site-footer">
         <div class="portal-container">
-            <p>&copy; 2026 BizLiv.life</p>
+            <div class="portal-footer-stack">
+                <p>&copy; 2026 BizLiv.life</p>
+                <p class="portal-footer-contact">Contact: <a class="portal-contact-email" data-contact-mail href="/support/en/?cache=20260620-contact">bizliv.life [at] gmail.com</a></p>
+            </div>
             <nav class="portal-footer-links" aria-label="Footer navigation">
                 <a href="/privacy/en/#privacy-policy">Privacy Policy</a>
                 <a href="/privacy/en/#terms-of-service">Terms</a>
-                <a href="/support/en/">Contact</a>
+                <a href="/support/en/?cache=20260620-contact">Contact</a>
             </nav>
         </div>
     </footer>
+    <script>
+        const mail = ['bizliv.life', 'gmail.com'].join('@');
+        document.querySelectorAll('[data-contact-mail]').forEach((link) => {
+            link.href = 'mailto:' + mail;
+        });
+    </script>
 </body>
 </html>

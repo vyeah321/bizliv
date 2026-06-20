@@ -3,179 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ - BizLiv</title>
-    <meta name="description" content="BizLivに関するお問い合わせはこちらのページからお願いします。">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            padding-top: 64px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
+    <title>お問い合わせ | BizLiv.life</title>
+    <link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/">
+    <link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/">
+    <link rel="canonical" href="https://bizliv.life/support/ja/">
+    <meta name="description" content="BizLiv.lifeと関連アプリへのお問い合わせ先です。メールで受け付けています。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="お問い合わせ | BizLiv.life">
+    <meta property="og:description" content="BizLiv.lifeと関連アプリへのお問い合わせ先です。">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:url" content="https://bizliv.life/support/ja/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="お問い合わせ | BizLiv.life">
+    <meta name="twitter:description" content="BizLiv.lifeと関連アプリへのお問い合わせ先です。">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-contact">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
-    <meta property="og:description" content="BizLivに関するお問い合わせはこちらのページからお願いします。">
-    <meta name="twitter:description" content="BizLivに関するお問い合わせはこちらのページからお願いします。">
 </head>
-<body>
-    <header id="site-header" class="bg-white">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="https://bizliv.life/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-            
-            <!-- デスクトップメニュー -->
-            <ul class="hidden md:flex space-x-4">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">トップ</a></li>
-                <li><a href="#contact" class="text-gray-600 hover:text-blue-600">お問い合わせ</a></li>
-            </ul>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            </button>
-        </nav>
-        
-        <!-- モバイルメニュー -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="container mx-auto px-4 py-4">
-                <ul class="space-y-2">
-                    <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">トップ</a></li>
-                    <li><a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">お問い合わせ</a></li>
-                </ul>
+<body class="portal-page portal-legal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="メインナビゲーション">
+            <a class="portal-brand" href="/ja/" aria-label="BizLiv.life">
+                <span class="portal-brand-text">BizLiv<span>.life</span></span>
+            </a>
+            <div class="portal-links">
+                <a href="#contact">連絡先</a>
+                <a href="#feedback">送る前に</a>
+                <a href="/privacy/ja/">規約</a>
+                <select class="portal-lang-select" aria-label="Language / 言語" onchange="location.href=this.value">
+                    <option value="/support/ja/?cache=20260620-contact" lang="ja" selected>🌐 日本語</option>
+                    <option value="/support/en/?cache=20260620-contact" lang="en">English</option>
+                    <option value="/support/zhhans/?cache=20260620-contact" lang="zh-Hans">简体中文</option>
+                    <option value="/support/zhhant/?cache=20260620-contact" lang="zh-Hant">繁體中文</option>
+                </select>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="text-center py-16 bg-blue-50 rounded-lg mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">お問い合わせ</h1>
-            <p class="text-xl text-gray-600 mb-8">BizLivに関するご質問やご意見をお聞かせください</p>
-        </section>
-
-        <section id="contact" class="mb-12">
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <form id="contactForm">
-                    <div class="mb-4">
-                        <label for="app" class="block text-gray-700 font-bold mb-2">サービス・アプリを選択</label>
-                        <select id="app" name="app" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <option value="">選択してください</option>
-                            <option value="BizLivサービス">BizLivサービス</option>
-                            <option value="オンライン会議スケジュール">オンライン会議スケジュール</option>
-                            <option value="NomiReco">NomiReco</option>
-                            <option value="買い物リスト">買い物リスト</option>
-                            <option value="帰宅ナビ">帰宅ナビ</option>
-                            <option value="その他">その他</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label for="subject" class="block text-gray-700 font-bold mb-2">件名</label>
-                        <input type="text" id="subject" name="subject" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-bold mb-2">メッセージ</label>
-                        <textarea id="message" name="message" rows="16" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" onclick="openMailApp()" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">
-                            メールアプリで開く
-                        </button>
-                    </div>
-                </form>
+    <main>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <p class="portal-eyebrow">Support</p>
+                <h1 class="portal-title">お問い合わせ</h1>
+                <p class="portal-lead">BizLiv.life、各アプリ、Media、Designなどへのお問い合わせはメールで受け付けています。個人で運営しているため、返信に時間がかかる場合や、内容によって返信できない場合があります。</p>
+                <p class="portal-legal-updated">最終更新日: 2026年6月20日</p>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">その他のお問い合わせ方法</h2>
-            <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">メールでのお問い合わせ</h3>
-                <p class="text-gray-600">bizliv.life@gmail.com</p>
+        <section class="portal-section">
+            <div class="portal-container portal-legal-layout">
+                <aside class="portal-legal-toc" aria-label="ページ内ナビゲーション">
+                    <span>Contents</span>
+                    <a href="#contact">連絡先</a>
+                    <a href="#feedback">アプリの不具合・フィードバック</a>
+                    <a href="#design">BizLiv Designについて</a>
+                    <a href="#reply">返信について</a>
+                </aside>
+
+                <div class="portal-legal-doc">
+                    <article id="contact" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Contact</p>
+                            <h2>連絡先</h2>
+                        </div>
+                        <p class="portal-legal-note">メール: <a class="portal-contact-email" data-contact-mail href="#contact">bizliv.life [at] gmail.com</a></p>
+                        <p>アプリの不具合報告、利用規約やプライバシーに関するご連絡は、上記メールアドレスまでお願いします。</p>
+                        <div class="portal-actions">
+                            <a class="portal-button primary" data-contact-mail href="#contact">メールを開く</a>
+                            <a class="portal-button secondary" href="/privacy/ja/">規約を確認する</a>
+                        </div>
+                    </article>
+
+                    <article id="feedback" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">App Feedback</p>
+                            <h2>アプリの不具合・フィードバック</h2>
+                        </div>
+                        <p>アプリに関する連絡では、分かる範囲で次の情報を添えてください。原因調査や改善の判断がしやすくなります。</p>
+                        <ul class="portal-legal-list">
+                            <li>対象のアプリ名、ページURL、または機能名</li>
+                            <li>端末名、OS、ブラウザ、アプリのバージョン</li>
+                            <li>起きたこと、期待していたこと、再現手順</li>
+                            <li>必要に応じてスクリーンショットや画面録画の有無</li>
+                        </ul>
+                    </article>
+
+                    <article id="design" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">BizLiv Design</p>
+                            <h2>有料支援について</h2>
+                        </div>
+                        <p>BizLiv Designに関する相談、契約条件、特定商取引法に基づく表記は、Design側の案内を優先します。</p>
+                        <p class="portal-legal-note"><a href="https://design.bizliv.life/legal.html" target="_blank" rel="noopener">BizLiv Designの運営者情報・利用規約・特商法表記を見る</a></p>
+                    </article>
+
+                    <article id="reply" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Reply Policy</p>
+                            <h2>返信について</h2>
+                        </div>
+                        <p>すべてのメールに返信できるとは限りません。営業、宣伝、迷惑メール、内容が不明確な連絡には返信しない場合があります。</p>
+                        <p>アプリやサイトの改善につながるフィードバックは、個別返信の有無にかかわらず大切に確認します。</p>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p>&copy; 2024 BizLiv. All rights reserved.</p>
-                <nav class="space-x-4">
-                    <a href="https://bizliv.life/privacy/ja/#privacy-policy" class="text-white hover:text-blue-300">プライバシーポリシー</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/privacy/ja/#terms-of-service" class="text-white hover:text-blue-300">利用規約</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/support/ja/" class="text-white hover:text-blue-300">お問い合わせ</a>
-                </nav>
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <div class="portal-footer-stack">
+                <p>&copy; 2026 BizLiv.life</p>
+                <p class="portal-footer-contact">お問い合わせ: <a class="portal-contact-email" data-contact-mail href="#contact">bizliv.life [at] gmail.com</a></p>
             </div>
+            <nav class="portal-footer-links" aria-label="フッターナビゲーション">
+                <a href="/privacy/ja/#privacy-policy">プライバシーポリシー</a>
+                <a href="/privacy/ja/#terms-of-service">利用規約</a>
+                <a href="/support/ja/?cache=20260620-contact">お問い合わせ</a>
+            </nav>
         </div>
     </footer>
-
     <script>
-        function openMailApp() {
-            var app = document.getElementById('app').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-            var mailSubject = '[' + app + '] ' + subject;
-            var mailBody = 'アプリ: ' + app + '\n\n' + message;
-            var mailtoLink = 'mailto:bizliv.life@gmail.com?subject=' + encodeURIComponent(mailSubject) + '&body=' + encodeURIComponent(mailBody);
-            window.location.href = mailtoLink;
-        }
+        const mail = ['bizliv.life', 'gmail.com'].join('@');
+        document.querySelectorAll('[data-contact-mail]').forEach((link) => {
+            link.href = 'mailto:' + mail;
+        });
     </script>
 </body>
 </html>

@@ -3,184 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯繫我們 - BizLiv</title>
-    <meta name="description" content="如果您有任何關於BizLiv的問題，請通過此頁面與我們聯繫。">
-    <link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/">
+    <title>聯絡我們 | BizLiv.life</title>
     <link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/">
     <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/">
     <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/">
     <link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            padding-top: 64px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
+    <link rel="canonical" href="https://bizliv.life/support/zhhant/">
+    <meta name="description" content="BizLiv.life 及相關應用的聯絡方式。請透過電子郵件聯絡。">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:title" content="聯絡我們 | BizLiv.life">
+    <meta property="og:description" content="BizLiv.life 及相關應用的聯絡方式。">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:url" content="https://bizliv.life/support/zhhant/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="聯絡我們 | BizLiv.life">
+    <meta name="twitter:description" content="BizLiv.life 及相關應用的聯絡方式。">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-contact">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
-    <meta property="og:description" content="如果您有任何關於BizLiv的問題，請通過此頁面與我們聯繫。">
-    <meta name="twitter:description" content="如果您有任何關於BizLiv的問題，請通過此頁面與我們聯繫。">
 </head>
-<body>
-    <header id="site-header" class="bg-white">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="https://bizliv.life/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-            
-            <!-- デスクトップメニュー -->
-            <ul class="hidden md:flex space-x-4">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">首頁</a></li>
-                <li><a href="#contact" class="text-gray-600 hover:text-blue-600">聯繫我們</a></li>
-            </ul>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            </button>
-        </nav>
-        
-        <!-- モバイルメニュー -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="container mx-auto px-4 py-4">
-                <ul class="space-y-2">
-                    <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">首頁</a></li>
-                    <li><a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">聯繫我們</a></li>
-                </ul>
+<body class="portal-page portal-legal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="主導覽">
+            <a class="portal-brand" href="/zhhant/" aria-label="BizLiv.life">
+                <span class="portal-brand-text">BizLiv<span>.life</span></span>
+            </a>
+            <div class="portal-links">
+                <a href="#contact">聯絡方式</a>
+                <a href="#feedback">寄送前</a>
+                <a href="/privacy/zhhant/">條款</a>
+                <select class="portal-lang-select" aria-label="Language / 語言" onchange="location.href=this.value">
+                    <option value="/support/ja/?cache=20260620-contact" lang="ja">日本語</option>
+                    <option value="/support/en/?cache=20260620-contact" lang="en">English</option>
+                    <option value="/support/zhhans/?cache=20260620-contact" lang="zh-Hans">简体中文</option>
+                    <option value="/support/zhhant/?cache=20260620-contact" lang="zh-Hant" selected>🌐 繁體中文</option>
+                </select>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="text-center py-16 bg-blue-50 rounded-lg mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">聯繫我們</h1>
-            <p class="text-xl text-gray-600 mb-8">請告訴我們您對BizLiv的問題或意見</p>
-        </section>
-
-        <section id="contact" class="mb-12">
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <form id="contactForm">
-                    <div class="mb-4">
-                        <label for="app" class="block text-gray-700 font-bold mb-2">選擇服務或應用</label>
-                        <select id="app" name="app" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <option value="">請選擇</option>
-                            <option value="BizLiv服務">BizLiv服務</option>
-                            <option value="線上會議日程">線上會議日程</option>
-                            <option value="NomiReco">NomiReco</option>
-                            <option value="購物清單">購物清單</option>
-                            <option value="回家導航">回家導航</option>
-                            <option value="其他">其他</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label for="subject" class="block text-gray-700 font-bold mb-2">主題</label>
-                        <input type="text" id="subject" name="subject" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-bold mb-2">訊息</label>
-                        <textarea id="message" name="message" rows="16" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" onclick="openMailApp()" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">
-                            在郵件應用中開啟
-                        </button>
-                    </div>
-                </form>
+    <main>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <p class="portal-eyebrow">Support</p>
+                <h1 class="portal-title">聯絡我們</h1>
+                <p class="portal-lead">關於 BizLiv.life、各應用、Media、Design 等相關服務的聯絡，請透過電子郵件寄送。由於由個人營運，回覆可能需要時間，也可能無法逐一回覆所有郵件。</p>
+                <p class="portal-legal-updated">最後更新日期：2026年6月20日</p>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">其他聯繫方式</h2>
-            <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">電子郵件聯繫</h3>
-                <p class="text-gray-600">bizliv.life@gmail.com</p>
+        <section class="portal-section">
+            <div class="portal-container portal-legal-layout">
+                <aside class="portal-legal-toc" aria-label="頁面導覽">
+                    <span>Contents</span>
+                    <a href="#contact">聯絡方式</a>
+                    <a href="#feedback">應用回饋</a>
+                    <a href="#design">BizLiv Design</a>
+                    <a href="#reply">回覆說明</a>
+                </aside>
+
+                <div class="portal-legal-doc">
+                    <article id="contact" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Contact</p>
+                            <h2>聯絡信箱</h2>
+                        </div>
+                        <p class="portal-legal-note">信箱：<a class="portal-contact-email" data-contact-mail href="#contact">bizliv.life [at] gmail.com</a></p>
+                        <p>如需回報應用問題，或詢問服務條款與隱私權政策，請使用上述信箱。</p>
+                        <div class="portal-actions">
+                            <a class="portal-button primary" data-contact-mail href="#contact">開啟郵件</a>
+                            <a class="portal-button secondary" href="/privacy/zhhant/">查看條款</a>
+                        </div>
+                    </article>
+
+                    <article id="feedback" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">App Feedback</p>
+                            <h2>應用問題與回饋</h2>
+                        </div>
+                        <p>聯絡應用相關問題時，請盡量附上以下資訊。這有助於調查原因與判斷優先順序。</p>
+                        <ul class="portal-legal-list">
+                            <li>應用名稱、頁面 URL 或功能名稱</li>
+                            <li>裝置、OS、瀏覽器和應用版本</li>
+                            <li>發生的情況、預期的結果和重現步驟</li>
+                            <li>是否可以提供截圖或螢幕錄影</li>
+                        </ul>
+                    </article>
+
+                    <article id="design" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">BizLiv Design</p>
+                            <h2>關於付費支援</h2>
+                        </div>
+                        <p>關於 BizLiv Design 的諮詢、合約條件和法律資訊，以 Design 網站上的說明為準。</p>
+                        <p class="portal-legal-note"><a href="https://design.bizliv.life/legal.html" target="_blank" rel="noopener">查看 BizLiv Design 的營運者資訊、條款和法律說明</a></p>
+                    </article>
+
+                    <article id="reply" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Reply Policy</p>
+                            <h2>關於回覆</h2>
+                        </div>
+                        <p>並非所有郵件都會收到回覆。銷售、推廣、垃圾郵件或內容不明確的聯絡，可能不會回覆。</p>
+                        <p>有助於改進應用或網站的回饋，即使沒有個別回覆，也會認真確認。</p>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p>&copy; 2024 BizLiv. 保留所有權利。</p>
-                <nav class="space-x-4">
-                    <a href="https://bizliv.life/privacy/zhhant/#privacy-policy" class="text-white hover:text-blue-300">隱私政策</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/privacy/zhhant/#terms-of-service" class="text-white hover:text-blue-300">服務條款</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/support/zhhant/" class="text-white hover:text-blue-300">聯絡我們</a>
-                </nav>
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <div class="portal-footer-stack">
+                <p>&copy; 2026 BizLiv.life</p>
+                <p class="portal-footer-contact">聯絡：<a class="portal-contact-email" data-contact-mail href="#contact">bizliv.life [at] gmail.com</a></p>
             </div>
+            <nav class="portal-footer-links" aria-label="頁尾導覽">
+                <a href="/privacy/zhhant/#privacy-policy">隱私權政策</a>
+                <a href="/privacy/zhhant/#terms-of-service">服務條款</a>
+                <a href="/support/zhhant/?cache=20260620-contact">聯絡我們</a>
+            </nav>
         </div>
     </footer>
-
     <script>
-        function openMailApp() {
-            var app = document.getElementById('app').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-            var mailSubject = '[' + app + '] ' + subject;
-            var mailBody = '應用: ' + app + '\n\n' + message;
-            var mailtoLink = 'mailto:bizliv.life@gmail.com?subject=' + encodeURIComponent(mailSubject) + '&body=' + encodeURIComponent(mailBody);
-            window.location.href = mailtoLink;
-        }
+        const mail = ['bizliv.life', 'gmail.com'].join('@');
+        document.querySelectorAll('[data-contact-mail]').forEach((link) => {
+            link.href = 'mailto:' + mail;
+        });
     </script>
 </body>
 </html>

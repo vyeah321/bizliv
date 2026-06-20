@@ -28,7 +28,7 @@
     <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
     <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
-    <link rel="stylesheet" href="/css/site.css?v=20260620-legal">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-contact">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -46,7 +46,7 @@
             <div class="portal-links">
                 <a href="#privacy-policy">プライバシー</a>
                 <a href="#terms-of-service">利用規約</a>
-                <a href="/support/ja/">お問い合わせ</a>
+                <a href="/support/ja/?cache=20260620-contact">お問い合わせ</a>
                 <select class="portal-lang-select" aria-label="Language / 言語" onchange="location.href=this.value">
                     <option value="/privacy/ja/" lang="ja" selected>🌐 日本語</option>
                     <option value="/privacy/en/" lang="en">English</option>
@@ -74,7 +74,7 @@
                     <a href="#privacy-policy">プライバシーポリシー</a>
                     <a href="#terms-of-service">利用規約</a>
                     <a href="#scope">適用範囲</a>
-                    <a href="/support/ja/">お問い合わせ</a>
+                    <a href="/support/ja/?cache=20260620-contact">お問い合わせ</a>
                 </aside>
 
                 <div class="portal-legal-doc">
@@ -88,7 +88,7 @@
                             <h3>1. 取得する情報</h3>
                             <p>本サービスでは、必要な範囲で次の情報を取得することがあります。</p>
                             <ul class="portal-legal-list">
-                                <li>お問い合わせ時に送信される氏名、メールアドレス、選択したサービス名、件名、本文など</li>
+                                <li>お問い合わせ時にメール等で送信される氏名、メールアドレス、対象サービス名、件名、本文など</li>
                                 <li>アプリやWebサイトの利用状況、アクセスログ、端末情報、ブラウザ情報、クラッシュ情報、Cookieまたは類似技術による識別子</li>
                                 <li>アプリ内課金や購入復元に必要な購入状態、ストアが発行する識別子、レシート情報の一部</li>
                                 <li>ユーザーがアプリ内で入力・記録する情報。ただし、端末またはiCloud等に保存される記録は、原則として運営者が直接閲覧するものではありません。</li>
@@ -132,7 +132,7 @@
 
                         <section class="portal-legal-section">
                             <h3>7. 開示・訂正・削除等の請求</h3>
-                            <p>本人から、保有する個人情報の開示、訂正、追加、削除、利用停止等の請求があった場合、本人確認のうえ、法令に従って合理的な範囲で対応します。お問い合わせは、<a href="/support/ja/">お問い合わせページ</a>または <a href="mailto:bizliv.life@gmail.com">bizliv.life@gmail.com</a> までご連絡ください。</p>
+                            <p>本人から、保有する個人情報の開示、訂正、追加、削除、利用停止等の請求があった場合、本人確認のうえ、法令に従って合理的な範囲で対応します。お問い合わせは、<a href="/support/ja/?cache=20260620-contact">お問い合わせページ</a>または <a class="portal-contact-email" data-contact-mail href="/support/ja/?cache=20260620-contact">bizliv.life [at] gmail.com</a> までご連絡ください。</p>
                         </section>
 
                         <section class="portal-legal-section">
@@ -224,13 +224,22 @@
 
     <footer class="portal-site-footer">
         <div class="portal-container">
-            <p>&copy; 2026 BizLiv.life</p>
+            <div class="portal-footer-stack">
+                <p>&copy; 2026 BizLiv.life</p>
+                <p class="portal-footer-contact">お問い合わせ: <a class="portal-contact-email" data-contact-mail href="/support/ja/?cache=20260620-contact">bizliv.life [at] gmail.com</a></p>
+            </div>
             <nav class="portal-footer-links" aria-label="フッターナビゲーション">
                 <a href="/privacy/ja/#privacy-policy">プライバシーポリシー</a>
                 <a href="/privacy/ja/#terms-of-service">利用規約</a>
-                <a href="/support/ja/">お問い合わせ</a>
+                <a href="/support/ja/?cache=20260620-contact">お問い合わせ</a>
             </nav>
         </div>
     </footer>
+    <script>
+        const mail = ['bizliv.life', 'gmail.com'].join('@');
+        document.querySelectorAll('[data-contact-mail]').forEach((link) => {
+            link.href = 'mailto:' + mail;
+        });
+    </script>
 </body>
 </html>

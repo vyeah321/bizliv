@@ -961,6 +961,34 @@ nav ul li { display: inline; margin-right: 10px; }
   font-weight: 800;
 }
 
+.portal-footer-stack {
+  display: grid;
+  gap: 6px;
+}
+
+.portal-footer-contact {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.portal-contact-email {
+  color: #f1c65f;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.portal-contact-email:hover {
+  color: #fff;
+}
+
+.portal-legal-note .portal-contact-email {
+  color: var(--portal-blue);
+}
+
+.portal-legal-note .portal-contact-email:hover {
+  color: var(--portal-ink);
+}
+
 .portal-grid {
   display: grid;
   gap: 18px;

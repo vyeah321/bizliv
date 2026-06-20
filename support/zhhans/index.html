@@ -3,179 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - BizLiv</title>
-    <meta name="description" content="如果您有任何关于BizLiv的问题，请通过此页面与我们联系。">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            padding-top: 64px;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
+    <title>联系我们 | BizLiv.life</title>
+    <link rel="alternate" hreflang="ja" href="https://bizliv.life/support/ja/">
+    <link rel="alternate" hreflang="en" href="https://bizliv.life/support/en/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://bizliv.life/support/zhhans/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://bizliv.life/support/zhhant/">
+    <link rel="alternate" hreflang="x-default" href="https://bizliv.life/support/">
+    <link rel="canonical" href="https://bizliv.life/support/zhhans/">
+    <meta name="description" content="BizLiv.life 及相关应用的联系方式。请通过电子邮件联系。">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="联系我们 | BizLiv.life">
+    <meta property="og:description" content="BizLiv.life 及相关应用的联系方式。">
+    <meta property="og:site_name" content="BizLiv.life">
+    <meta property="og:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <meta property="og:url" content="https://bizliv.life/support/zhhans/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="联系我们 | BizLiv.life">
+    <meta name="twitter:description" content="BizLiv.life 及相关应用的联系方式。">
+    <meta name="twitter:image" content="https://bizliv.life/images/portal/og-card.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e3a72f">
+    <link rel="icon" href="/images/bizliv-life-favicon.svg?v=20260619" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=20260619" sizes="any">
+    <link rel="icon" href="/images/bizliv-life-icon-192.png?v=20260619" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/bizliv-life-icon-180.png?v=20260619" sizes="180x180">
+    <link rel="stylesheet" href="/css/site.css?v=20260620-contact">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2GMHNF9E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-    
         gtag('config', 'G-KZ2GMHNF9E');
     </script>
-    
-    <!-- ハンバーガーメニュー用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLines = mobileMenuButton.querySelectorAll('span');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                
-                if (isOpen) {
-                    // メニューを閉じる
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                } else {
-                    // メニューを開く
-                    mobileMenu.classList.remove('hidden');
-                    menuLines[0].style.transform = 'rotate(45deg) translate(3px, 3px)';
-                    menuLines[1].style.opacity = '0';
-                    menuLines[2].style.transform = 'rotate(-45deg) translate(3px, -3px)';
-                }
-            });
-            
-            // メニュー項目クリック時にメニューを閉じる
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuLines[0].style.transform = 'rotate(0deg)';
-                    menuLines[1].style.opacity = '1';
-                    menuLines[2].style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
-    <meta property="og:description" content="如果您有任何关于BizLiv的问题，请通过此页面与我们联系。">
-    <meta name="twitter:description" content="如果您有任何关于BizLiv的问题，请通过此页面与我们联系。">
 </head>
-<body>
-    <header id="site-header" class="bg-white">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="https://bizliv.life/" class="text-2xl font-bold text-blue-600">BizLiv.life</a>
-            
-            <!-- デスクトップメニュー -->
-            <ul class="hidden md:flex space-x-4">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">首页</a></li>
-                <li><a href="#contact" class="text-gray-600 hover:text-blue-600">联系我们</a></li>
-            </ul>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-opacity duration-300"></span>
-                <span class="block w-5 h-0.5 bg-gray-600 transition-transform duration-300"></span>
-            </button>
-        </nav>
-        
-        <!-- モバイルメニュー -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="container mx-auto px-4 py-4">
-                <ul class="space-y-2">
-                    <li><a href="#" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">首页</a></li>
-                    <li><a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-2 rounded">联系我们</a></li>
-                </ul>
+<body class="portal-page portal-legal-page">
+    <header class="portal-header">
+        <nav class="portal-nav" aria-label="主导航">
+            <a class="portal-brand" href="/zhhans/" aria-label="BizLiv.life">
+                <span class="portal-brand-text">BizLiv<span>.life</span></span>
+            </a>
+            <div class="portal-links">
+                <a href="#contact">联系方式</a>
+                <a href="#feedback">发送前</a>
+                <a href="/privacy/zhhans/">条款</a>
+                <select class="portal-lang-select" aria-label="Language / 语言" onchange="location.href=this.value">
+                    <option value="/support/ja/?cache=20260620-contact" lang="ja">日本語</option>
+                    <option value="/support/en/?cache=20260620-contact" lang="en">English</option>
+                    <option value="/support/zhhans/?cache=20260620-contact" lang="zh-Hans" selected>🌐 简体中文</option>
+                    <option value="/support/zhhant/?cache=20260620-contact" lang="zh-Hant">繁體中文</option>
+                </select>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="text-center py-16 bg-blue-50 rounded-lg mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">联系我们</h1>
-            <p class="text-xl text-gray-600 mb-8">请告诉我们您对BizLiv的问题或意见</p>
-        </section>
-
-        <section id="contact" class="mb-12">
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <form id="contactForm">
-                    <div class="mb-4">
-                        <label for="app" class="block text-gray-700 font-bold mb-2">选择服务或应用</label>
-                        <select id="app" name="app" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <option value="">请选择</option>
-                            <option value="BizLiv服务">BizLiv服务</option>
-                            <option value="在线会议日程">在线会议日程</option>
-                            <option value="NomiReco">NomiReco</option>
-                            <option value="购物清单">购物清单</option>
-                            <option value="回家导航">回家导航</option>
-                            <option value="其他">其他</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label for="subject" class="block text-gray-700 font-bold mb-2">主题</label>
-                        <input type="text" id="subject" name="subject" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-bold mb-2">消息</label>
-                        <textarea id="message" name="message" rows="16" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" onclick="openMailApp()" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">
-                            在邮件应用中打开
-                        </button>
-                    </div>
-                </form>
+    <main>
+        <section class="portal-hero">
+            <div class="portal-container">
+                <p class="portal-eyebrow">Support</p>
+                <h1 class="portal-title">联系我们</h1>
+                <p class="portal-lead">关于 BizLiv.life、各应用、Media、Design 等相关服务的联系，请通过电子邮件发送。由于由个人运营，回复可能需要时间，也可能无法对所有邮件逐一回复。</p>
+                <p class="portal-legal-updated">最后更新日期：2026年6月20日</p>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">其他联系方式</h2>
-            <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-2">电子邮件联系</h3>
-                <p class="text-gray-600">bizliv.life@gmail.com</p>
+        <section class="portal-section">
+            <div class="portal-container portal-legal-layout">
+                <aside class="portal-legal-toc" aria-label="页面导航">
+                    <span>Contents</span>
+                    <a href="#contact">联系方式</a>
+                    <a href="#feedback">应用反馈</a>
+                    <a href="#design">BizLiv Design</a>
+                    <a href="#reply">回复说明</a>
+                </aside>
+
+                <div class="portal-legal-doc">
+                    <article id="contact" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Contact</p>
+                            <h2>联系邮箱</h2>
+                        </div>
+                        <p class="portal-legal-note">邮箱：<a class="portal-contact-email" data-contact-mail href="#contact">bizliv.life [at] gmail.com</a></p>
+                        <p>如需报告应用问题，或咨询服务条款和隐私政策，请使用上述邮箱。</p>
+                        <div class="portal-actions">
+                            <a class="portal-button primary" data-contact-mail href="#contact">打开邮件</a>
+                            <a class="portal-button secondary" href="/privacy/zhhans/">查看条款</a>
+                        </div>
+                    </article>
+
+                    <article id="feedback" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">App Feedback</p>
+                            <h2>应用问题与反馈</h2>
+                        </div>
+                        <p>联系应用相关问题时，请尽量附上以下信息。这有助于调查原因和判断优先级。</p>
+                        <ul class="portal-legal-list">
+                            <li>应用名称、页面 URL 或功能名称</li>
+                            <li>设备、OS、浏览器和应用版本</li>
+                            <li>发生的情况、预期的结果和复现步骤</li>
+                            <li>是否可以提供截图或屏幕录制</li>
+                        </ul>
+                    </article>
+
+                    <article id="design" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">BizLiv Design</p>
+                            <h2>关于付费支持</h2>
+                        </div>
+                        <p>关于 BizLiv Design 的咨询、合同条件和法律信息，以 Design 网站上的说明为准。</p>
+                        <p class="portal-legal-note"><a href="https://design.bizliv.life/legal.html" target="_blank" rel="noopener">查看 BizLiv Design 的运营者信息、条款和法律说明</a></p>
+                    </article>
+
+                    <article id="reply" class="portal-legal-panel">
+                        <div>
+                            <p class="portal-eyebrow">Reply Policy</p>
+                            <h2>关于回复</h2>
+                        </div>
+                        <p>并非所有邮件都会收到回复。销售、推广、垃圾邮件或内容不明确的联系，可能不会回复。</p>
+                        <p>有助于改进应用或网站的反馈，即使没有单独回复，也会认真确认。</p>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p>&copy; 2024 BizLiv. 保留所有权利。</p>
-                <nav class="space-x-4">
-                    <a href="https://bizliv.life/privacy/zhhans/#privacy-policy" class="text-white hover:text-blue-300">隐私政策</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/privacy/zhhans/#terms-of-service" class="text-white hover:text-blue-300">服务条款</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="https://bizliv.life/support/zhhans/" class="text-white hover:text-blue-300">联系我们</a>
-                </nav>
+    <footer class="portal-site-footer">
+        <div class="portal-container">
+            <div class="portal-footer-stack">
+                <p>&copy; 2026 BizLiv.life</p>
+                <p class="portal-footer-contact">联系：<a class="portal-contact-email" data-contact-mail href="#contact">bizliv.life [at] gmail.com</a></p>
             </div>
+            <nav class="portal-footer-links" aria-label="页脚导航">
+                <a href="/privacy/zhhans/#privacy-policy">隐私政策</a>
+                <a href="/privacy/zhhans/#terms-of-service">服务条款</a>
+                <a href="/support/zhhans/?cache=20260620-contact">联系我们</a>
+            </nav>
         </div>
     </footer>
-
     <script>
-        function openMailApp() {
-            var app = document.getElementById('app').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-            var mailSubject = '[' + app + '] ' + subject;
-            var mailBody = '应用: ' + app + '\n\n' + message;
-            var mailtoLink = 'mailto:bizliv.life@gmail.com?subject=' + encodeURIComponent(mailSubject) + '&body=' + encodeURIComponent(mailBody);
-            window.location.href = mailtoLink;
-        }
+        const mail = ['bizliv.life', 'gmail.com'].join('@');
+        document.querySelectorAll('[data-contact-mail]').forEach((link) => {
+            link.href = 'mailto:' + mail;
+        });
     </script>
 </body>
 </html>
