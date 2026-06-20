@@ -11,7 +11,7 @@
   const locale = localeAliases[rawLocale] || rawLocale.replace("-", "");
   const supportedLocales = ["ja", "en", "zhhans", "zhhant"];
   const activeLocale = supportedLocales.includes(locale) ? locale : "ja";
-  const assetVersion = "20260620-cardfix2";
+  const assetVersion = "20260620-linkfix";
 
   function isExternal(href) {
     return /^https?:\/\//.test(href);

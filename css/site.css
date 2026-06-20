@@ -785,44 +785,51 @@ nav ul li { display: inline; margin-right: 10px; }
 .portal-property-card {
   --property-accent: var(--portal-gold);
   align-self: start;
-  border-top: 4px solid var(--property-accent);
   display: block;
   height: auto;
   min-height: 0;
   overflow: visible;
-  padding: 18px;
+  padding: 24px;
 }
 
 .portal-property-card h3 {
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .portal-property-card p {
-  line-height: 1.62;
-  margin-top: 9px;
+  line-height: 1.85;
+  margin-top: 12px;
 }
 
 .portal-property-card a {
+  align-self: flex-start;
   color: var(--portal-blue);
+  clear: both;
   display: inline-flex;
+  float: none;
   font-weight: 900;
-  margin-top: 14px;
-  padding-top: 0;
+  line-height: 1.45;
+  margin: 14px 0 0;
+  padding: 0;
+  position: static;
 }
 
 .property-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.property-meta span:not(.property-verb) {
+  display: none;
 }
 
 .property-verb {
-  color: var(--portal-ink);
-  font-size: 1rem;
-  letter-spacing: 0;
-  text-transform: none;
+  color: var(--portal-terrain-gold);
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .property-audience {
@@ -1023,6 +1030,7 @@ nav ul li { display: inline; margin-right: 10px; }
 
 .operator-link-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
 }
 
 .operator-card,
@@ -1065,13 +1073,13 @@ nav ul li { display: inline; margin-right: 10px; }
 .operator-link-card {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 0;
 }
 
 .operator-link-card a {
   color: var(--portal-blue);
   font-weight: 900;
-  margin-top: auto;
+  margin-top: 0;
   padding-top: 18px;
 }
 
@@ -1200,23 +1208,6 @@ nav ul li { display: inline; margin-right: 10px; }
 
   .portal-properties-grid {
     gap: 22px;
-  }
-
-  .portal-property-card {
-    padding: 18px 20px 20px;
-  }
-
-  .portal-property-card h3 {
-    margin-top: 12px;
-  }
-
-  .portal-property-card p {
-    line-height: 1.72;
-    margin-top: 12px;
-  }
-
-  .portal-property-card a {
-    margin-top: 16px;
   }
 
   .portal-actions {
