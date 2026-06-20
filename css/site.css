@@ -786,10 +786,10 @@ nav ul li { display: inline; margin-right: 10px; }
   --property-accent: var(--portal-gold);
   align-self: start;
   border-top: 4px solid var(--property-accent);
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: auto;
   min-height: 0;
+  overflow: visible;
   padding: 18px;
 }
 
@@ -803,8 +803,11 @@ nav ul li { display: inline; margin-right: 10px; }
 }
 
 .portal-property-card a {
-  margin-top: 0;
-  padding-top: 14px;
+  color: var(--portal-blue);
+  display: inline-flex;
+  font-weight: 900;
+  margin-top: 14px;
+  padding-top: 0;
 }
 
 .property-meta {
@@ -1193,6 +1196,27 @@ nav ul li { display: inline; margin-right: 10px; }
   .operator-link-grid,
   .portal-funnel-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portal-properties-grid {
+    gap: 22px;
+  }
+
+  .portal-property-card {
+    padding: 18px 20px 20px;
+  }
+
+  .portal-property-card h3 {
+    margin-top: 12px;
+  }
+
+  .portal-property-card p {
+    line-height: 1.72;
+    margin-top: 12px;
+  }
+
+  .portal-property-card a {
+    margin-top: 16px;
   }
 
   .portal-actions {

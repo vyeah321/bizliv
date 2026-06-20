@@ -11,6 +11,7 @@
   const locale = localeAliases[rawLocale] || rawLocale.replace("-", "");
   const supportedLocales = ["ja", "en", "zhhans", "zhhant"];
   const activeLocale = supportedLocales.includes(locale) ? locale : "ja";
+  const assetVersion = "20260620-cardfix2";
 
   function isExternal(href) {
     return /^https?:\/\//.test(href);
@@ -123,7 +124,7 @@
   }
 
   async function initPortal() {
-    const response = await fetch("/data/portal.json", { cache: "no-cache" });
+    const response = await fetch(`/data/portal.json?v=${assetVersion}`, { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`Portal data request failed: ${response.status}`);
     }
