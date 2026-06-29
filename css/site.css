@@ -449,10 +449,10 @@ nav ul li { display: inline; margin-right: 10px; }
 
 .portal-hero {
   box-sizing: border-box;
-  min-height: calc(100svh - 104px);
+  min-height: calc(100svh - 220px);
   display: grid;
   align-items: center;
-  padding: 64px 0 8px;
+  padding: 44px 0 28px;
   overflow: hidden;
 }
 
@@ -506,6 +506,14 @@ nav ul li { display: inline; margin-right: 10px; }
   font-size: 1rem;
   line-height: 1.75;
   margin-top: 16px;
+}
+
+.portal-lead a {
+  color: var(--portal-deep);
+  font-weight: 700;
+  text-decoration-color: rgba(227, 167, 47, 0.65);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .portal-actions {
