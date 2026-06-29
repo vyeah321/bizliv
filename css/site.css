@@ -1389,10 +1389,6 @@ nav ul li { display: inline; margin-right: 10px; }
     order: -1;
   }
 
-  .operator-portrait {
-    order: -1;
-  }
-
   .portal-signal-grid {
     grid-template-columns: 1fr;
   }
